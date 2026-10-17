@@ -1,0 +1,126 @@
+/* Native roles keep dialog/menu behavior, focus management and semantics. */
+[role="menu"],
+.menu_c1e9c4,
+.root__49fc1,
+.outer_c0bea0,
+[class^="vc-notification"],
+[class*=" vc-notification"] {
+  background-color: var(--darkirc-panel);
+  border: 1px solid var(--darkirc-border);
+  border-radius: 0;
+  box-shadow: none;
+  font-family: var(--darkirc-font);
+}
+.root__49fc1.root__49fc1 { border-radius: 0; }
+[role="dialog"] { color: var(--darkirc-text); font-family: var(--darkirc-font); }
+[role="dialog"] :is(h1, h2, h3) { font-family: var(--darkirc-font); }
+[role="dialog"] :is(input, textarea, select),
+[role="combobox"] {
+  font-family: var(--darkirc-font);
+  border-radius: 0;
+}
+.menu_c1e9c4 {
+  --custom-menu-separator-margin: 4px;
+  --custom-menu-viewport-padding: 8px;
+}
+[role="menuitem"],
+[role="menuitemcheckbox"],
+[role="menuitemradio"] {
+  border-radius: 0;
+  min-height: 28px;
+  font-size: 13px;
+  line-height: 19px;
+}
+/* Respect native danger/checked colors: only supply the common hover fill. */
+[role="menuitem"]:hover,
+[role="menuitemcheckbox"]:hover,
+[role="menuitemradio"]:hover { background-color: var(--darkirc-active); }
+.inner_c0bea0 { border-radius: 0; }
+.outer_c0bea0 {
+  /* Nitro profile colors are inline custom properties. Scope the override to
+   * profile surfaces so name/role colors and user banner images stay native. */
+  --profile-gradient-primary-color: var(--darkirc-panel) !important;
+  --profile-gradient-secondary-color: var(--darkirc-panel) !important;
+  --profile-gradient-overlay-color: transparent !important;
+  background: var(--darkirc-panel);
+}
+:is(.user-profile-popout, .user-profile-modal, .user-profile-sidebar) {
+  --profile-gradient-primary-color: var(--darkirc-panel);
+  --profile-gradient-secondary-color: var(--darkirc-panel);
+  --profile-gradient-overlay-color: transparent;
+  background-color: var(--darkirc-panel);
+  border-radius: 0;
+  box-shadow: none;
+}
+/* Profile banners, badges, roles and presence are user content: retained. */
+.user-profile-popout { max-width: calc(100vw - 16px); }
+.user-profile-modal { max-width: calc(100vw - 24px); }
+:is([class^="tooltip_"], [class*=" tooltip_"]) {
+  --background-floating: var(--darkirc-header);
+  border-radius: 0;
+  box-shadow: none;
+  font-family: var(--darkirc-font);
+}
+/* Search/threads use intrinsic max sizing; no content is hidden at breakpoints. */
+:is([class^="searchResultsWrap_"], [class*=" searchResultsWrap_"]) {
+  background: var(--darkirc-panel);
+  border-inline-start: 1px solid var(--darkirc-border);
+  width: clamp(240px, 30vw, 380px);
+  min-width: 0;
+}
+:is([class^="searchResult_"], [class*=" searchResult_"]) {
+  border: 1px solid var(--darkirc-border);
+  border-radius: 0;
+  background: var(--darkirc-bg);
+}
+:is([class^="autocomplete_"], [class*=" autocomplete_"]) {
+  background: var(--darkirc-header);
+  border: 1px solid var(--darkirc-border);
+  border-radius: 0;
+  box-shadow: none;
+}
+[role="alert"], [role="status"] { font-family: var(--darkirc-font); }
+/* Keep the native new-message controls, stacking and 32px hit area. */
+.newMessagesBar__0f481 {
+  background-color: var(--darkirc-header);
+  color: var(--darkirc-text);
+  border-inline-start: 2px solid var(--darkirc-accent);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Flat controls without altering SVGs, avatar status masks or toggle shapes. */
+:is(button, input, textarea, select, [role="button"], [role="tab"]) {
+  font-family: var(--darkirc-font);
+}
+button, input, textarea, select { border-radius: 0; }
+/* Keyboard ring remains distinct from hover/selection. No outline:none rule. */
+:is(a, button, input, textarea, select, [tabindex], [contenteditable="true"]):focus-visible {
+  outline: 2px solid var(--darkirc-accent) !important;
+  outline-offset: 2px;
+}
+::selection { background: #315773; color: #F0F6FC; }
+/* Preserve native scrollbar widths (Discord uses them for layout/scrolling). */
+::-webkit-scrollbar-thumb { background-color: #425B70; border-radius: 0; }
+::-webkit-scrollbar-track { background-color: var(--darkirc-bg); }
+::-webkit-scrollbar-thumb:hover { background-color: #66839B; }
+
+/* Remove only decorative transitions. Voice activity, loading, typing, video
+ * and accessibility feedback retain their semantic animation/state changes. */
+.guilds__5e434 .wrapper__6e9f8,
+.guilds__5e434 .childWrapper__6e9f8,
+.sidebarList__5e434 a,
+.member__5d473,
+.channelTextArea__74017,
+.channelTextArea__5126c,
+.searchBar_c322aa,
+[role="menuitem"] { transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .guilds__5e434 *,
+  [role="menu"],
+  [role="dialog"] { scroll-behavior: auto; transition-duration: 0s !important; }
+}
+@media (forced-colors: active) {
+  :root:root { --darkirc-accent: Highlight; --darkirc-border: CanvasText; }
+  :is(a, button, input, textarea, select, [tabindex]):focus-visible { outline-color: Highlight !important; }
+}

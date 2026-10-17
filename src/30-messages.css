@@ -1,0 +1,250 @@
+/* Compact++ supplies the core positioning; these rules refine its IRC layout.
+ * Scope geometry to Compact. Cozy remains usable with the same palette. */
+.compact_c19a55.wrapper_c19a55 {
+  font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
+  min-height: var(--darkirc-line-height);
+  padding-block: 0;
+  padding-inline-start: 0;
+  margin-block: 0;
+  border-radius: 0;
+  /* Keep the first column left-to-right even for Arabic/Hebrew message text. */
+  direction: ltr;
+}
+.compact_c19a55.wrapper_c19a55.groupStart__5126c { margin-top: 2px; }
+.compact_c19a55 .markup__75297 {
+  font-size: var(--darkirc-font-size);
+  line-height: var(--darkirc-line-height);
+}
+.compact_c19a55 .contents_c19a55 { margin-inline-start: 0; padding-inline-start: 0; }
+.compact_c19a55 .header_c19a55 {
+  min-height: var(--darkirc-line-height);
+  gap: 0;
+  line-height: var(--darkirc-line-height);
+  font-size: var(--darkirc-font-size);
+  font-weight: 400;
+  text-indent: 0;
+}
+.compact_c19a55 .header_c19a55 > .timestamp_c19a55 {
+  flex: 0 0 var(--darkirc-time-width);
+  width: var(--darkirc-time-width);
+  height: auto;
+  font: 12px/var(--darkirc-line-height) var(--darkirc-font);
+  font-variant-numeric: tabular-nums;
+  color: var(--darkirc-muted);
+  opacity: 1;
+  text-align: left;
+  margin-inline-end: 0;
+}
+/* Some builds already include accessible bracket separators. Avoid doubling. */
+.compact_c19a55 .header_c19a55 > .timestamp_c19a55 time:not(:has([class*="separator_"]))::before { content: "["; }
+.compact_c19a55 .header_c19a55 > .timestamp_c19a55 time:not(:has([class*="separator_"]))::after { content: "]"; }
+/* Native Compact's bracket nodes exist for selection/copying but are normally
+ * visually transparent and absolutely positioned. Make those nodes visible. */
+.compact_c19a55 .header_c19a55 > .timestamp_c19a55 .separator_c19a55 {
+  display: inline;
+  position: static;
+  opacity: 1;
+  z-index: auto;
+  font-style: normal;
+}
+.compact_c19a55 .header_c19a55 > .timestamp_c19a55:is(.latin12CompactTimeStamp_c19a55, .asianCompactTimeStamp_c19a55) {
+  --darkirc-time-width: 11ch;
+}
+.compact_c19a55 .headerText_c19a55 {
+  flex: 1 1 0;
+  justify-content: flex-end;
+  min-width: 0;
+  overflow: hidden;
+  gap: 0;
+  margin-inline: 4px 0;
+}
+.compact_c19a55 .headerText_c19a55 .username_c19a55 {
+  font: 600 var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
+  min-width: 0;
+  max-width: 100%;
+  isolation: isolate;
+}
+/* CSS fallback is a single readable nick color. Per-user hashing belongs to
+ * IrcColors: inline colors and native role colors are deliberately preserved. */
+.compact_c19a55 .headerText_c19a55 .username_c19a55:not([style*="color"]) {
+  color: var(--darkirc-accent);
+}
+.compact_c19a55 .headerText_c19a55 .username_c19a55::before { content: "<"; }
+.compact_c19a55 .headerText_c19a55 .username_c19a55::after { content: ">"; }
+/* Keep modern nested names clipped too, including replies. No generated
+ * tooltip: CSS has no reliable full-name attribute on every native variant.
+ * The existing name node, accessible name and profile handlers are retained. */
+.compact_c19a55 :is(.headerText_c19a55, .repliedMessage_c19a55) .username_c19a55 :is(.nameContainer__703b9, .name__703b9) {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
+}
+/* An inset focus ring cannot cover either the next column or adjacent rows. */
+.compact_c19a55 :is(.headerText_c19a55, .repliedMessage_c19a55) .username_c19a55:focus-visible {
+  outline: 2px solid var(--darkirc-accent);
+  outline-offset: -2px;
+  border-radius: 0;
+}
+.compact_c19a55 .header_c19a55 > .avatar_c19a55,
+.compact_c19a55 .avatarDecoration_c19a55,
+.compact_c19a55 .headerText_c19a55 :is(.roleIcon_c19a55, .roleIcon_ee71ee, .roleDot_c19a55, .roleDotLeft__703b9, .roleDotRight__703b9, .newMemberBadge_f80704, .clanTagChiplet_c19a55, .profileEffects__0dd08) {
+  display: none;
+}
+.compact_c19a55 .headerText_c19a55 :is(.botTag_c19a55, .clanTagChiplet_c19a55) {
+  flex-shrink: 0;
+  font-size: 10px;
+  line-height: 14px;
+  border-radius: 0;
+  margin-inline-end: 3px;
+}
+.compact_c19a55 .badgesContainer_c19a55 { flex-shrink: 0; }
+.compact_c19a55 .messageContent_c19a55 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: start;
+}
+.compact_c19a55 > .container_b7e1cb { min-width: 0; max-width: calc(100% - var(--compactpp-header-width) - 30px); }
+.compact_c19a55 .repliedMessage_c19a55 {
+  color: var(--darkirc-muted);
+  /* ch-based column tokens must resolve at the same 13px font as messages. */
+  font: var(--darkirc-font-size)/18px var(--darkirc-font);
+  min-height: 18px;
+  min-width: 0;
+  /* Align references with message text, without Compact's extra reply indent. */
+  margin-inline-start: calc(var(--compactpp-header-width) + var(--compactpp-header-margin-left) + var(--compactpp-header-margin-right));
+  padding-inline-start: 0;
+  gap: 4px;
+}
+.compact_c19a55 .repliedMessage_c19a55 .username_c19a55 {
+  opacity: 1;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 23ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.compact_c19a55 .repliedMessage_c19a55 .repliedTextPreview_c19a55 {
+  flex: 1 1 0;
+  min-width: 0;
+}
+/* Keep the native clickable spine in the gutter, clear of both columns. */
+.compact_c19a55 .repliedMessageClickableSpine_c19a55 {
+  inset-inline-start: -12px;
+  inset-inline-end: 100%;
+}
+.compact_c19a55 .timestamp_c19a55.timestampVisibleOnHover_c19a55 {
+  opacity: 1;
+  color: var(--darkirc-muted);
+}
+/* One line of room for attachment-only messages and system/event notices. */
+.compact_c19a55 .contents_c19a55 { min-height: var(--darkirc-line-height); }
+.compact_c19a55.isSystemMessage_c19a55 { min-height: 22px; }
+.compact_c19a55 .messageContent_c19a55 :is(pre, blockquote) { max-width: 100%; }
+.markup__75297 pre {
+  border: 1px solid var(--darkirc-border);
+  border-radius: 0;
+  background: var(--background-code);
+  max-width: 100%;
+}
+.markup__75297 pre code {
+  display: block;
+  white-space: pre;
+  overflow-x: auto;
+  font: 12px/18px var(--darkirc-font);
+}
+.markup__75297 code.inline {
+  background: var(--background-code);
+  border-radius: 0;
+  color: inherit;
+  font-family: var(--darkirc-font);
+}
+.markup__75297 a { color: var(--darkirc-accent); text-underline-offset: 2px; }
+.markup__75297 a:hover { text-decoration: underline; }
+.markup__75297 blockquote { border-radius: 0; }
+/* Only message text: reaction/picker/media emoji keep native geometry. */
+.compact_c19a55 .messageContent_c19a55 .emoji {
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+}
+.compact_c19a55 .messageContent_c19a55 .emoji.jumboable {
+  width: 22px;
+  height: 22px;
+  min-height: 22px;
+}
+/* Keep spoiler masking, embed type/color rails, image aspect ratios and player
+ * controls native. Never apply a blanket height/overflow to media elements. */
+.compact_c19a55 :is([class^="embedFull_"], [class*=" embedFull_"], [class^="attachment_"], [class*=" attachment_"]) {
+  border-radius: 0;
+  background-color: var(--darkirc-panel);
+}
+.compact_c19a55 :is([class^="reaction_"], [class*=" reaction_"]) { border-radius: 2px; }
+.compact_c19a55 :is([class^="buttons_"], [class*=" buttons_"]) {
+  border-radius: 0;
+  box-shadow: none;
+}
+/* Do not change native hover/focus visibility of message action toolbars. */
+.compact_c19a55 :is([class^="button_"], [class*=" button_"]) { border-radius: 0; }
+
+/* Main composer AND inline edit composer (different native class modules). */
+.form_f75fb0,
+.compact_c19a55 .channelTextArea__5126c {
+  /* Native Slate sizing and button alignment share these tokens. No fixed
+   * editor height: Discord can still measure and grow multiline content. */
+  --custom-channel-textarea-text-area-height: 38px;
+  --chat-markup-line-height: var(--darkirc-line-height);
+}
+.channelTextArea__74017,
+.channelTextArea__5126c {
+  background: var(--darkirc-panel);
+  border: 1px solid var(--darkirc-control-border);
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 4px;
+}
+.channelTextArea__74017:focus-within,
+.channelTextArea__5126c:focus-within { border-color: var(--darkirc-accent); }
+.scrollableContainer__74017 { background: var(--darkirc-panel); border-radius: 0; }
+.textArea__74017,
+.channelTextArea__5126c [role="textbox"] {
+  font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
+  min-width: 0;
+}
+/* Keep the verified bottom layout: restoring native -16px requires live
+ * typing/scroll anchoring evidence, not just a reconstructed spacer fixture. */
+.form_f75fb0 { margin-top: 0; padding-inline: 8px; }
+.form_f75fb0 .inner__74017 { padding-inline-start: 8px; }
+.form_f75fb0 .attachButton__74017 { margin-inline: 0 4px; }
+/* Modern + action lives outside module 74017. Its native 12px + 12px
+ * padding around a 32px icon made the REAL inner container 56px tall even
+ * while Slate and the old fixture measured 38px. Size this wrapper too. */
+.form_f75fb0 .attachWrapper__0923f {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  height: var(--custom-channel-textarea-text-area-height);
+  padding: 0 4px 0 0;
+}
+.form_f75fb0 { --chat-input-icon-size: 20px; }
+.form_f75fb0 .attachButtonInner__0923f {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 0;
+}
+.form_f75fb0 .buttons__74017 { gap: 2px; }
+.form_f75fb0 .buttons__74017 .button__74017 {
+  min-width: 28px;
+  min-height: 28px;
+}
+.form_f75fb0 .placeholder__1b31f {
+  color: var(--darkirc-muted);
+  opacity: 1;
+  font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
+}
+.compact_c19a55 .operations_bab751 { font: 12px/19px var(--darkirc-font); }

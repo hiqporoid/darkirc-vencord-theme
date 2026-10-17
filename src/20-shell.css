@@ -1,0 +1,258 @@
+/* Main shell. Channel hierarchy verified in desktop Elements and its public
+ * lazy sheet on 2026-10-17; include voice buttons, not only href links. */
+body {
+  background: var(--darkirc-bg);
+  color: var(--darkirc-text);
+  font-family: var(--darkirc-font);
+}
+.sidebarList__5e434,
+.guilds__5e434,
+.members_c8ffbb,
+.container_c8ffbb,
+.panels__5e434 {
+  background: var(--darkirc-panel);
+  border-radius: 0;
+}
+.sidebarList__5e434 { border-inline-end: 1px solid var(--darkirc-border); }
+.guilds__5e434 { border-inline-end: 1px solid var(--darkirc-border); }
+.chatContent_f75fb0 {
+  background: var(--darkirc-bg);
+  min-width: 0;
+  container: darkirc-chat / inline-size;
+}
+.membersWrap_c8ffbb {
+  width: var(--darkirc-member-width);
+  min-width: var(--darkirc-member-width);
+  border-inline-start: 1px solid var(--darkirc-border);
+}
+.members_c8ffbb { width: var(--darkirc-member-width); }
+.member__5d473 {
+  margin-inline: 3px;
+  max-width: calc(var(--darkirc-member-width) - 6px);
+}
+.membersGroup_c8ffbb {
+  color: var(--darkirc-muted);
+  font: 600 11px/16px var(--darkirc-font);
+  letter-spacing: 0;
+}
+/* Preserve server badge masks and the native unread/voice indicators. */
+.guilds__5e434 .listItem__650eb { margin-block: 3px; }
+.guilds__5e434 .wrapper__6e9f8 { border-radius: 3px; }
+.guilds__5e434 .childWrapper__6e9f8 {
+  border-radius: 3px;
+  background: var(--darkirc-header);
+  font-size: 13px;
+}
+.guilds__5e434 .wrapper__6e9f8:hover .childWrapper__6e9f8,
+.guilds__5e434 .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
+  background: var(--darkirc-active);
+  color: var(--darkirc-accent);
+}
+.guilds__5e434 .childWrapperHoverScale__6e9f8 { scale: 1 !important; }
+
+.container__9293f {
+  --__header-bar-background: var(--darkirc-header);
+  background: var(--darkirc-header);
+  border-bottom: 1px solid var(--darkirc-border);
+  box-shadow: none;
+  padding-block: 3px;
+  font: 13px/19px var(--darkirc-font);
+}
+.container__9293f :is(h1, h2, h3) { font: 600 13px/19px var(--darkirc-font); }
+.container__9293f :is([class^="topic_"], [class*=" topic_"]) {
+  font-size: 12px;
+  color: var(--darkirc-muted);
+}
+.sidebarList__5e434 :is(header, .searchBar_e6b769) {
+  background: var(--darkirc-header);
+  border-bottom: 1px solid var(--darkirc-border);
+  box-shadow: none;
+  border-radius: 0;
+}
+.sidebarList__5e434 header { min-height: 38px; height: auto; padding: 8px; }
+.sidebarList__5e434 [role="listitem"] { border-radius: 0; }
+.sidebarList__5e434 :is(.link__2ea32, a[href^="/channels/"]) {
+  box-sizing: border-box;
+  border-radius: 0;
+  min-height: 0;
+  padding-block: 0;
+  font-size: 12.5px;
+  line-height: 19px;
+}
+.sidebarList__5e434 a[href^="/channels/"]:hover { background: var(--darkirc-hover); }
+.sidebarList__5e434 a[href^="/channels/"][aria-current="page"] {
+  background: var(--darkirc-active);
+  color: var(--darkirc-accent);
+  box-shadow: inset 2px 0 var(--darkirc-accent);
+}
+/* Only real channel rows: category, forum, voice and thread icons survive. */
+.sidebarList__5e434 :is([class^="linkTop_"], [class*=" linkTop_"]) {
+  display: flex;
+  align-items: center;
+  min-height: 0;
+  height: 28px;
+  padding-block: 0;
+}
+.sidebarList__5e434 :is([class^="content_"], [class*=" content_"]):has(> a[href^="/channels/"]) {
+  border-radius: 0;
+  margin-inline: 3px;
+  padding-block: 0;
+  padding-inline: 5px;
+}
+.sidebarList__5e434 .containerDefault_c69b6d {
+  /* A voice row may contain participants below its 28px clickable line. */
+  min-height: 28px;
+  padding-block: 0;
+}
+.sidebarList__5e434 .wrapper__2ea32 { padding-block: 0; margin-block: 0; }
+.sidebarList__5e434 :is(.icon__2ea32, .iconContainer__2ea32) {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.sidebarList__5e434 :is([class^="modeSelected_"], [class*=" modeSelected_"]) a[href^="/channels/"] {
+  color: var(--darkirc-accent);
+  background: var(--darkirc-active);
+  box-shadow: inset 2px 0 var(--darkirc-accent);
+}
+.sidebarList__5e434 :is(.link__2ea32, a[href^="/channels/"]) :is([class^="name_"], [class*=" name_"]) {
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.sidebarList__5e434 .wrapper__2ea32:is(.modeSelected__2ea32, .modeUnreadImportant__2ea32) .name__2ea32 { font-weight: 600; }
+.sidebarList__5e434 .channel__972a0 { border-radius: 0; margin-block: 1px; }
+.sidebarList__5e434 .channel__972a0 .link__972a0 { padding-block: 0; }
+.searchBar_e6b769 .searchBarComponent_e6b769 {
+  font: 12px/18px var(--darkirc-font);
+  padding: 4px 6px;
+  border-radius: 0;
+}
+.searchBar_c322aa { border-radius: 0; height: 28px; }
+
+/* Sidebar participants only. This is the native expanded list, not the
+ * collapsed avatar grid or a call/video surface. Preserve the clickable row. */
+.sidebarList__5e434 .listDefault__07f91 { padding-inline: 4px; }
+.sidebarList__5e434 .listDefault__07f91 :is(.draggable__55bab, .voiceUser__07f91) {
+  min-height: 22px;
+  height: auto;
+}
+.sidebarList__5e434 .listDefault__07f91 .content__07f91 {
+  min-height: 22px;
+  height: auto;
+  padding: 1px 4px;
+  margin-inline: 0;
+  gap: 4px;
+  border-radius: 0;
+}
+.sidebarList__5e434 .listDefault__07f91 :is(.avatarContainer__07f91, .avatar__07f91) { display: none; }
+.sidebarList__5e434 .listDefault__07f91 .username__07f91 {
+  min-width: 0;
+  font: 12.5px/20px var(--darkirc-font);
+}
+/* The native speaking name class remains; replace its hidden avatar ring
+ * with a fixed-width dot so speaking never shifts the nick or state icons. */
+.sidebarList__5e434 .listDefault__07f91 .content__07f91::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  flex: 0 0 4px;
+  border-radius: 50%;
+  background: var(--darkirc-muted);
+}
+.sidebarList__5e434 .listDefault__07f91 .content__07f91:has(.usernameSpeaking__07f91)::before { background: var(--status-positive, #91e0b0); }
+.sidebarList__5e434 .listDefault__07f91 :is(.icons__07f91, .iconGroup__07f91) { gap: 2px; }
+.sidebarList__5e434 .listDefault__07f91 .icon__07f91 { width: 14px; height: 14px; }
+.sidebarList__5e434 .listDefault__07f91 .iconPriortySpeaker__07f91 { position: static; }
+.sidebarList__5e434 .listDefault__07f91 .voiceUser__07f91:focus-within .content__07f91 {
+  outline: 2px solid var(--darkirc-accent);
+  outline-offset: -2px;
+}
+
+/* Account and RTC panels keep their native absolute positioning and sizing.
+ * No fixed panel height: connected voice controls must be able to expand. */
+.panels__5e434 { border-color: var(--darkirc-border); box-shadow: none; }
+.container__37e49 {
+  border-radius: 0;
+  min-height: 44px;
+  height: auto;
+  padding: 4px;
+  gap: 4px;
+  flex-direction: column;
+  align-items: stretch;
+}
+.container__37e49 .accountPopoutButtonWrapper__37e49 {
+  flex: 0 0 auto;
+  min-width: 0;
+  margin: 0;
+  padding: 2px;
+  gap: 6px;
+  border-radius: 0;
+}
+/* Scale the existing SVG viewBox, including its status mask, as one unit. */
+.container__37e49 .avatar__37e49 {
+  width: 26px !important;
+  height: 26px !important;
+  flex: 0 0 26px;
+}
+.container__37e49 .avatar__37e49 > svg { width: 100%; height: 100%; }
+/* Account nameplate artwork is a separate, full-panel decorative sibling. */
+.container__37e49 > .container_df39b2,
+.container__37e49 .avatarDecorationContainer__44b0c { display: none; }
+.container__37e49 .nameTag__37e49 {
+  /* Native account container queries can hide this in a narrow panel. With
+   * controls on their own line there is now room for the name and status. */
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  font: 12px/16px var(--darkirc-font);
+}
+.container__37e49 :is(.panelTitleContainer__37e49, .panelSubtextContainer__37e49, .customStatus__37e49) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  font: inherit;
+}
+.container__37e49 .panelTitleContainer__37e49 .withDisplayNameStyles__37e49 { line-height: 16px; }
+.container__37e49 .panelSubtextContainer__37e49 {
+  color: var(--darkirc-muted);
+  font-size: 10px;
+  line-height: 14px;
+}
+.container__37e49 .buttons__37e49 {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+  margin: 0;
+  padding-top: 4px;
+  border-top: 1px solid var(--darkirc-border);
+}
+.container__37e49 .buttons__37e49 .button__67645 {
+  width: 100%;
+  height: 30px;
+  min-width: 0;
+  padding: 0;
+}
+.container__37e49 .buttons__37e49 .audioButtonParent__5e764 {
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: subgrid;
+  min-width: 0;
+}
+/* Five equal targets, while retaining native audio group state/hover hooks. */
+.container__37e49 .buttons__37e49 .buttonChevron__5e764 {
+  width: 100%;
+  min-width: 0;
+  height: 30px;
+  margin-inline-start: 0;
+  padding: 0;
+}
+.container__37e49 :is(.accountPopoutButtonWrapper__37e49, .button__67645):hover {
+  background-color: var(--darkirc-hover);
+}
+.container__37e49 :is(.accountPopoutButtonWrapper__37e49, .button__67645):active,
+.container__37e49 .buttons__37e49 [aria-pressed="true"] { background-color: var(--darkirc-active); }
+.container_e131a9 { border-radius: 0; padding: 6px; gap: 6px; }
+.container_e131a9 :is(button, [role="button"]) { min-width: 28px; min-height: 28px; }

@@ -1,0 +1,15 @@
+node_modules/
+artifacts/
+backups/
+references/
+vendor/
+.env*
+*.log
+*.bak
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+.DS_Store
+Thumbs.db

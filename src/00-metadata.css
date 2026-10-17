@@ -1,0 +1,15 @@
+/**
+ * @name DarkIRC
+ * @author DarkIRC contributors
+ * @version 1.0.5
+ * @description A compact blue-black IRC-style theme, based on Compact++ 1.9.3. Requires Discord Compact message display.
+ * @license BSD-2-Clause-Patent
+ */
+
+/* DarkIRC v1.0.5 — Copyright (c) 2026 DarkIRC contributors.
+ * Includes a modified Compact++ 1.9.3 by Grzesiek11.
+ * Compact++: Copyright (c) 2023-2026 Grzesiek11.
+ * Upstream: https://git.stary.pc.pl/Grzesiek11/compactpp
+ * Full BSD+Patent terms follow in this standalone distribution.
+ * Build: node scripts/build.cjs. Edit src/, not the generated theme.
+ */

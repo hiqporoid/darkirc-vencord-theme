@@ -1,0 +1,64 @@
+/* IRC nicklist only: keep the native row, profile target and context menu.
+ * Do not target DM rows, server icons, profile popouts or message media.
+ * Native list virtualization owns row/group heights and spacers. Retain the
+ * avatar's 32px vertical strut, but give it NO horizontal space or visible
+ * pixels. This preserves native 42px geometry without showing an avatar.
+ * CSS alone cannot safely turn Discord's virtualizer into a 20px list. */
+.members_c8ffbb .member__5d473 .childContainer__91a9d {
+  padding: 0 5px;
+  border-radius: 0;
+}
+.members_c8ffbb .member__5d473 .layout__91a9d {
+  width: 100%;
+  gap: 0;
+  border-radius: 0;
+}
+/* One neutral availability marker replaces the hidden avatar status, rather
+ * than duplicating it. Offline is distinguished by Discord's native class.
+ * No attempt to infer online/idle/DND from nickname/role colors. */
+.members_c8ffbb .member__5d473 .layout__91a9d::before {
+  content: "";
+  flex: 0 0 4px;
+  width: 4px;
+  height: 4px;
+  margin-inline-end: 6px;
+  border-radius: 50%;
+  background: var(--darkirc-muted);
+}
+.members_c8ffbb .member__5d473.offline__5d473 { opacity: .65; }
+.members_c8ffbb .member__5d473.offline__5d473:hover,
+.members_c8ffbb .member__5d473.offline__5d473:focus-within { opacity: 1; }
+.members_c8ffbb .offline__5d473 .layout__91a9d::before {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--darkirc-muted);
+}
+.members_c8ffbb .member__5d473 :is(.content__91a9d, .username__5d473, .name__5d473) {
+  min-width: 0;
+  font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
+}
+.members_c8ffbb .member__5d473 :is(.name__5d473, .name__703b9) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Compact text only; retain the name-containing wrapper and nameplate. */
+.members_c8ffbb .member__5d473 :is(
+  .roleIcon_c8ffbb, .roleIcon_ee71ee,
+  .icon__5d473, .clanTag__5d473, .botTag__5d473,
+  .roleDotLeft__703b9, .roleDotRight__703b9, .subText__91a9d
+) { display: none; }
+.members_c8ffbb .member__5d473 .avatar__91a9d {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  flex: 0 0 0;
+  margin-inline: 0;
+}
+.members_c8ffbb .member__5d473 :is([class^="avatarDecoration_"], [class*=" avatarDecoration_"]) { display: none; }
+/* Native nameplates reserve 32px on the right for their artwork. Reclaim it
+ * for the name; the decorative layer remains behind the native layout. */
+.members_c8ffbb .member__5d473 .childContainer__91a9d.nameplated__91a9d { padding-inline-end: 5px; }
+/* Group labels stay as text, including role and online/offline grouping. */
+.members_c8ffbb .membersGroup_c8ffbb :is(.roleIcon_c8ffbb, .membersGroupNitroWheel_c8ffbb) {
+  display: none;
+}

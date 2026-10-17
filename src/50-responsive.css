@@ -1,0 +1,54 @@
+@media (max-width: 1100px) {
+  :root {
+    --darkirc-channel-width: 180px;
+    --darkirc-member-width: 160px;
+    --darkirc-header-width: 22ch;
+  }
+}
+@media (max-width: 850px) {
+  :root {
+    --darkirc-channel-width: 160px;
+    --darkirc-member-width: 140px;
+    --darkirc-server-width: 48px;
+  }
+  .container__9293f { padding-inline: 6px; }
+}
+@media (max-width: 600px) {
+  :root {
+    --darkirc-channel-width: clamp(120px, 27vw, 150px);
+    --darkirc-member-width: clamp(100px, 23vw, 130px);
+    --darkirc-server-width: 44px;
+  }
+  .form_f75fb0 { padding-inline: 4px; }
+  /* Toolbar can scroll horizontally instead of removing its controls. */
+  .container__9293f :is([class^="toolbar_"], [class*=" toolbar_"]) {
+    overflow-x: auto;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+}
+
+/* Also handles narrow split/thread panes on a wide desktop. Group metadata
+ * becomes its own line, leaving the complete pane width for message content. */
+@container darkirc-chat (max-width: 420px) {
+  .compact_c19a55.wrapper_c19a55 {
+    --compactpp-header-width: 0px;
+    --compactpp-header-margin-right: 0px;
+    padding-block: 2px;
+  }
+  .compact_c19a55 .header_c19a55,
+  .zalgo_c19a55.gradient_c19a55.compact_c19a55 .header_c19a55,
+  .withDisplayNameStyles_c19a55.withDisplayNameStyles_c19a55.withDisplayNameStyles_c19a55 .header_c19a55 {
+    position: relative;
+    width: auto;
+    margin-inline: 8px 0;
+  }
+  .compact_c19a55 .headerText_c19a55 { flex: 0 1 auto; justify-content: flex-start; }
+  .compact_c19a55 > .container_b7e1cb { max-width: calc(100% - 8px); }
+  .compact_c19a55 .repliedMessage_c19a55 { margin-inline-start: 16px; }
+  /* Keep every composer action reachable when a thread/pane is narrow. */
+  .form_f75fb0 .inner__74017 { flex-wrap: wrap; }
+  .form_f75fb0 .textArea__74017 { flex: 1 1 8ch; }
+  .form_f75fb0 .buttons__74017 { margin-inline-start: auto; }
+  .compact_c19a55 .repliedMessage_c19a55 .username_c19a55 { max-width: 40%; }
+}

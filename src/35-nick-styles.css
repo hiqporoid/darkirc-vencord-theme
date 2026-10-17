@@ -1,0 +1,26 @@
+/* Flatten display-name cosmetics in the nicklist and message metadata only.
+ * Inline IrcColors / role colors remain on the real name nodes. In particular,
+ * do not apply these rules to messageContent, emoji, media or profile portals. */
+:is(.members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) :is(
+  .username_c19a55, .name__5d473, .name__703b9, .nameContainer__703b9,
+  .usernameGradient_e5de78
+) {
+  font-family: var(--darkirc-font) !important;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: normal;
+  letter-spacing: normal;
+  background: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  -webkit-text-stroke: 0 !important;
+  text-shadow: none !important;
+  filter: none !important;
+  animation: none !important;
+}
+:is(.members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) :is(.nameGlow__703b9, .usernameGlow_e5de78) {
+  display: none;
+}
+:is(.members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) .convenienceGlowGradient_e5de78::after {
+  content: none;
+}
+/* Hover/focus keep the same inline, role or fallback color as the resting name. */
