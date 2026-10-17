@@ -7,6 +7,8 @@
 .members_c8ffbb .member__5d473 .childContainer__91a9d {
   padding: 0 5px;
   border-radius: 0;
+  background: none !important;
+  box-shadow: none;
 }
 .members_c8ffbb .member__5d473 .layout__91a9d {
   width: 100%;
@@ -41,7 +43,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* Compact text only; retain the name-containing wrapper and nameplate. */
+/* Compact text only; retain the name-containing wrapper and native target. */
 .members_c8ffbb .member__5d473 :is(
   .roleIcon_c8ffbb, .roleIcon_ee71ee,
   .icon__5d473, .clanTag__5d473, .botTag__5d473,
@@ -55,8 +57,15 @@
   margin-inline: 0;
 }
 .members_c8ffbb .member__5d473 :is([class^="avatarDecoration_"], [class*=" avatarDecoration_"]) { display: none; }
-/* Native nameplates reserve 32px on the right for their artwork. Reclaim it
- * for the name; the decorative layer remains behind the native layout. */
+/* Elements verified container_df39b2 is an aria-hidden decorative sibling
+ * with an inline gradient/image. Hide that layer, never its name wrapper.
+ * Legacy artwork variants stay scoped to member rows, away from profiles. */
+.members_c8ffbb .member__5d473 :is(
+  .container_df39b2, .container__4bbc6, .profileEffects__0dd08,
+  .avatarDecorationContainer__44b0c,
+  [class^="nameplate_"], [class*=" nameplate_"]
+) { display: none; }
+/* Native nameplates reserve 32px on the right. Reclaim it for the name. */
 .members_c8ffbb .member__5d473 .childContainer__91a9d.nameplated__91a9d { padding-inline-end: 5px; }
 /* Group labels stay as text, including role and online/offline grouping. */
 .members_c8ffbb .membersGroup_c8ffbb :is(.roleIcon_c8ffbb, .membersGroupNitroWheel_c8ffbb) {

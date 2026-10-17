@@ -1,12 +1,12 @@
 /**
  * @name DarkIRC
  * @author DarkIRC contributors
- * @version 1.0.6
+ * @version 1.0.7
  * @description A compact blue-black IRC-style theme, based on Compact++ 1.9.3. Requires Discord Compact message display.
  * @license BSD-2-Clause-Patent
  */
 
-/* DarkIRC v1.0.6 — Copyright (c) 2026 DarkIRC contributors.
+/* DarkIRC v1.0.7 — Copyright (c) 2026 DarkIRC contributors.
  * Includes a modified Compact++ 1.9.3 by Grzesiek11.
  * Compact++: Copyright (c) 2023-2026 Grzesiek11.
  * Upstream: https://git.stary.pc.pl/Grzesiek11/compactpp
@@ -737,6 +737,14 @@ body {
   border-radius: 0;
 }
 .sidebarList__5e434 { border-inline-end: 1px solid var(--darkirc-border); }
+/* Desktop Elements: the inner nav paints background-base-lowest over the
+ * outer sidebar. Set the real surface rather than darkening global tokens. */
+.sidebarList__5e434 .container__2637a,
+.sidebarList__5e434 .scroller__629e4 {
+  background: var(--darkirc-panel);
+  box-shadow: none;
+}
+.sidebar__5e434::after { background: none; }
 .guilds__5e434 { border-inline-end: 1px solid var(--darkirc-border); }
 .chatContent_f75fb0 {
   background: var(--darkirc-bg);
@@ -758,11 +766,18 @@ body {
   font: 600 11px/16px var(--darkirc-font);
   letter-spacing: 0;
 }
-/* Preserve server badge masks and the native unread/voice indicators. */
+/* Keep native 32px targets, badge masks, folder geometry and unread pills.
+ * Image-backed guilds have no reliable short label on the clickable node;
+ * retain their recognizable art. Native acronyms remain text. */
 .guilds__5e434 .listItem__650eb { margin-block: 3px; }
-.guilds__5e434 .wrapper__6e9f8 { border-radius: 3px; }
+.guilds__5e434 .stack_dbd263 { gap: 4px !important; }
+.guilds__5e434 .wrapper__6e9f8 {
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--darkirc-border);
+}
 .guilds__5e434 .childWrapper__6e9f8 {
-  border-radius: 3px;
+  border-radius: 2px;
   background: var(--darkirc-header);
   font-size: 13px;
 }
@@ -772,6 +787,21 @@ body {
   color: var(--darkirc-accent);
 }
 .guilds__5e434 .childWrapperHoverScale__6e9f8 { scale: 1 !important; }
+.guilds__5e434 :is(.icon__6e9f8, .folderPreviewGuildIcon__48112) {
+  border-radius: 2px;
+  filter: saturate(.25);
+}
+.guilds__5e434 .wrapper__6e9f8:is(:hover, [aria-selected="true"]) .icon__6e9f8 {
+  filter: saturate(.65);
+}
+.guilds__5e434 .wrapper__6e9f8[aria-selected="true"] {
+  box-shadow: inset 0 0 0 1px var(--darkirc-accent);
+}
+.guilds__5e434 :is(.folderIcon__48112, .folderPreviewWrapper__48112) {
+  background: var(--darkirc-header);
+  border-radius: 2px;
+}
+.guilds__5e434 .folderIcon__48112 { color: var(--darkirc-muted); }
 
 .container__9293f {
   --__header-bar-background: var(--darkirc-header);
@@ -828,6 +858,14 @@ body {
   padding-block: 0;
 }
 .sidebarList__5e434 .wrapper__2ea32 { padding-block: 0; margin-block: 0; }
+.sidebarList__5e434 #channels [role="button"]:has(h3) {
+  color: var(--darkirc-muted);
+}
+.sidebarList__5e434 #channels [role="button"] h3 {
+  font: 500 11px/16px var(--darkirc-font);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
 .sidebarList__5e434 :is(.icon__2ea32, .iconContainer__2ea32) {
   width: 16px;
   height: 16px;
@@ -923,6 +961,8 @@ body {
  * No fixed panel height: connected voice controls must be able to expand. */
 .panels__5e434 { border-color: var(--darkirc-border); box-shadow: none; }
 .container__37e49 {
+  background: var(--darkirc-panel);
+  box-shadow: none;
   border-radius: 0;
   min-height: 44px;
   height: auto;
@@ -1017,6 +1057,8 @@ body {
 .members_c8ffbb .member__5d473 .childContainer__91a9d {
   padding: 0 5px;
   border-radius: 0;
+  background: none !important;
+  box-shadow: none;
 }
 .members_c8ffbb .member__5d473 .layout__91a9d {
   width: 100%;
@@ -1051,7 +1093,7 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* Compact text only; retain the name-containing wrapper and nameplate. */
+/* Compact text only; retain the name-containing wrapper and native target. */
 .members_c8ffbb .member__5d473 :is(
   .roleIcon_c8ffbb, .roleIcon_ee71ee,
   .icon__5d473, .clanTag__5d473, .botTag__5d473,
@@ -1065,8 +1107,15 @@ body {
   margin-inline: 0;
 }
 .members_c8ffbb .member__5d473 :is([class^="avatarDecoration_"], [class*=" avatarDecoration_"]) { display: none; }
-/* Native nameplates reserve 32px on the right for their artwork. Reclaim it
- * for the name; the decorative layer remains behind the native layout. */
+/* Elements verified container_df39b2 is an aria-hidden decorative sibling
+ * with an inline gradient/image. Hide that layer, never its name wrapper.
+ * Legacy artwork variants stay scoped to member rows, away from profiles. */
+.members_c8ffbb .member__5d473 :is(
+  .container_df39b2, .container__4bbc6, .profileEffects__0dd08,
+  .avatarDecorationContainer__44b0c,
+  [class^="nameplate_"], [class*=" nameplate_"]
+) { display: none; }
+/* Native nameplates reserve 32px on the right. Reclaim it for the name. */
 .members_c8ffbb .member__5d473 .childContainer__91a9d.nameplated__91a9d { padding-inline-end: 5px; }
 /* Group labels stay as text, including role and online/offline grouping. */
 .members_c8ffbb .membersGroup_c8ffbb :is(.roleIcon_c8ffbb, .membersGroupNitroWheel_c8ffbb) {
@@ -1285,6 +1334,16 @@ body {
 .channelTextArea__74017:focus-within,
 .channelTextArea__5126c:focus-within { border-color: var(--darkirc-accent); }
 .scrollableContainer__74017 { background: var(--darkirc-panel); border-radius: 0; }
+.form_f75fb0 .channelTextArea__74017 :is(.button__74017, .attachButtonInner__0923f) {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--darkirc-muted);
+}
+.form_f75fb0 .channelTextArea__74017 :is(.button__74017, .attachButtonInner__0923f):hover {
+  background: var(--darkirc-hover);
+  color: var(--darkirc-text);
+}
 .textArea__74017,
 .channelTextArea__5126c [role="textbox"] {
   font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
@@ -1326,10 +1385,10 @@ body {
 .compact_c19a55 .operations_bab751 { font: 12px/19px var(--darkirc-font); }
 
 /* ===== 35-nick-styles.css ===== */
-/* Flatten display-name cosmetics in the nicklist and message metadata only.
+/* Flatten display-name cosmetics in account, nicklist and message metadata only.
  * Inline IrcColors / role colors remain on the real name nodes. In particular,
  * do not apply these rules to messageContent, emoji, media or profile portals. */
-:is(.members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) :is(
+:is(.container__37e49, .members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) :is(
   .username_c19a55, .name__5d473, .name__703b9, .nameContainer__703b9,
   .usernameGradient_e5de78
 ) {
@@ -1345,10 +1404,10 @@ body {
   filter: none !important;
   animation: none !important;
 }
-:is(.members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) :is(.nameGlow__703b9, .usernameGlow_e5de78) {
+:is(.container__37e49, .members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) :is(.nameGlow__703b9, .usernameGlow_e5de78) {
   display: none;
 }
-:is(.members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) .convenienceGlowGradient_e5de78::after {
+:is(.container__37e49, .members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) .convenienceGlowGradient_e5de78::after {
   content: none;
 }
 /* Hover/focus keep the same inline, role or fallback color as the resting name. */

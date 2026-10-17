@@ -14,6 +14,14 @@ body {
   border-radius: 0;
 }
 .sidebarList__5e434 { border-inline-end: 1px solid var(--darkirc-border); }
+/* Desktop Elements: the inner nav paints background-base-lowest over the
+ * outer sidebar. Set the real surface rather than darkening global tokens. */
+.sidebarList__5e434 .container__2637a,
+.sidebarList__5e434 .scroller__629e4 {
+  background: var(--darkirc-panel);
+  box-shadow: none;
+}
+.sidebar__5e434::after { background: none; }
 .guilds__5e434 { border-inline-end: 1px solid var(--darkirc-border); }
 .chatContent_f75fb0 {
   background: var(--darkirc-bg);
@@ -35,11 +43,18 @@ body {
   font: 600 11px/16px var(--darkirc-font);
   letter-spacing: 0;
 }
-/* Preserve server badge masks and the native unread/voice indicators. */
+/* Keep native 32px targets, badge masks, folder geometry and unread pills.
+ * Image-backed guilds have no reliable short label on the clickable node;
+ * retain their recognizable art. Native acronyms remain text. */
 .guilds__5e434 .listItem__650eb { margin-block: 3px; }
-.guilds__5e434 .wrapper__6e9f8 { border-radius: 3px; }
+.guilds__5e434 .stack_dbd263 { gap: 4px !important; }
+.guilds__5e434 .wrapper__6e9f8 {
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--darkirc-border);
+}
 .guilds__5e434 .childWrapper__6e9f8 {
-  border-radius: 3px;
+  border-radius: 2px;
   background: var(--darkirc-header);
   font-size: 13px;
 }
@@ -49,6 +64,21 @@ body {
   color: var(--darkirc-accent);
 }
 .guilds__5e434 .childWrapperHoverScale__6e9f8 { scale: 1 !important; }
+.guilds__5e434 :is(.icon__6e9f8, .folderPreviewGuildIcon__48112) {
+  border-radius: 2px;
+  filter: saturate(.25);
+}
+.guilds__5e434 .wrapper__6e9f8:is(:hover, [aria-selected="true"]) .icon__6e9f8 {
+  filter: saturate(.65);
+}
+.guilds__5e434 .wrapper__6e9f8[aria-selected="true"] {
+  box-shadow: inset 0 0 0 1px var(--darkirc-accent);
+}
+.guilds__5e434 :is(.folderIcon__48112, .folderPreviewWrapper__48112) {
+  background: var(--darkirc-header);
+  border-radius: 2px;
+}
+.guilds__5e434 .folderIcon__48112 { color: var(--darkirc-muted); }
 
 .container__9293f {
   --__header-bar-background: var(--darkirc-header);
@@ -105,6 +135,14 @@ body {
   padding-block: 0;
 }
 .sidebarList__5e434 .wrapper__2ea32 { padding-block: 0; margin-block: 0; }
+.sidebarList__5e434 #channels [role="button"]:has(h3) {
+  color: var(--darkirc-muted);
+}
+.sidebarList__5e434 #channels [role="button"] h3 {
+  font: 500 11px/16px var(--darkirc-font);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
 .sidebarList__5e434 :is(.icon__2ea32, .iconContainer__2ea32) {
   width: 16px;
   height: 16px;
@@ -200,6 +238,8 @@ body {
  * No fixed panel height: connected voice controls must be able to expand. */
 .panels__5e434 { border-color: var(--darkirc-border); box-shadow: none; }
 .container__37e49 {
+  background: var(--darkirc-panel);
+  box-shadow: none;
   border-radius: 0;
   min-height: 44px;
   height: auto;

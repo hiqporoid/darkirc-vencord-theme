@@ -209,6 +209,16 @@
 .channelTextArea__74017:focus-within,
 .channelTextArea__5126c:focus-within { border-color: var(--darkirc-accent); }
 .scrollableContainer__74017 { background: var(--darkirc-panel); border-radius: 0; }
+.form_f75fb0 .channelTextArea__74017 :is(.button__74017, .attachButtonInner__0923f) {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--darkirc-muted);
+}
+.form_f75fb0 .channelTextArea__74017 :is(.button__74017, .attachButtonInner__0923f):hover {
+  background: var(--darkirc-hover);
+  color: var(--darkirc-text);
+}
 .textArea__74017,
 .channelTextArea__5126c [role="textbox"] {
   font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
