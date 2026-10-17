@@ -1,12 +1,12 @@
 /**
  * @name DarkIRC
  * @author DarkIRC contributors
- * @version 1.0.5
+ * @version 1.0.6
  * @description A compact blue-black IRC-style theme, based on Compact++ 1.9.3. Requires Discord Compact message display.
  * @license BSD-2-Clause-Patent
  */
 
-/* DarkIRC v1.0.5 — Copyright (c) 2026 DarkIRC contributors.
+/* DarkIRC v1.0.6 — Copyright (c) 2026 DarkIRC contributors.
  * Includes a modified Compact++ 1.9.3 by Grzesiek11.
  * Compact++: Copyright (c) 2023-2026 Grzesiek11.
  * Upstream: https://git.stary.pc.pl/Grzesiek11/compactpp
@@ -855,12 +855,20 @@ body {
 
 /* Sidebar participants only. This is the native expanded list, not the
  * collapsed avatar grid or a call/video surface. Preserve the clickable row. */
-.sidebarList__5e434 .listDefault__07f91 { padding-inline: 4px; }
+.sidebarList__5e434 .listDefault__07f91 {
+  /* The old 4px shorthand erased list_c3cd7d's native channel indent.
+   * Reserve real layout space, rather than shifting painted rows. */
+  box-sizing: border-box;
+  min-width: 0;
+  padding-inline: 28px 4px;
+}
 .sidebarList__5e434 .listDefault__07f91 :is(.draggable__55bab, .voiceUser__07f91) {
+  min-width: 0;
   min-height: 22px;
   height: auto;
 }
 .sidebarList__5e434 .listDefault__07f91 .content__07f91 {
+  min-width: 0;
   min-height: 22px;
   height: auto;
   padding: 1px 4px;
@@ -871,8 +879,27 @@ body {
 .sidebarList__5e434 .listDefault__07f91 :is(.avatarContainer__07f91, .avatar__07f91) { display: none; }
 .sidebarList__5e434 .listDefault__07f91 .username__07f91 {
   min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font: 12.5px/20px var(--darkirc-font);
 }
+/* Current display-name wrapper must yield space to mute/deafen icons. */
+.sidebarList__5e434 .listDefault__07f91 .content__07f91 > .container__394db {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.sidebarList__5e434 .listDefault__07f91 .usernameContainer__394db { min-width: 0; }
+/* Server tags are optional cosmetics, never voice controls. Prefix variants
+ * cover the shared tag component without targeting its profile/message uses. */
+.sidebarList__5e434 .listDefault__07f91 .voiceUser__07f91 :is(
+  [class^="clanTag_"], [class*=" clanTag_"],
+  [class^="guildTag_"], [class*=" guildTag_"],
+  .chipletContainerInner__10651,
+  .avatarDecorationContainer__44b0c,
+  [class^="avatarDecoration_"], [class*=" avatarDecoration_"]
+) { display: none; }
 /* The native speaking name class remains; replace its hidden avatar ring
  * with a fixed-width dot so speaking never shifts the nick or state icons. */
 .sidebarList__5e434 .listDefault__07f91 .content__07f91::before {
@@ -884,7 +911,7 @@ body {
   background: var(--darkirc-muted);
 }
 .sidebarList__5e434 .listDefault__07f91 .content__07f91:has(.usernameSpeaking__07f91)::before { background: var(--status-positive, #91e0b0); }
-.sidebarList__5e434 .listDefault__07f91 :is(.icons__07f91, .iconGroup__07f91) { gap: 2px; }
+.sidebarList__5e434 .listDefault__07f91 :is(.icons__07f91, .iconGroup__07f91) { gap: 2px; flex-shrink: 0; }
 .sidebarList__5e434 .listDefault__07f91 .icon__07f91 { width: 14px; height: 14px; }
 .sidebarList__5e434 .listDefault__07f91 .iconPriortySpeaker__07f91 { position: static; }
 .sidebarList__5e434 .listDefault__07f91 .voiceUser__07f91:focus-within .content__07f91 {

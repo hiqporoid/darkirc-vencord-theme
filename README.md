@@ -1,10 +1,10 @@
 # DarkIRC
 
-DarkIRC 1.0.5 is an unofficial IRC-style Discord theme for Vencord, with a blue-black palette, monospace text, aligned timestamp/nickname columns and compact controls. It builds on [Compact++](https://git.stary.pc.pl/Grzesiek11/compactpp) by Grzesiek11.
+DarkIRC 1.0.6 is an unofficial IRC-style Discord theme for Vencord, with a blue-black palette, monospace text, aligned timestamp/nickname columns and compact controls. It builds on [Compact++](https://git.stary.pc.pl/Grzesiek11/compactpp) by Grzesiek11.
 
 - Consistent message columns, visible timestamps and restrained hover/selection colors.
 - Long names stay truncated on hover and keyboard focus. Open the native user profile to read the full name.
-- An avatar-free member list, compact voice participants and a two-row account panel.
+- An avatar-free member list, indented 22 px voice participants without avatars or server tags and a two-row account panel.
 - Role colors and optional IrcColors colors are preserved; display-name glow and decorative typography are simplified.
 - One standalone CSS file, without remote imports, images or downloaded fonts.
 
