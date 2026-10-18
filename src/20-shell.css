@@ -204,11 +204,15 @@ body {
 .sidebarList__5e434 .link__2ea32,
 .sidebarList__5e434 .linkTop__2ea32 { min-width: 0; }
 .sidebarList__5e434 .name__2ea32 {
+  font: 400 12.5px/19px var(--darkirc-font);
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* Current Desktop wraps the name in a separately sized text-md span.
+ * Inherit the channel metrics instead of letting that span restore 16/20px. */
+.sidebarList__5e434 .name__2ea32 > [data-text-variant] { font: inherit; }
 .sidebarList__5e434 #channels [role="button"]:has(h3) {
   color: var(--darkirc-muted);
 }
@@ -226,11 +230,6 @@ body {
   color: var(--darkirc-accent);
   background: var(--darkirc-active);
   box-shadow: inset 2px 0 var(--darkirc-accent);
-}
-.sidebarList__5e434 :is(.link__2ea32, a[href^="/channels/"]) :is([class^="name_"], [class*=" name_"]) {
-  font-size: 12.5px;
-  font-weight: 400;
-  line-height: 19px;
 }
 .sidebarList__5e434 .wrapper__2ea32:is(.modeSelected__2ea32, .modeUnreadImportant__2ea32) .name__2ea32 { font-weight: 600; }
 .sidebarList__5e434 .channel__972a0 { border-radius: 0; margin-block: 1px; }

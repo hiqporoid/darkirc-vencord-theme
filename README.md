@@ -1,19 +1,21 @@
 # DarkIRC
 
-DarkIRC 1.0.9 is an unofficial IRC-style Discord theme for Vencord, with a blue-black palette, monospace text, aligned timestamp/nickname columns and compact controls. It builds on [Compact++](https://git.stary.pc.pl/Grzesiek11/compactpp) by Grzesiek11.
+DarkIRC 1.0.10 is an unofficial IRC-style Discord theme for Vencord, with a blue-black palette, monospace text, aligned timestamp/nickname columns and compact controls. It builds on [Compact++](https://git.stary.pc.pl/Grzesiek11/compactpp) by Grzesiek11.
 
 - Flat blue-black panels, 1 px dividers, consistent message columns and restrained hover/selection colors.
 - Regular 14 px message text with 20 px lines, a 22ch metadata column and left-aligned nicknames after 12 px timestamps. Controls and member text keep their previous sizes.
 - A 40 px server rail with recognizable 28 px square icons, restrained saturation, visible selection/focus, native unread markers and 36 px folder controls.
+- Restrained 12.5/19 px channel names, including native nested text wrappers; selected/unread names use weight 600, ordinary names 400. Channel icons stay 16 px and rows 28 px.
+- Compact reactions: 18 px emoji, 12/18 px counters, 26 px borders with a 24 px inner click target. Native own-reaction colors, hover, wrapping, tooltips and controls remain.
 - A single-line 13 px server heading with less nested padding; the native 32 px server-menu and invite targets remain. Long names truncate inside the channel pane.
 - Long names stay truncated on hover and keyboard focus. Open the native user profile to read the full name.
 - An avatar-free member list, indented 22 px voice participants without avatars or server tags and a two-row account panel.
 - Role colors and optional IrcColors colors are preserved; member nameplates, profile effects and decorative name glow are removed from the list.
 - One standalone CSS file, without remote imports, images or downloaded fonts.
 
-![DarkIRC 1.0.9 synthetic desktop preview](assets/darkirc-preview.png)
+![DarkIRC 1.0.10 synthetic desktop preview](assets/darkirc-preview.png)
 
-*Synthetic preview with fictional servers, people and messages, rendered with the released CSS. Fictional image-backed server icons illustrate the new proportions; native acronyms also remain supported. This is not a Discord screenshot.*
+*Synthetic preview with fictional servers, people and messages, rendered with the released CSS. Fictional reactions and image-backed server icons illustrate the proportions; native acronyms also remain supported. This is not a Discord screenshot.*
 
 ## Install
 
