@@ -21,7 +21,8 @@
   --darkirc-column-gap: 7px;
   --darkirc-channel-width: 200px;
   --darkirc-member-width: 180px;
-  --darkirc-server-width: 56px;
+  --darkirc-server-width: 40px;
+  --darkirc-server-icon-size: 28px;
 }
 
 /* Also applies in portals, settings, light-mode roots and profile theme scopes.
@@ -257,8 +258,8 @@
 /* These dimensions inherit through the application, including thread panes. */
 :root:root,
 :root :is(.theme-dark, .theme-light, .theme-darker, .theme-midnight) {
-  --guildbar-avatar-size: 32px;
-  --guildbar-folder-size: 40px;
+  --guildbar-avatar-size: var(--darkirc-server-icon-size);
+  --guildbar-folder-size: 36px;
   --custom-guild-list-width: var(--darkirc-server-width);
   --custom-guild-sidebar-width: calc(var(--darkirc-channel-width) + var(--darkirc-server-width) + 1px);
   --custom-member-list-width: var(--darkirc-member-width);

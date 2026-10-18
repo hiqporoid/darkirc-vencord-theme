@@ -1,18 +1,19 @@
 # DarkIRC
 
-DarkIRC 1.0.8 is an unofficial IRC-style Discord theme for Vencord, with a blue-black palette, monospace text, aligned timestamp/nickname columns and compact controls. It builds on [Compact++](https://git.stary.pc.pl/Grzesiek11/compactpp) by Grzesiek11.
+DarkIRC 1.0.9 is an unofficial IRC-style Discord theme for Vencord, with a blue-black palette, monospace text, aligned timestamp/nickname columns and compact controls. It builds on [Compact++](https://git.stary.pc.pl/Grzesiek11/compactpp) by Grzesiek11.
 
 - Flat blue-black panels, 1 px dividers, consistent message columns and restrained hover/selection colors.
 - Regular 14 px message text with 20 px lines, a 22ch metadata column and left-aligned nicknames after 12 px timestamps. Controls and member text keep their previous sizes.
-- Muted square server icons; native text acronyms, unread markers and folder controls remain.
+- A 40 px server rail with recognizable 28 px square icons, restrained saturation, visible selection/focus, native unread markers and 36 px folder controls.
+- A single-line 13 px server heading with less nested padding; the native 32 px server-menu and invite targets remain. Long names truncate inside the channel pane.
 - Long names stay truncated on hover and keyboard focus. Open the native user profile to read the full name.
 - An avatar-free member list, indented 22 px voice participants without avatars or server tags and a two-row account panel.
 - Role colors and optional IrcColors colors are preserved; member nameplates, profile effects and decorative name glow are removed from the list.
 - One standalone CSS file, without remote imports, images or downloaded fonts.
 
-![DarkIRC 1.0.8 synthetic desktop preview](assets/darkirc-preview.png)
+![DarkIRC 1.0.9 synthetic desktop preview](assets/darkirc-preview.png)
 
-*Synthetic preview with fictional servers, people and messages, rendered with the released CSS. Native server acronyms are illustrated; image-backed servers retain muted icons. This is not a Discord screenshot.*
+*Synthetic preview with fictional servers, people and messages, rendered with the released CSS. Fictional image-backed server icons illustrate the new proportions; native acronyms also remain supported. This is not a Discord screenshot.*
 
 ## Install
 
@@ -33,9 +34,9 @@ To remove, disable DarkIRC under Local Themes and delete its CSS file from the f
 ## Known limitations
 
 - The right member list retains Discord's native **42 px rows** in the tested desktop layout. Discord's JavaScript virtualizer controls row offsets, spacer sizes and member loading. CSS-only row shrinking cannot keep those calculations synchronized, so DarkIRC preserves their geometry. Client updates or density settings may change native dimensions.
-- Image-backed servers cannot reliably become short text labels using CSS: their name is in a separate accessibility node. Their 32 px icons keep native targets, badge masks and recognizable art.
+- Image-backed servers cannot reliably become short text labels using CSS: their name is in a separate accessibility node. Their 28 px icons retain recognizable art. The inspected desktop client uses nested 40 px SVG coordinate spaces: DarkIRC scales the complete icon assembly once and keeps notification badge text at native size. Other client variants may need adjustment.
 - Discord controls its title bar, dynamic activity sections, toolbar actions and media; these can differ from the synthetic preview. The account panel keeps its native avatar and two rows of actions.
-- Full names use Discord's native profile controls. No custom tooltip or script is injected. Native click and keyboard targets remain intact.
+- Full member names use Discord's native profile controls. Server names remain in the native server-menu accessibility label and app title; very long names still use ellipsis, especially in narrow windows. No custom tooltip or script is injected. Native click and keyboard targets remain intact.
 - Discord changes internal CSS classes frequently. Updates, experiments, unusual badge/name structures and third-party plugin combinations may need fixes. Very narrow chat panes stack metadata above message content.
 - The 7 px member marker is neutral gray for unknown presence and hollow gray for Discord's native offline rows. The inspected client uses dynamic SVG masks and localized avatar labels, so precise online/idle/DND colors are unavailable. Markers never infer status from nickname or role colors. Role colors, IrcColors colors and offline dimming can affect contrast.
 - The native 40 px conversation spacer and zero composer top margin remain. Reducing the visible gap needs more live typing and scroll anchoring evidence.

@@ -22,7 +22,12 @@ body {
   box-shadow: none;
 }
 .sidebar__5e434::after { background: none; }
-.guilds__5e434 { border-inline-end: 1px solid var(--darkirc-border); }
+.guilds__5e434 {
+  /* Keep folder backgrounds centered without changing account/RTC padding. */
+  --custom-guild-list-padding: calc((var(--darkirc-server-width) - var(--guildbar-avatar-size)) / 2);
+  box-sizing: border-box;
+  border-inline-end: 1px solid var(--darkirc-border);
+}
 .chatContent_f75fb0 {
   background: var(--darkirc-bg);
   min-width: 0;
@@ -43,11 +48,26 @@ body {
   font: 600 11px/16px var(--darkirc-font);
   letter-spacing: 0;
 }
-/* Keep native 32px targets, badge masks, folder geometry and unread pills.
+/* Use Discord's size tokens for targets, badge masks and folder geometry.
  * Image-backed guilds have no reliable short label on the clickable node;
  * retain their recognizable art. Native acronyms remain text. */
 .guilds__5e434 .listItem__650eb { margin-block: 3px; }
 .guilds__5e434 .stack_dbd263 { gap: 4px !important; }
+/* Desktop React fixes both nested badge SVGs to a 40px coordinate space,
+ * independently of the avatar token. Scale their outer layout as one unit;
+ * shrinking only the image leaves a 40px target and off-center artwork.
+ * Do not scale nested wrappers twice. Keep badge text at its native size. */
+.guilds__5e434 .wrapper_cc5dd2:not(.wrapper_cc5dd2 .wrapper_cc5dd2) {
+  --guildbar-avatar-size: 40px;
+  zoom: calc(var(--darkirc-server-icon-size) / 40px);
+}
+.guilds__5e434 .wrapper_cc5dd2 :is(.upperBadge_cc5dd2, .lowerBadge_cc5dd2) {
+  zoom: calc(40px / var(--darkirc-server-icon-size));
+}
+.guilds__5e434 .wrapper_cc5dd2 .childWrapper__6e9f8 {
+  font-size: calc(13px * 40px / var(--darkirc-server-icon-size));
+}
+.guilds__5e434 .item__58105.selected__58105 { height: var(--darkirc-server-icon-size); }
 .guilds__5e434 .wrapper__6e9f8 {
   border-radius: 2px;
   overflow: hidden;
@@ -75,6 +95,14 @@ body {
 .guilds__5e434 .wrapper__6e9f8:is(.selected__6e9f8, [aria-selected="true"]) {
   box-shadow: inset 0 0 0 1px var(--darkirc-accent);
 }
+.guilds__5e434 :is(.wrapper__6e9f8, .folderButton__48112):focus-visible {
+  outline: 2px solid var(--darkirc-accent);
+  outline-offset: -2px;
+}
+.guilds__5e434 .wrapper_cc5dd2 .wrapper__6e9f8:focus-visible {
+  outline-width: calc(2px * 40px / var(--darkirc-server-icon-size)) !important;
+  outline-offset: calc(-2px * 40px / var(--darkirc-server-icon-size));
+}
 .guilds__5e434 :is(.folderIcon__48112, .folderPreviewWrapper__48112) {
   background: var(--darkirc-header);
   border-radius: 2px;
@@ -101,6 +129,41 @@ body {
   border-radius: 0;
 }
 .sidebarList__5e434 header { min-height: 38px; height: auto; padding: 8px; }
+/* Elements-observed native flex chain. Recover nested padding and 16px
+ * heading space; keep the 32px menu/invite targets and native full-name label.
+ * Ellipsis is confined to the name, including when a guild badge is present. */
+.sidebarList__5e434 .header_f37cb1 {
+  padding: 2px 4px;
+  padding-inline-start: 4px;
+}
+.sidebarList__5e434 .headerContent_f37cb1 {
+  min-width: 0;
+  gap: 4px;
+}
+.sidebarList__5e434 .guildDropdown_f37cb1 {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-inline: 2px;
+  border-radius: 2px;
+}
+.sidebarList__5e434 .guildBadgeAndName_f37cb1 { min-width: 0; gap: 4px; }
+.sidebarList__5e434 .name_f37cb1 {
+  min-width: 0;
+  margin: 0 auto 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: 600 13px/19px var(--darkirc-font);
+}
+.sidebarList__5e434 .headerChildren_f37cb1,
+.sidebarList__5e434 .guildBadgeAndName_f37cb1 > :not(.name_f37cb1) { flex-shrink: 0; }
+.sidebarList__5e434 :is(.guildDropdown_f37cb1, .inviteButton_f37cb1, .addActionButton_f37cb1):hover {
+  background: var(--darkirc-hover);
+}
+.sidebarList__5e434 :is(.guildDropdown_f37cb1, .inviteButton_f37cb1, .addActionButton_f37cb1):focus-visible {
+  outline: 2px solid var(--darkirc-accent);
+  outline-offset: -2px;
+}
 .sidebarList__5e434 [role="listitem"] { border-radius: 0; }
 .sidebarList__5e434 :is(.link__2ea32, a[href^="/channels/"]) {
   box-sizing: border-box;

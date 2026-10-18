@@ -8,7 +8,6 @@
   :root {
     --darkirc-channel-width: 160px;
     --darkirc-member-width: 140px;
-    --darkirc-server-width: 48px;
   }
   .container__9293f { padding-inline: 6px; }
 }
@@ -16,7 +15,6 @@
   :root {
     --darkirc-channel-width: clamp(120px, 27vw, 150px);
     --darkirc-member-width: clamp(100px, 23vw, 130px);
-    --darkirc-server-width: 44px;
   }
   .form_f75fb0 { padding-inline: 4px; }
   /* Toolbar can scroll horizontally instead of removing its controls. */
