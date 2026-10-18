@@ -13,9 +13,11 @@
   --darkirc-font: Consolas, "Cascadia Mono", "Cascadia Code", "Liberation Mono", monospace;
   --darkirc-font-size: 13px;
   --darkirc-line-height: 19px;
+  --darkirc-message-font-size: 14px;
+  --darkirc-message-line-height: 20px;
   --darkirc-time-width: 8ch;
-  /* Timestamp + roughly 15 nick characters (including IRC brackets). */
-  --darkirc-header-width: 23ch;
+  /* Message-font ch units; timestamp keeps its own 12px metrics. */
+  --darkirc-header-width: 22ch;
   --darkirc-column-gap: 7px;
   --darkirc-channel-width: 200px;
   --darkirc-member-width: 180px;

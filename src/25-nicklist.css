@@ -15,14 +15,14 @@
   gap: 0;
   border-radius: 0;
 }
-/* One neutral availability marker replaces the hidden avatar status, rather
- * than duplicating it. Offline is distinguished by Discord's native class.
- * No attempt to infer online/idle/DND from nickname/role colors. */
+/* Desktop Elements: status SVGs use dynamic masks and localized avatar labels,
+ * not stable presence classes. Keep unknown presence neutral; only the native
+ * offline class is reliable here. Never infer status from name/role colors. */
 .members_c8ffbb .member__5d473 .layout__91a9d::before {
   content: "";
-  flex: 0 0 4px;
-  width: 4px;
-  height: 4px;
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
   margin-inline-end: 6px;
   border-radius: 50%;
   background: var(--darkirc-muted);

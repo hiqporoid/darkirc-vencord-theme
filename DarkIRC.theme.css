@@ -1,12 +1,12 @@
 /**
  * @name DarkIRC
  * @author DarkIRC contributors
- * @version 1.0.7
+ * @version 1.0.8
  * @description A compact blue-black IRC-style theme, based on Compact++ 1.9.3. Requires Discord Compact message display.
  * @license BSD-2-Clause-Patent
  */
 
-/* DarkIRC v1.0.7 — Copyright (c) 2026 DarkIRC contributors.
+/* DarkIRC v1.0.8 — Copyright (c) 2026 DarkIRC contributors.
  * Includes a modified Compact++ 1.9.3 by Grzesiek11.
  * Compact++: Copyright (c) 2023-2026 Grzesiek11.
  * Upstream: https://git.stary.pc.pl/Grzesiek11/compactpp
@@ -458,9 +458,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   --darkirc-font: Consolas, "Cascadia Mono", "Cascadia Code", "Liberation Mono", monospace;
   --darkirc-font-size: 13px;
   --darkirc-line-height: 19px;
+  --darkirc-message-font-size: 14px;
+  --darkirc-message-line-height: 20px;
   --darkirc-time-width: 8ch;
-  /* Timestamp + roughly 15 nick characters (including IRC brackets). */
-  --darkirc-header-width: 23ch;
+  /* Message-font ch units; timestamp keeps its own 12px metrics. */
+  --darkirc-header-width: 22ch;
   --darkirc-column-gap: 7px;
   --darkirc-channel-width: 200px;
   --darkirc-member-width: 180px;
@@ -782,6 +784,7 @@ body {
   font-size: 13px;
 }
 .guilds__5e434 .wrapper__6e9f8:hover .childWrapper__6e9f8,
+.guilds__5e434 .wrapper__6e9f8:focus-visible .childWrapper__6e9f8,
 .guilds__5e434 .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
   background: var(--darkirc-active);
   color: var(--darkirc-accent);
@@ -791,10 +794,10 @@ body {
   border-radius: 2px;
   filter: saturate(.25);
 }
-.guilds__5e434 .wrapper__6e9f8:is(:hover, [aria-selected="true"]) .icon__6e9f8 {
+.guilds__5e434 .wrapper__6e9f8:is(:hover, :focus-visible, .selected__6e9f8, [aria-selected="true"]) .icon__6e9f8 {
   filter: saturate(.65);
 }
-.guilds__5e434 .wrapper__6e9f8[aria-selected="true"] {
+.guilds__5e434 .wrapper__6e9f8:is(.selected__6e9f8, [aria-selected="true"]) {
   box-shadow: inset 0 0 0 1px var(--darkirc-accent);
 }
 .guilds__5e434 :is(.folderIcon__48112, .folderPreviewWrapper__48112) {
@@ -858,6 +861,16 @@ body {
   padding-block: 0;
 }
 .sidebarList__5e434 .wrapper__2ea32 { padding-block: 0; margin-block: 0; }
+/* Shrink only text-bearing flex items. Native tooltips, unread badges and
+ * trailing actions keep their targets; names never expand on hover. */
+.sidebarList__5e434 .link__2ea32,
+.sidebarList__5e434 .linkTop__2ea32 { min-width: 0; }
+.sidebarList__5e434 .name__2ea32 {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .sidebarList__5e434 #channels [role="button"]:has(h3) {
   color: var(--darkirc-muted);
 }
@@ -1065,14 +1078,14 @@ body {
   gap: 0;
   border-radius: 0;
 }
-/* One neutral availability marker replaces the hidden avatar status, rather
- * than duplicating it. Offline is distinguished by Discord's native class.
- * No attempt to infer online/idle/DND from nickname/role colors. */
+/* Desktop Elements: status SVGs use dynamic masks and localized avatar labels,
+ * not stable presence classes. Keep unknown presence neutral; only the native
+ * offline class is reliable here. Never infer status from name/role colors. */
 .members_c8ffbb .member__5d473 .layout__91a9d::before {
   content: "";
-  flex: 0 0 4px;
-  width: 4px;
-  height: 4px;
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
   margin-inline-end: 6px;
   border-radius: 50%;
   background: var(--darkirc-muted);
@@ -1126,8 +1139,9 @@ body {
 /* Compact++ supplies the core positioning; these rules refine its IRC layout.
  * Scope geometry to Compact. Cozy remains usable with the same palette. */
 .compact_c19a55.wrapper_c19a55 {
-  font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
-  min-height: var(--darkirc-line-height);
+  --chat-markup-line-height: var(--darkirc-message-line-height);
+  font: 400 var(--darkirc-message-font-size)/var(--darkirc-message-line-height) var(--darkirc-font);
+  min-height: var(--darkirc-message-line-height);
   padding-block: 0;
   padding-inline-start: 0;
   margin-block: 0;
@@ -1137,23 +1151,25 @@ body {
 }
 .compact_c19a55.wrapper_c19a55.groupStart__5126c { margin-top: 2px; }
 .compact_c19a55 .markup__75297 {
-  font-size: var(--darkirc-font-size);
-  line-height: var(--darkirc-line-height);
+  font-size: var(--darkirc-message-font-size);
+  line-height: var(--darkirc-message-line-height);
+  font-weight: 400;
 }
 .compact_c19a55 .contents_c19a55 { margin-inline-start: 0; padding-inline-start: 0; }
 .compact_c19a55 .header_c19a55 {
-  min-height: var(--darkirc-line-height);
+  min-height: var(--darkirc-message-line-height);
   gap: 0;
-  line-height: var(--darkirc-line-height);
-  font-size: var(--darkirc-font-size);
+  line-height: var(--darkirc-message-line-height);
+  font-size: var(--darkirc-message-font-size);
   font-weight: 400;
   text-indent: 0;
 }
 .compact_c19a55 .header_c19a55 > .timestamp_c19a55 {
-  flex: 0 0 var(--darkirc-time-width);
-  width: var(--darkirc-time-width);
+  flex: 0 0 auto;
+  width: max-content;
+  min-width: var(--darkirc-time-width);
   height: auto;
-  font: 12px/var(--darkirc-line-height) var(--darkirc-font);
+  font: 12px/var(--darkirc-message-line-height) var(--darkirc-font);
   font-variant-numeric: tabular-nums;
   color: var(--darkirc-muted);
   opacity: 1;
@@ -1172,19 +1188,19 @@ body {
   z-index: auto;
   font-style: normal;
 }
-.compact_c19a55 .header_c19a55 > .timestamp_c19a55:is(.latin12CompactTimeStamp_c19a55, .asianCompactTimeStamp_c19a55) {
-  --darkirc-time-width: 11ch;
-}
+/* The live Finnish 24-hour clock also carries latin12CompactTimeStamp.
+ * Measure native clock content instead of treating that class as a 12-hour
+ * signal. The 8ch minimum aligns ordinary clocks; wider locales can grow. */
 .compact_c19a55 .headerText_c19a55 {
   flex: 1 1 0;
-  justify-content: flex-end;
+  justify-content: flex-start;
   min-width: 0;
   overflow: hidden;
   gap: 0;
   margin-inline: 4px 0;
 }
 .compact_c19a55 .headerText_c19a55 .username_c19a55 {
-  font: 600 var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
+  font: 600 var(--darkirc-message-font-size)/var(--darkirc-message-line-height) var(--darkirc-font);
   min-width: 0;
   max-width: 100%;
   isolation: isolate;
@@ -1218,7 +1234,7 @@ body {
 .compact_c19a55 .headerText_c19a55 :is(.roleIcon_c19a55, .roleIcon_ee71ee, .roleDot_c19a55, .roleDotLeft__703b9, .roleDotRight__703b9, .newMemberBadge_f80704, .clanTagChiplet_c19a55, .profileEffects__0dd08) {
   display: none;
 }
-.compact_c19a55 .headerText_c19a55 :is(.botTag_c19a55, .clanTagChiplet_c19a55) {
+.compact_c19a55 .headerText_c19a55 .botTag_c19a55 {
   flex-shrink: 0;
   font-size: 10px;
   line-height: 14px;
@@ -1232,10 +1248,16 @@ body {
   text-align: start;
 }
 .compact_c19a55 > .container_b7e1cb { min-width: 0; max-width: calc(100% - var(--compactpp-header-width) - 30px); }
+/* Reactions and attachments retain the previous inherited metrics. Their
+ * native emoji sizing must not follow the larger message body. */
+.compact_c19a55 > .container_b7e1cb {
+  --chat-markup-line-height: var(--darkirc-line-height);
+  font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
+}
 .compact_c19a55 .repliedMessage_c19a55 {
   color: var(--darkirc-muted);
-  /* ch-based column tokens must resolve at the same 13px font as messages. */
-  font: var(--darkirc-font-size)/18px var(--darkirc-font);
+  /* Resolve ch-based columns at the same font size as message text. */
+  font: 400 var(--darkirc-message-font-size)/18px var(--darkirc-font);
   min-height: 18px;
   min-width: 0;
   /* Align references with message text, without Compact's extra reply indent. */
@@ -1247,7 +1269,7 @@ body {
   opacity: 1;
   flex: 0 1 auto;
   min-width: 0;
-  max-width: 23ch;
+  max-width: var(--darkirc-header-width);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1266,7 +1288,7 @@ body {
   color: var(--darkirc-muted);
 }
 /* One line of room for attachment-only messages and system/event notices. */
-.compact_c19a55 .contents_c19a55 { min-height: var(--darkirc-line-height); }
+.compact_c19a55 .contents_c19a55 { min-height: var(--darkirc-message-line-height); }
 .compact_c19a55.isSystemMessage_c19a55 { min-height: 22px; }
 .compact_c19a55 .messageContent_c19a55 :is(pre, blockquote) { max-width: 100%; }
 .markup__75297 pre {
@@ -1545,7 +1567,6 @@ button, input, textarea, select { border-radius: 0; }
   :root {
     --darkirc-channel-width: 180px;
     --darkirc-member-width: 160px;
-    --darkirc-header-width: 22ch;
   }
 }
 @media (max-width: 850px) {

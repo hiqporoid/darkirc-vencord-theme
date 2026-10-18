@@ -1,8 +1,9 @@
 /* Compact++ supplies the core positioning; these rules refine its IRC layout.
  * Scope geometry to Compact. Cozy remains usable with the same palette. */
 .compact_c19a55.wrapper_c19a55 {
-  font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
-  min-height: var(--darkirc-line-height);
+  --chat-markup-line-height: var(--darkirc-message-line-height);
+  font: 400 var(--darkirc-message-font-size)/var(--darkirc-message-line-height) var(--darkirc-font);
+  min-height: var(--darkirc-message-line-height);
   padding-block: 0;
   padding-inline-start: 0;
   margin-block: 0;
@@ -12,23 +13,25 @@
 }
 .compact_c19a55.wrapper_c19a55.groupStart__5126c { margin-top: 2px; }
 .compact_c19a55 .markup__75297 {
-  font-size: var(--darkirc-font-size);
-  line-height: var(--darkirc-line-height);
+  font-size: var(--darkirc-message-font-size);
+  line-height: var(--darkirc-message-line-height);
+  font-weight: 400;
 }
 .compact_c19a55 .contents_c19a55 { margin-inline-start: 0; padding-inline-start: 0; }
 .compact_c19a55 .header_c19a55 {
-  min-height: var(--darkirc-line-height);
+  min-height: var(--darkirc-message-line-height);
   gap: 0;
-  line-height: var(--darkirc-line-height);
-  font-size: var(--darkirc-font-size);
+  line-height: var(--darkirc-message-line-height);
+  font-size: var(--darkirc-message-font-size);
   font-weight: 400;
   text-indent: 0;
 }
 .compact_c19a55 .header_c19a55 > .timestamp_c19a55 {
-  flex: 0 0 var(--darkirc-time-width);
-  width: var(--darkirc-time-width);
+  flex: 0 0 auto;
+  width: max-content;
+  min-width: var(--darkirc-time-width);
   height: auto;
-  font: 12px/var(--darkirc-line-height) var(--darkirc-font);
+  font: 12px/var(--darkirc-message-line-height) var(--darkirc-font);
   font-variant-numeric: tabular-nums;
   color: var(--darkirc-muted);
   opacity: 1;
@@ -47,19 +50,19 @@
   z-index: auto;
   font-style: normal;
 }
-.compact_c19a55 .header_c19a55 > .timestamp_c19a55:is(.latin12CompactTimeStamp_c19a55, .asianCompactTimeStamp_c19a55) {
-  --darkirc-time-width: 11ch;
-}
+/* The live Finnish 24-hour clock also carries latin12CompactTimeStamp.
+ * Measure native clock content instead of treating that class as a 12-hour
+ * signal. The 8ch minimum aligns ordinary clocks; wider locales can grow. */
 .compact_c19a55 .headerText_c19a55 {
   flex: 1 1 0;
-  justify-content: flex-end;
+  justify-content: flex-start;
   min-width: 0;
   overflow: hidden;
   gap: 0;
   margin-inline: 4px 0;
 }
 .compact_c19a55 .headerText_c19a55 .username_c19a55 {
-  font: 600 var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
+  font: 600 var(--darkirc-message-font-size)/var(--darkirc-message-line-height) var(--darkirc-font);
   min-width: 0;
   max-width: 100%;
   isolation: isolate;
@@ -93,7 +96,7 @@
 .compact_c19a55 .headerText_c19a55 :is(.roleIcon_c19a55, .roleIcon_ee71ee, .roleDot_c19a55, .roleDotLeft__703b9, .roleDotRight__703b9, .newMemberBadge_f80704, .clanTagChiplet_c19a55, .profileEffects__0dd08) {
   display: none;
 }
-.compact_c19a55 .headerText_c19a55 :is(.botTag_c19a55, .clanTagChiplet_c19a55) {
+.compact_c19a55 .headerText_c19a55 .botTag_c19a55 {
   flex-shrink: 0;
   font-size: 10px;
   line-height: 14px;
@@ -107,10 +110,16 @@
   text-align: start;
 }
 .compact_c19a55 > .container_b7e1cb { min-width: 0; max-width: calc(100% - var(--compactpp-header-width) - 30px); }
+/* Reactions and attachments retain the previous inherited metrics. Their
+ * native emoji sizing must not follow the larger message body. */
+.compact_c19a55 > .container_b7e1cb {
+  --chat-markup-line-height: var(--darkirc-line-height);
+  font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
+}
 .compact_c19a55 .repliedMessage_c19a55 {
   color: var(--darkirc-muted);
-  /* ch-based column tokens must resolve at the same 13px font as messages. */
-  font: var(--darkirc-font-size)/18px var(--darkirc-font);
+  /* Resolve ch-based columns at the same font size as message text. */
+  font: 400 var(--darkirc-message-font-size)/18px var(--darkirc-font);
   min-height: 18px;
   min-width: 0;
   /* Align references with message text, without Compact's extra reply indent. */
@@ -122,7 +131,7 @@
   opacity: 1;
   flex: 0 1 auto;
   min-width: 0;
-  max-width: 23ch;
+  max-width: var(--darkirc-header-width);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -141,7 +150,7 @@
   color: var(--darkirc-muted);
 }
 /* One line of room for attachment-only messages and system/event notices. */
-.compact_c19a55 .contents_c19a55 { min-height: var(--darkirc-line-height); }
+.compact_c19a55 .contents_c19a55 { min-height: var(--darkirc-message-line-height); }
 .compact_c19a55.isSystemMessage_c19a55 { min-height: 22px; }
 .compact_c19a55 .messageContent_c19a55 :is(pre, blockquote) { max-width: 100%; }
 .markup__75297 pre {

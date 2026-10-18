@@ -2,7 +2,6 @@
   :root {
     --darkirc-channel-width: 180px;
     --darkirc-member-width: 160px;
-    --darkirc-header-width: 22ch;
   }
 }
 @media (max-width: 850px) {
