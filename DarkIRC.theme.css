@@ -1,12 +1,12 @@
 /**
  * @name DarkIRC
  * @author DarkIRC contributors
- * @version 1.0.10
+ * @version 1.0.11
  * @description A compact blue-black IRC-style theme, based on Compact++ 1.9.3. Requires Discord Compact message display.
  * @license BSD-2-Clause-Patent
  */
 
-/* DarkIRC v1.0.10 — Copyright (c) 2026 DarkIRC contributors.
+/* DarkIRC v1.0.11 — Copyright (c) 2026 DarkIRC contributors.
  * Includes a modified Compact++ 1.9.3 by Grzesiek11.
  * Compact++: Copyright (c) 2023-2026 Grzesiek11.
  * Upstream: https://git.stary.pc.pl/Grzesiek11/compactpp
@@ -1677,6 +1677,128 @@ button, input, textarea, select { border-radius: 0; }
   :root:root { --darkirc-accent: Highlight; --darkirc-border: CanvasText; }
   :is(a, button, input, textarea, select, [tabindex]):focus-visible { outline-color: Highlight !important; }
 }
+
+/* ===== 45-interface.css ===== */
+/* Interface Consistency. PTB 643186 / host 1.0.1226, 2026-10-20.
+ * The native sidebar is a subgrid spanning guilds + channels. Its absolute
+ * panels default to the entire sidebar, including the guild rail. Use the
+ * existing named grid area as their containing block; retain bottom anchoring
+ * and intrinsic height for RTC/activity panels. No viewport offset is needed. */
+.sidebar__5e434 > .panels__5e434 {
+  grid-column: channelsList;
+  inset-inline: 0;
+  width: auto;
+  container: darkirc-panels / inline-size;
+}
+/* Keep the five controls at least 24px wide when responsive channels are
+ * below 152px: four audio targets, then a full-width settings target. */
+@container darkirc-panels (max-width: 151px) {
+  .container__37e49 .buttons__37e49 { grid-template-columns: repeat(4, minmax(24px, 1fr)); }
+  .container__37e49 .buttons__37e49 > .button__67645 { grid-column: 1 / -1; }
+}
+
+/* Friends are ordinary flow rows, not the member-list virtualizer. PTB puts
+ * an animated 61px inline height on them; allow content to grow beyond 46px.
+ * The native rowButton still covers the full row and owns keyboard behavior. */
+.container__133bf .peopleListItem_cc6179 {
+  box-sizing: border-box;
+  min-height: 46px;
+  height: auto !important;
+  padding: 6px 8px;
+  border-radius: 2px;
+  font: 13px/19px var(--darkirc-font);
+}
+.container__133bf .rowContent_cc6179 { min-height: 34px; }
+.container__133bf .peopleListItem_cc6179 .userInfo__0a06e { min-width: 0; }
+.container__133bf .peopleListItem_cc6179 .avatar__0a06e {
+  width: 28px !important;
+  height: 28px !important;
+  flex: 0 0 28px;
+  margin-inline-end: 8px;
+}
+/* Scale the complete native SVG/status mask rather than the image alone. */
+.container__133bf .peopleListItem_cc6179 .avatar__0a06e > svg { width: 100%; height: 100%; }
+.container__133bf .peopleListItem_cc6179 :is(.text__0a06e, .discordTag__0a06e) { min-width: 0; }
+.container__133bf .peopleListItem_cc6179 .username__0a06e { font: 600 13px/18px var(--darkirc-font); }
+.container__133bf .peopleListItem_cc6179 .discriminator__0a06e { font: 12px/16px var(--darkirc-font); }
+.container__133bf .peopleListItem_cc6179 :is(.subtext__0a06e, .text__19b6d) { font: 12px/16px var(--darkirc-font); }
+.container__133bf .peopleListItem_cc6179 .actions_fc004c { gap: 8px; flex-shrink: 0; }
+.container__133bf .peopleListItem_cc6179 .actionButton_f8fa06 {
+  width: 32px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+/* Activity information remains content-sized, including games and parties. */
+.nowPlayingColumn__133bf .header__7d20c { font: 600 16px/22px var(--darkirc-font); margin-block: 4px 8px; }
+.nowPlayingColumn__133bf .itemCard__7e549 { border-radius: 2px; margin-bottom: 8px; }
+.nowPlayingColumn__133bf .header__00943 { padding: 10px 12px; }
+.nowPlayingColumn__133bf .section__00943 { padding: 10px 12px; }
+.nowPlayingColumn__133bf .textContent__00943 { font-size: 12px; line-height: 18px; }
+.nowPlayingColumn__133bf .header__00943 .textContent__00943:first-child { font-size: 13px; }
+
+/* PTB's replacement search button has nested text wrappers. Let the full
+ * localized prompt wrap instead of forcing a 160px ellipsis; it still opens
+ * Discord's native search dialog. Legacy search component remains supported. */
+.sidebarList__5e434 .searchBar_e6b769 { height: auto; min-height: 38px; padding: 4px; }
+.sidebarList__5e434 .searchBar_e6b769 :is(.button_a22cb0, .searchBarComponent_e6b769) {
+  height: auto;
+  min-height: 30px;
+  padding: 4px 6px;
+  white-space: normal;
+  text-align: start;
+}
+.sidebarList__5e434 .searchBar_e6b769 :is(.buttonChildrenWrapper_a22cb0, .buttonChildren_a22cb0) { min-width: 0; height: auto; }
+.sidebarList__5e434 .searchBar_e6b769 :is(.lineClamp1__4bd52, .overflow_b0dfc2) {
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  overflow-wrap: anywhere;
+  font: 12px/16px var(--darkirc-font);
+}
+
+/* Current modal settings body, legacy settings column and Vencord's own
+ * settings/modal components only. Never change global heading/input metrics.
+ * Text variants carry native weights, colors and accessible labels. */
+:is(.contentBody_e9e3ed, .contentColumn__23e6b, .vc-settings-tab, .root__49fc1) {
+  font: 13px/19px var(--darkirc-font);
+}
+:is(.contentBody_e9e3ed, .contentColumn__23e6b, .root__49fc1) :is(
+  [data-text-variant^="text-"], [data-text-variant^="experimental/body-"],
+  .vc-text-base, input, textarea, select
+) { font-size: 13px; line-height: 19px; }
+:is(.contentBody_e9e3ed, .contentColumn__23e6b, .root__49fc1) :is(h1, h2) {
+  font-size: 20px;
+  line-height: 26px;
+}
+:is(.contentBody_e9e3ed, .contentColumn__23e6b, .root__49fc1) :is(
+  h3, [data-text-variant^="heading-md"],
+  [data-text-variant^="experimental/heading-md"]
+) { font-size: 17px; line-height: 23px; }
+:is(.contentBody_e9e3ed, .contentColumn__23e6b, .root__49fc1) :is(
+  [data-text-variant^="heading-sm"], [data-text-variant^="heading-xs"],
+  [data-text-variant^="experimental/heading-sm"], [data-text-variant^="experimental/heading-xs"]
+) { font-size: 16px; line-height: 22px; }
+/* Limit spacing tokens to settings content; native stack/field relationships
+ * keep their relative spacing. Do not impose heights on inputs or switches. */
+:is(.contentBody_e9e3ed, .contentColumn__23e6b) {
+  --space-xl: 20px;
+  --space-lg: 16px;
+  --space-md: 12px;
+}
+.contentBody_e9e3ed .panel__6131a { margin-block: 24px; }
+.contentBody_e9e3ed .container__75920 > .stack_dbd263 { padding-bottom: 12px !important; }
+.vc-settings-tab .vc-text-base { font-size: 13px; line-height: 19px; }
+:is(.vc-settings-tab, .root__49fc1) .vc-h5 {
+  font: 600 16px/22px var(--darkirc-font);
+  text-transform: none;
+  margin-block: 12px 8px;
+}
+.vc-settings-tab .vc-special-title { font-size: 20px; line-height: 26px; margin-top: 0; }
+.vc-settings-tab .vc-special-card { padding: 12px 16px; }
+.vc-settings-tab .vc-margin-bottom-20 { margin-bottom: 12px; }
+.vc-settings-tab .vc-divider { margin-block: 16px; }
 
 /* ===== 50-responsive.css ===== */
 @media (max-width: 1100px) {

@@ -1,6 +1,6 @@
 # DarkIRC
 
-DarkIRC 1.0.10 is an unofficial IRC-style Discord theme for Vencord, with a blue-black palette, monospace text, aligned timestamp/nickname columns and compact controls. It builds on [Compact++](https://git.stary.pc.pl/Grzesiek11/compactpp) by Grzesiek11.
+DarkIRC 1.0.11 is an unofficial IRC-style Discord theme for Vencord, with a blue-black palette, monospace text, aligned timestamp/nickname columns and compact controls. It builds on [Compact++](https://git.stary.pc.pl/Grzesiek11/compactpp) by Grzesiek11.
 
 - Flat blue-black panels, 1 px dividers, consistent message columns and restrained hover/selection colors.
 - Regular 14 px message text with 20 px lines, a 22ch metadata column and left-aligned nicknames after 12 px timestamps. Controls and member text keep their previous sizes.
@@ -9,11 +9,13 @@ DarkIRC 1.0.10 is an unofficial IRC-style Discord theme for Vencord, with a blue
 - Compact reactions: 18 px emoji, 12/18 px counters, 26 px borders with a 24 px inner click target. Native own-reaction colors, hover, wrapping, tooltips and controls remain.
 - A single-line 13 px server heading with less nested padding; the native 32 px server-menu and invite targets remain. Long names truncate inside the channel pane.
 - Long names stay truncated on hover and keyboard focus. Open the native user profile to read the full name.
-- An avatar-free member list, indented 22 px voice participants without avatars or server tags and a two-row account panel.
+- An avatar-free member list and indented 22 px voice participants without avatars or server tags. The account panel uses the native channel grid area, keeps all five audio/settings targets and grows upwards for voice panels. Below 152 px, audio targets and the settings button use separate rows to retain at least 24 px widths.
+- Friends use 46 px minimum rows (48 px with the tested game status), 28 px avatars, 13 px names, 12 px status text and 32 px action targets. Active Now cards keep readable game/party information; the sidebar search prompt wraps.
+- Scoped settings and modal typography: 13/19 px body text, 16–17 px subsections and 20/26 px main headings, including Vencord settings and the profile editor. Settings panels use 24 px vertical margins in place of the native 64 px. Native field sizes, colors and focus behavior remain.
 - Role colors and optional IrcColors colors are preserved; member nameplates, profile effects and decorative name glow are removed from the list.
 - One standalone CSS file, without remote imports, images or downloaded fonts.
 
-![DarkIRC 1.0.10 synthetic desktop preview](assets/darkirc-preview.png)
+![DarkIRC 1.0.11 synthetic desktop preview](assets/darkirc-preview.png)
 
 *Synthetic preview with fictional servers, people and messages, rendered with the released CSS. Fictional reactions and image-backed server icons illustrate the proportions; native acronyms also remain supported. This is not a Discord screenshot.*
 
@@ -42,6 +44,7 @@ To remove, disable DarkIRC under Local Themes and delete its CSS file from the f
 - Discord changes internal CSS classes frequently. Updates, experiments, unusual badge/name structures and third-party plugin combinations may need fixes. Very narrow chat panes stack metadata above message content.
 - The 7 px member marker is neutral gray for unknown presence and hollow gray for Discord's native offline rows. The inspected client uses dynamic SVG masks and localized avatar labels, so precise online/idle/DND colors are unavailable. Markers never infer status from nickname or role colors. Role colors, IrcColors colors and offline dimming can affect contrast.
 - The native 40 px conversation spacer and zero composer top margin remain. Reducing the visible gap needs more live typing and scroll anchoring evidence.
+- PTB checks cover the standalone theme, Controller off, Normal and Compact. Controller remains optional and its presence markers and mode-specific rules are separate. Connected voice/video streams and all settings experiments are not exhaustively tested.
 - Browser fixtures simulate layout and interactions; they do not prove Discord's virtualizer or React behavior. Desktop checks cover a limited set of states.
 
 ## Build
