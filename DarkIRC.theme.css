@@ -1,12 +1,12 @@
 /**
  * @name DarkIRC
  * @author DarkIRC contributors
- * @version 1.0.11
+ * @version 1.0.12
  * @description A compact blue-black IRC-style theme, based on Compact++ 1.9.3. Requires Discord Compact message display.
  * @license BSD-2-Clause-Patent
  */
 
-/* DarkIRC v1.0.11 — Copyright (c) 2026 DarkIRC contributors.
+/* DarkIRC v1.0.12 — Copyright (c) 2026 DarkIRC contributors.
  * Includes a modified Compact++ 1.9.3 by Grzesiek11.
  * Compact++: Copyright (c) 2023-2026 Grzesiek11.
  * Upstream: https://git.stary.pc.pl/Grzesiek11/compactpp
@@ -1799,6 +1799,201 @@ button, input, textarea, select { border-radius: 0; }
 .vc-settings-tab .vc-special-card { padding: 12px 16px; }
 .vc-settings-tab .vc-margin-bottom-20 { margin-bottom: 12px; }
 .vc-settings-tab .vc-divider { margin-block: 16px; }
+
+/* ===== 46-cohesion.css ===== */
+/* UI Cohesion, PTB 643186, 2026-10-20. Component scopes include the native
+ * text leaves: setting a font on their flex parents does not override them.
+ * These UI tokens deliberately do not replace the IRC message tokens. */
+:root {
+  --darkirc-ui-meta: 12px;
+  --darkirc-ui-body: 13px;
+  --darkirc-ui-section: 15px;
+  --darkirc-ui-title: 18px;
+}
+
+/* PTB's floating-panel bottom inset is 8px. Its decorative sidebar ::after
+ * covers the same strip. Remove only that outer inset; retain border, inner
+ * padding, intrinsic height and all RTC/audio siblings above the account. */
+.sidebar__5e434 > .panels__5e434 { bottom: 0; }
+.container__37e49 .panelTitleContainer__37e49 > [data-text-variant] {
+  font-size: var(--darkirc-ui-body);
+  line-height: 18px;
+}
+.container__37e49 .panelSubtextContainer__37e49 > [data-text-variant] {
+  font-size: var(--darkirc-ui-meta);
+  line-height: 16px;
+}
+
+/* Private channels are flow rows. Avatars/status masks scale together;
+ * multi-line status grows the row rather than clipping user information. */
+.privateChannels_e6b769 .channel__972a0 { margin-inline: 4px 0; }
+.privateChannels_e6b769 .channel__972a0 .interactive__972a0 {
+  min-height: 28px;
+  height: auto;
+}
+.privateChannels_e6b769 .channel__972a0 .link__972a0 {
+  flex: 1;
+  min-width: 0;
+  min-height: 28px;
+  padding-inline: 6px 4px;
+}
+.privateChannels_e6b769 .layout__20a53 {
+  flex: 1;
+  min-width: 0;
+  min-height: 24px;
+  height: auto;
+  padding-block: 2px;
+}
+.privateChannels_e6b769 .dm__972a0 .link__972a0 { min-height: 30px; }
+.privateChannels_e6b769 .avatar__20a53 { margin-inline-end: 6px; flex-shrink: 0; }
+.privateChannels_e6b769 .dm__972a0 .avatar__20a53,
+.privateChannels_e6b769 .dm__972a0 .avatar__20a53 > .wrapper__44b0c {
+  width: 24px !important;
+  height: 24px !important;
+  flex: 0 0 24px;
+}
+.privateChannels_e6b769 .dm__972a0 .avatar__20a53 > .wrapper__44b0c > svg { width: 100%; height: 100%; }
+.privateChannels_e6b769 :is(.content__20a53, .nameAndDecorators__20a53, .name__20a53) { min-width: 0; }
+.privateChannels_e6b769 .content__20a53 { flex: 1; }
+.privateChannels_e6b769 .name__20a53 {
+  font: 500 var(--darkirc-ui-body)/18px var(--darkirc-font);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.privateChannels_e6b769 .name__20a53 .overflow_b0dfc2 { font: inherit; }
+.privateChannels_e6b769 :is(.subText__20a53, .subtext__972a0, .activityStatusText__972a0) {
+  font-size: var(--darkirc-ui-meta);
+  line-height: 14px;
+}
+.privateChannels_e6b769 .iconsContainer__972a0 { height: auto; align-self: stretch; flex-shrink: 0; }
+.privateChannels_e6b769 .closeButton__972a0 { min-width: 24px; min-height: 24px; padding-inline-end: 4px; }
+.privateChannels_e6b769 .privateChannelsHeaderContainer__99e7c {
+  font-size: var(--darkirc-ui-meta);
+  line-height: 16px;
+  padding-inline-start: 10px;
+}
+/* The 22px nested horizontal padding caused the Finnish prompt to wrap.
+ * A single line with native tooltip/accessible name fits regular widths;
+ * ellipsis handles narrow panes without expanding the sidebar. */
+.sidebarList__5e434 .searchBar_e6b769 { height: 38px; padding: 4px; }
+.sidebarList__5e434 .searchBar_e6b769 :is(.button_a22cb0, .searchBarComponent_e6b769) {
+  height: 30px;
+  padding: 3px 2px;
+  white-space: nowrap;
+}
+.sidebarList__5e434 .searchBar_e6b769 .buttonChildrenWrapper_a22cb0 { padding: 0; width: 100%; }
+.sidebarList__5e434 .searchBar_e6b769 .buttonChildren_a22cb0 { width: 100%; }
+.sidebarList__5e434 .searchBar_e6b769 :is(.lineClamp1__4bd52, .overflow_b0dfc2) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: normal;
+  font: var(--darkirc-ui-meta)/16px var(--darkirc-font);
+  letter-spacing: -.2px;
+}
+
+/* Preserve the successful central friend rows. Only activity cards change. */
+.nowPlayingColumn__133bf .header__7d20c { font-size: var(--darkirc-ui-section); line-height: 20px; }
+.nowPlayingColumn__133bf .itemCard__7e549 { margin-block: 6px; }
+.nowPlayingColumn__133bf :is(.header__00943, .section__00943) { padding: 6px 8px; }
+.nowPlayingColumn__133bf .header__00943 .textContent__00943 { font-size: var(--darkirc-ui-meta); line-height: 16px; }
+.nowPlayingColumn__133bf .header__00943 .textContent__00943:is([data-text-variant^="text-sm/"], [data-text-variant^="text-xs/"]) { font-size: var(--darkirc-ui-meta); }
+.nowPlayingColumn__133bf .header__00943 [data-text-variant="text-md/semibold"] { font-size: var(--darkirc-ui-body); line-height: 18px; }
+.nowPlayingColumn__133bf .headerAvatar__00943 { width: 28px !important; height: 28px !important; }
+.nowPlayingColumn__133bf .headerAvatar__00943 > svg { width: 100%; height: 100%; }
+
+/* Settings: body, native nested variants, navigation and Vencord buttons.
+ * No global heading/form selectors and no imposed field/switch heights. */
+:is(.contentBody_e9e3ed, .contentColumn__23e6b, .vc-settings-tab, .sidebar__409aa, .contentHeader_e9e3ed) {
+  font: var(--darkirc-ui-body)/19px var(--darkirc-font);
+}
+:is(.contentBody_e9e3ed, .contentColumn__23e6b, .vc-settings-tab, .sidebar__409aa, .contentHeader_e9e3ed) :is(
+  [data-text-variant^="text-"], [data-text-variant^="experimental/body-"],
+  [class*="text-md/"], [class*="text-sm/"], .vc-text-base, .vc-btn-base, input, textarea, select
+) { font-size: var(--darkirc-ui-body); line-height: 19px; }
+:is(.contentBody_e9e3ed, .contentColumn__23e6b, .vc-settings-tab, .root__49fc1) :is(
+  h1, h2, .vc-special-title, [data-text-variant^="heading-lg"], [data-text-variant^="heading-xl"],
+  [data-text-variant^="experimental/heading-lg"], [data-text-variant^="experimental/heading-xl"]
+) { font-size: var(--darkirc-ui-title); line-height: 24px; }
+:is(.contentBody_e9e3ed, .contentColumn__23e6b, .vc-settings-tab, .root__49fc1) :is(
+  h3, .vc-h5:not(.vc-special-title), [data-text-variant^="heading-md"],
+  [data-text-variant^="heading-sm"], [data-text-variant^="heading-xs"],
+  [data-text-variant^="experimental/heading-md"], [data-text-variant^="experimental/heading-sm"],
+  [data-text-variant^="experimental/heading-xs"]
+) { font-size: var(--darkirc-ui-section); line-height: 21px; }
+.sidebar__409aa :is(.label__409aa, [data-text-variant^="text-xs"], [data-text-variant^="text-xxs"]) {
+  font-size: var(--darkirc-ui-meta); line-height: 16px;
+}
+.sidebar__409aa { min-width: 0; }
+.sidebar__409aa .compactInfo__081d7 { overflow-wrap: anywhere; }
+.sidebar__409aa .item_caf372 { padding-block: 6px; gap: 8px; min-height: 32px; }
+.sidebar__409aa .itemContent_caf372 { min-width: 0; }
+.sidebar__409aa .navScroller__409aa { padding-top: 8px; gap: 16px; }
+.sidebar__409aa .sublist__409aa { gap: 4px; }
+.contentBody_e9e3ed .panel__6131a { margin-block: 16px; }
+
+/* Profile portals: keep banners, avatars, badges, roles, descriptions, media
+ * and controls. Full names may wrap; never truncate profile information. */
+:is(.user-profile-popout, .user-profile-modal, .user-profile-modal-v2) { font: var(--darkirc-ui-body)/19px var(--darkirc-font); }
+:is(.user-profile-popout, .user-profile-modal, .user-profile-modal-v2) :is(
+  [data-text-variant^="text-"], [data-text-variant^="experimental/body-"],
+  .userTag__26b1f, .userTagUsername__26b1f, .markup__75297, .input__983bc
+) { font-size: var(--darkirc-ui-body); line-height: 19px; }
+:is(.user-profile-popout, .user-profile-modal, .user-profile-modal-v2) :is(
+  [data-text-variant^="heading-"], [data-text-variant^="experimental/heading-"]
+) { font-size: var(--darkirc-ui-section); line-height: 21px; }
+:is(.user-profile-popout, .user-profile-modal, .user-profile-modal-v2) :is(
+  .displayNameRow__26b1f [data-text-variant^="heading-"], .displayName__26b1f
+) { font-size: var(--darkirc-ui-title); line-height: 24px; }
+.user-profile-popout .body_ce8328 { padding: 4px 8px 12px 12px; gap: 8px; }
+.user-profile-modal-v2 .profileBody__9c3be { padding: 4px 16px 20px 20px; gap: 16px; }
+
+/* Pins are a separate cozy-message surface. Preserve all media and native
+ * action buttons; only its own message padding and text sizes are adjusted. */
+.messagesPopoutWrap__432f4 {
+  max-width: calc(100vw - 16px);
+  background: var(--darkirc-panel);
+  border: 1px solid var(--darkirc-border);
+  border-radius: 0;
+  font: var(--darkirc-ui-body)/19px var(--darkirc-font);
+}
+.messagesPopoutWrap__432f4 :is(.header__432f4, .footer__432f4) { padding: 8px 12px; }
+.messagesPopoutWrap__432f4 [data-text-variant] { font-size: var(--darkirc-ui-body); line-height: 19px; }
+.messagesPopoutWrap__432f4 .titleContainer__432f4 [data-text-variant] { font-size: 16px; line-height: 22px; }
+.messagesPopoutWrap__432f4 .footer__432f4 [data-text-variant] { font-size: var(--darkirc-ui-meta); line-height: 18px; }
+.messagesPopoutWrap__432f4 .messageGroupCozy__432f4 { padding: 8px 12px 8px 56px; }
+.messagesPopoutWrap__432f4 .messageGroupCozy__432f4 .avatar_c19a55 { left: 8px; }
+.messagesPopoutWrap__432f4 .messageGroupCozy__432f4 .messageContent_c19a55 { margin-inline-start: -56px; padding-inline-start: 56px; }
+.messagesPopoutWrap__432f4 :is(.markup__75297, .username_c19a55) { font-size: var(--darkirc-ui-body); line-height: 19px; }
+.messagesPopoutWrap__432f4 .timestamp_c19a55 { font-size: var(--darkirc-ui-meta); }
+.messagesPopoutWrap__432f4 .emptyPlaceholder__432f4 { margin-block: 8px 16px; }
+
+@media (max-width: 700px) {
+  /* Native account rows have non-shrinking trailing stacks. At 640px these
+   * put edit/reveal controls beyond the content scroller. Wrap only settings
+   * control rows and retain every target and the navigation scroll area. */
+  .container_abd9a8 .sidebar__409aa:not(.mobile__409aa) { flex-basis: 180px; }
+  .contentBody_e9e3ed { min-width: 0; }
+  .sidebar__409aa .itemContent_caf372 [data-text-variant] {
+    white-space: normal;
+    -webkit-line-clamp: unset;
+    overflow-wrap: anywhere;
+  }
+  .contentBody_e9e3ed .panel__6131a { min-width: 0; margin-inline: 8px; padding-inline: 8px; }
+  .contentBody_e9e3ed .baseControlItem_dbfbe0 { flex-wrap: wrap; }
+  .contentBody_e9e3ed .baseControlItemContent_dbfbe0 { min-width: 0; flex-basis: 160px; }
+  .contentBody_e9e3ed .baseControlItemTitle_dbfbe0 { min-width: 0; flex-wrap: wrap; }
+  .contentBody_e9e3ed .baseControlItemTrailingElement_dbfbe0,
+  .contentBody_e9e3ed .baseControlItemTrailingElement_dbfbe0 > .stack_dbd263 {
+    min-width: 0;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .contentBody_e9e3ed .baseControlItemTrailingElement_dbfbe0 [data-text-variant] { overflow-wrap: anywhere; }
+  .user-profile-modal-v2 .profileBody__9c3be { padding-inline: 12px; }
+  .messagesPopoutWrap__432f4 .header__432f4 { padding-inline: 8px; }
+}
 
 /* ===== 50-responsive.css ===== */
 @media (max-width: 1100px) {
