@@ -1,6 +1,8 @@
 # DarkIRC
 
-DarkIRC 1.0.12 is an unofficial IRC-style Discord theme for Vencord, with a blue-black palette, monospace text, aligned timestamp/nickname columns and compact controls. It builds on [Compact++](https://git.stary.pc.pl/Grzesiek11/compactpp) by Grzesiek11.
+DarkIRC 1.0.13 is an unofficial IRC-style Discord theme for Vencord, with a blue-black palette, monospace text, aligned timestamp/nickname columns and compact controls. It builds on [Compact++](https://git.stary.pc.pl/Grzesiek11/compactpp) by Grzesiek11.
+
+Version 1.0.13 restores compatibility with Discord's November CSS class changes, including the avatar-free member list, display-name cosmetics, server icons, message columns and account controls. Exact class aliases retain support for the previous client layout.
 
 - Flat blue-black panels, 1 px dividers, consistent message columns and restrained hover/selection colors.
 - Regular 14 px message text with 20 px lines, a 22ch metadata column and left-aligned nicknames after 12 px timestamps. Controls and member text keep their previous sizes.
@@ -49,6 +51,7 @@ To remove, disable DarkIRC under Local Themes and delete its CSS file from the f
 - The native 40 px conversation spacer and zero composer top margin remain. Reducing the visible gap needs more live typing and scroll anchoring evidence.
 - Version 1.0.12 PTB checks cover the installed standalone theme and narrow CSS viewports in the live Discord renderer through CDP emulation. Physical OS window resizing is not asserted. Controller is temporarily stopped for standalone checks without changing its saved settings; its original runtime state is then restored. Controller remains optional and its presence markers and mode-specific rules are separate. Connected voice/video streams and all settings experiments are not exhaustively tested.
 - Browser fixtures simulate layout and interactions; they do not prove Discord's virtualizer or React behavior. Desktop checks cover a limited set of states.
+- Version 1.0.13 was checked in the running Stable desktop client and against its current public CSS. The member list keeps its native 42 px rows; profile avatars and message images remain visible. Other experiments and future class changes can still require updates.
 
 ## Build
 
@@ -58,7 +61,7 @@ Requires Node.js. No dependency installation is needed:
 node scripts/build.cjs
 ```
 
-Edit the numbered modules in `src/`; the build concatenates them and embeds the complete Compact++ license into `DarkIRC.theme.css`. The public distribution contains theme sources, the build script and documentation. Development history, runtime CSS, captured conversations and internal validation artifacts are excluded.
+Edit the numbered modules in `src/`; `src/selector-aliases.json` maps their previous exact classes to the current client classes. The build expands these into equal-specificity `:is()` selectors, concatenates the modules and embeds the complete Compact++ license into `DarkIRC.theme.css`. No runtime script or downloaded CSS is required. The public distribution contains theme sources, the build script and documentation. Development history, runtime CSS, captured conversations and internal validation artifacts are excluded.
 
 ## Credits and license
 

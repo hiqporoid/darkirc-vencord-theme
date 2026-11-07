@@ -1,12 +1,12 @@
 /**
  * @name DarkIRC
  * @author DarkIRC contributors
- * @version 1.0.12
+ * @version 1.0.13
  * @description A compact blue-black IRC-style theme, based on Compact++ 1.9.3. Requires Discord Compact message display.
  * @license BSD-2-Clause-Patent
  */
 
-/* DarkIRC v1.0.12 — Copyright (c) 2026 DarkIRC contributors.
+/* DarkIRC v1.0.13 — Copyright (c) 2026 DarkIRC contributors.
  * Includes a modified Compact++ 1.9.3 by Grzesiek11.
  * Compact++: Copyright (c) 2023-2026 Grzesiek11.
  * Upstream: https://git.stary.pc.pl/Grzesiek11/compactpp
@@ -69,65 +69,65 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   --compactpp-pronoundb-pronouns-width: 45px;
 }
 /* Message container */
-.compact_c19a55.wrapper_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm):is(.wrapper_c19a55, .wrapper_2i8Bfm) {
   padding-left: 0;
   padding-right: var(--compactpp-message-margin-right) !important;
 }
 /* Message content container */
-.compact_c19a55 .contents_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.contents_c19a55, .contents_2i8Bfm) {
   margin-left: 0;
   padding-left: 0;
   text-indent: 0;
 }
 /* Message markup first header 1 */
-.compact_c19a55 .markup__75297 h1:first-child,
-.compact_c19a55 .markup__75297 h2:first-child,
-.compact_c19a55 .markup__75297 h3:first-child {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) h1:first-child,
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) h2:first-child,
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) h3:first-child {
   margin-top: 0;
 }
 /* Message markup last header 1 */
-.compact_c19a55 .markup__75297 h1:last-child,
-.compact_c19a55 .markup__75297 h2:last-child,
-.compact_c19a55 .markup__75297 h3:last-child {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) h1:last-child,
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) h2:last-child,
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) h3:last-child {
   margin-bottom: 0;
 }
 /* Message markup first unordered list */
-.compact_c19a55 .markup__75297 ul:first-child,
-.compact_c19a55 .markup__75297 ol:first-child {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) ul:first-child,
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) ol:first-child {
   margin-top: 0;
 }
 /* Message markup list last element */
-.compact_c19a55 .markup__75297 li:last-child {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) li:last-child {
   margin-bottom: 0;
 }
 /* Message markup unordered list */
-.compact_c19a55 .markup__75297 ul,
-.compact_c19a55 .markup__75297 ol {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) ul,
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) ol {
   margin-bottom: 4px;
 }
 /* Message markup last unordered list */
-.compact_c19a55 .markup__75297 ul:last-child,
-.compact_c19a55 .markup__75297 ol:last-child {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) ul:last-child,
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) ol:last-child {
   margin-bottom: 0px;
 }
 /* Message markup code block */
-.compact_c19a55 .markup__75297 pre {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) pre {
   max-width: unset;
 }
 /* Message markup quote container */
-.compact_c19a55 .markup__75297 blockquote {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) blockquote {
   padding-right: 0;
   max-width: unset;
   min-width: 0;
 }
 /* Message markup quote line */
-.compact_c19a55 .blockquoteContainer__75297 .blockquoteDivider__75297 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.blockquoteContainer__75297, .blockquoteContainer_ku1OHH) :is(.blockquoteDivider__75297, .blockquoteDivider_ku1OHH) {
   flex-shrink: 0;
 }
 /* Message header container */
-.compact_c19a55 .header_c19a55,
-.zalgo_c19a55.gradient_c19a55.compact_c19a55 .header_c19a55,
-.withDisplayNameStyles_c19a55.withDisplayNameStyles_c19a55.withDisplayNameStyles_c19a55 .header_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm),
+:is(.zalgo_c19a55, .zalgo_2i8Bfm):is(.gradient_c19a55, .gradient_2i8Bfm):is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm),
+:is(.withDisplayNameStyles_c19a55, .withDisplayNameStyles_2i8Bfm):is(.withDisplayNameStyles_c19a55, .withDisplayNameStyles_2i8Bfm):is(.withDisplayNameStyles_c19a55, .withDisplayNameStyles_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm) {
   margin-left: var(--compactpp-header-margin-left);
   position: absolute;
   display: flex;
@@ -135,7 +135,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   align-items: center;
 }
 /* Message timestamp */
-.compact_c19a55 .header_c19a55 .timestamp_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm) :is(.timestamp_c19a55, .timestamp_2i8Bfm) {
   flex-grow: 1;
   margin-right: 0;
   text-align: left;
@@ -143,11 +143,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   width: unset;
 }
 /* Hidden message timestamp */
-.compact_c19a55 .timestampVisibleOnHover_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.timestampVisibleOnHover_c19a55, .timestampVisibleOnHover_2i8Bfm) {
   opacity: unset;
 }
 /* Message avatar */
-.compact_c19a55 .avatar_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.avatar_c19a55, .avatar_2i8Bfm) {
   position: static;
   width: var(--compactpp-avatar-size);
   height: var(--compactpp-avatar-size);
@@ -157,7 +157,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   order: 1;
 }
 /* Message username container */
-.compact_c19a55 .headerText_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) {
   display: flex;
   align-items: center;
   margin-left: 5px;
@@ -166,32 +166,32 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   order: 2;
 }
 /* Message tag */
-.compact_c19a55 .botTag_c19a55,
-.compact_c19a55 .systemTag__44492,
-.compact_c19a55 .systemTag_b99f57,
-.compact_c19a55 .clanTagChiplet_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.botTag_c19a55, .botTag_2i8Bfm),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.systemTag__44492, .systemTag_bbJCi7),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.systemTag_b99f57, .systemTag_q-l2Gj),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.clanTagChiplet_c19a55, .clanTagChiplet_2i8Bfm) {
   margin-left: 0;
   margin-right: 5px;
 }
 /* Message tag */
-.compact_c19a55 .botTag_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.botTag_c19a55, .botTag_2i8Bfm) {
   position: static;
 }
 /* Message clan tag */
-.compact_c19a55 .clanTagChiplet_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.clanTagChiplet_c19a55, .clanTagChiplet_2i8Bfm) {
   white-space: nowrap;
 }
 @container style(--compactpp-hide-tags: true) {
   /* Message tag */
-  .compact_c19a55 .botTag_c19a55,
-  .compact_c19a55 .systemTag__44492,
-  .compact_c19a55 .systemTag_b99f57,
-  .compact_c19a55 .clanTagChiplet_c19a55 {
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.botTag_c19a55, .botTag_2i8Bfm),
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.systemTag__44492, .systemTag_bbJCi7),
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.systemTag_b99f57, .systemTag_q-l2Gj),
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.clanTagChiplet_c19a55, .clanTagChiplet_2i8Bfm) {
     display: none;
   }
 }
 /* Message username */
-.compact_c19a55 .headerText_c19a55 .username_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :is(.username_c19a55, .username_2i8Bfm) {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -202,68 +202,68 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   order: 2;
 }
 /* AutoMod message username container */
-.compact__44492.usernameContainer__44492 > :nth-child(2),
-.compact_b99f57.usernameContainer_b99f57 > :nth-child(2) {
+:is(.compact__44492, .compact_bbJCi7):is(.usernameContainer__44492, .usernameContainer_bbJCi7) > :nth-child(2),
+:is(.compact_b99f57, .compact_q-l2Gj):is(.usernameContainer_b99f57, .usernameContainer_q-l2Gj) > :nth-child(2) {
   overflow: hidden;
   margin-left: 5px;
 }
 /* DarkIRC: names and pronouns remain clipped on hover. Use the native
  * profile control for the full name; do not paint a popup over messages. */
 /* Role and new member icon container */
-.compact_c19a55 .headerText_c19a55 :has(.newMemberBadge_f80704),
-.compact_c19a55 .headerText_c19a55 :has(.roleIcon_c19a55) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :has(:is(.newMemberBadge_f80704, .newMemberBadge_P4-UkH)),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :has(:is(.roleIcon_c19a55, .roleIcon_2i8Bfm)) {
   order: 1;
 }
 /* Role icon */
-.compact_c19a55 .roleIcon_c19a55,
-.compact_c19a55 .newMemberBadge_f80704 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.roleIcon_c19a55, .roleIcon_2i8Bfm),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.newMemberBadge_f80704, .newMemberBadge_P4-UkH) {
   margin-right: 5px;
   margin-left: 0;
 }
 @container style(--compactpp-hide-icons: true) {
   /* Role icon */
-  .compact_c19a55 .roleIcon_c19a55,
-  .compact_c19a55 .newMemberBadge_f80704 {
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.roleIcon_c19a55, .roleIcon_2i8Bfm),
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.newMemberBadge_f80704, .newMemberBadge_P4-UkH) {
     display: none;
   }
 }
 /* Message tag in username container (like the Remix tag) */
-.compact_c19a55 .headerText_c19a55 .botTag_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :is(.botTag_c19a55, .botTag_2i8Bfm) {
   order: 0;
 }
 /* Silent message icon container */
-.compact_c19a55 .badgesContainer_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.badgesContainer_c19a55, .badgesContainer_2i8Bfm) {
   margin-right: 0;
   margin-left: 5px;
 }
 /* Silent message icon */
-.compact_c19a55 .badge__6ba43 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.badge__6ba43, .badge_1jaGB6) {
   position: static;
 }
 @container style(--compactpp-hide-icons: true) {
   /* Silent message icon container */
-  .compact_c19a55 .badgesContainer_c19a55 {
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.badgesContainer_c19a55, .badgesContainer_2i8Bfm) {
     display: none;
   }
 }
 /* Message content */
-.compact_c19a55 .contents_c19a55 .messageContent_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.contents_c19a55, .contents_2i8Bfm) :is(.messageContent_c19a55, .messageContent_2i8Bfm) {
   display: block;
   overflow: visible;
 }
 /* Message content */
-.compact_c19a55 .contents_c19a55 .messageContent_c19a55,
-.compact_c19a55 > .container_b7e1cb,
-.compact__44492.messageContent__44492,
-.compact__44492.footerContainer__44492,
-.compact_c19a55 .channelTextArea__5126c,
-.compact_c19a55 .operations_bab751,
-.compact_b99f57.embedCard_b99f57,
-.compact_b99f57.content_b99f57 > :nth-child(2) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.contents_c19a55, .contents_2i8Bfm) :is(.messageContent_c19a55, .messageContent_2i8Bfm),
+:is(.compact_c19a55, .compact_2i8Bfm) > :is(.container_b7e1cb, .container_YUQhib),
+:is(.compact__44492, .compact_bbJCi7):is(.messageContent__44492, .messageContent_bbJCi7),
+:is(.compact__44492, .compact_bbJCi7):is(.footerContainer__44492, .footerContainer_bbJCi7),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.channelTextArea__5126c, .channelTextArea_SY_P2T),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.operations_bab751, .operations_h_zE4S),
+:is(.compact_b99f57, .compact_q-l2Gj):is(.embedCard_b99f57, .embedCard_q-l2Gj),
+:is(.compact_b99f57, .compact_q-l2Gj):is(.content_b99f57, .content_q-l2Gj) > :nth-child(2) {
   margin-left: calc(var(--compactpp-header-width) + var(--compactpp-header-margin-left) + var(--compactpp-header-margin-right));
 }
 /* Message content of message with empty embed container */
-.compact_c19a55:has(> .container_b7e1cb:empty) .contents_c19a55 .messageContent_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm):has(> :is(.container_b7e1cb, .container_YUQhib):empty) :is(.contents_c19a55, .contents_2i8Bfm) :is(.messageContent_c19a55, .messageContent_2i8Bfm) {
   /* Make the content have at least 1 line of height, in case the client
      * renders a message with no content and no embeds */
   /* This has happened before with the 2023-09_soundmoji experiment. If a
@@ -272,28 +272,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   min-height: 1lh;
 }
 /* AutoMod notice content */
-.compact_b99f57.content_b99f57 > :nth-child(2) {
+:is(.compact_b99f57, .compact_q-l2Gj):is(.content_b99f57, .content_q-l2Gj) > :nth-child(2) {
   line-height: var(--chat-markup-line-height);
 }
 /* AutoMod blocked message notice container */
-.blockedNoticeContainer_b7ab2c.compact_b7ab2c {
+:is(.blockedNoticeContainer_b7ab2c, .blockedNoticeContainer_REFxkR):is(.compact_b7ab2c, .compact_REFxkR) {
   margin-left: 0;
 }
 /* AutoMod blocked message accessories container */
-.ephemeralAccessories_b7ab2c.compact_b7ab2c {
+:is(.ephemeralAccessories_b7ab2c, .ephemeralAccessories_REFxkR):is(.compact_b7ab2c, .compact_REFxkR) {
   margin-left: 0;
 }
 /* System message container */
-.compact__235ca {
+:is(.compact__235ca, .compact_bLMKT5) {
   margin-left: 0;
 }
 /* System message content */
-.compact_c19a55.systemMessage__5126c > .contents_c19a55 > .messageContent_c19a55,
-.compact_c19a55 .blockedSystemMessage__7a70a {
+:is(.compact_c19a55, .compact_2i8Bfm):is(.systemMessage__5126c, .systemMessage_SY_P2T) > :is(.contents_c19a55, .contents_2i8Bfm) > :is(.messageContent_c19a55, .messageContent_2i8Bfm),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.blockedSystemMessage__7a70a, .blockedSystemMessage_cKojhe) {
   margin-left: calc(var(--compactpp-header-width) + var(--compactpp-header-margin-left) - var(--compactpp-avatar-size));
 }
 /* System message icon */
-.compact_c19a55 .iconContainer__235ca.iconContainer__235ca {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.iconContainer__235ca, .iconContainer_bLMKT5):is(.iconContainer__235ca, .iconContainer_bLMKT5) {
   margin-right: var(--compactpp-header-margin-right);
   width: var(--compactpp-avatar-size);
   height: var(--compactpp-avatar-size);
@@ -304,34 +304,34 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   inset-inline-end: auto;
 }
 /* Send welcome sticker button */
-.compact_c19a55 .welcomeCTA_f5d1e2,
-.compact_c19a55 .container_f69538 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.welcomeCTA_f5d1e2, .welcomeCTA_eZQ1Gc),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.container_f69538, .container_D5ZFqQ) {
   margin-left: calc(var(--compactpp-avatar-size) + var(--compactpp-header-margin-right));
 }
 /* Non-AutoMod system message container */
-.compact__235ca.container__235ca:not(.mainContainer__44492) {
+:is(.compact__235ca, .compact_bLMKT5):is(.container__235ca, .container_bLMKT5):not(:is(.mainContainer__44492, .mainContainer_bbJCi7)) {
   align-items: center;
 }
 /* AutoMod message container */
-.compact__44492.mainContainer__44492,
-.compact_b99f57.mainContainer_b99f57 {
+:is(.compact__44492, .compact_bbJCi7):is(.mainContainer__44492, .mainContainer_bbJCi7),
+:is(.compact_b99f57, .compact_q-l2Gj):is(.mainContainer_b99f57, .mainContainer_q-l2Gj) {
   margin-left: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
 /* AutoMod message header */
-.compact__44492.usernameContainer__44492,
-.compact_b99f57.usernameContainer_b99f57 {
+:is(.compact__44492, .compact_bbJCi7):is(.usernameContainer__44492, .usernameContainer_bbJCi7),
+:is(.compact_b99f57, .compact_q-l2Gj):is(.usernameContainer_b99f57, .usernameContainer_q-l2Gj) {
   margin-left: var(--compactpp-header-margin-left) !important;
 }
 /* AutoMod message timestamp */
-.compact__44492.mainContainer__44492 .timestamp_c19a55,
-.compact_b99f57.mainContainer_b99f57 .timestamp_c19a55 {
+:is(.compact__44492, .compact_bbJCi7):is(.mainContainer__44492, .mainContainer_bbJCi7) :is(.timestamp_c19a55, .timestamp_2i8Bfm),
+:is(.compact_b99f57, .compact_q-l2Gj):is(.mainContainer_b99f57, .mainContainer_q-l2Gj) :is(.timestamp_c19a55, .timestamp_2i8Bfm) {
   flex-shrink: 0;
 }
 /* AutoMod message username */
-.compact_c19a55 .username__44492,
-.compact_c19a55 .username_b99f57 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.username__44492, .username_bbJCi7),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.username_b99f57, .username_q-l2Gj) {
   font-weight: 500;
   margin-right: 0;
   text-overflow: ellipsis;
@@ -341,89 +341,89 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
 }
 /* DarkIRC: retain the AutoMod action control; upstream hid the third child. */
 /* AutoMod message header flex container */
-.compact_c19a55 .spanCorrection__44492,
-.compact_c19a55 .spanCorrection_b99f57 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.spanCorrection__44492, .spanCorrection_bbJCi7),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.spanCorrection_b99f57, .spanCorrection_q-l2Gj) {
   flex-wrap: unset;
   align-items: center;
 }
 /* AutoMod message content */
-.compact_c19a55 .contents_c19a55 .messageContent_c19a55:has(> div > .compact__44492.mainContainer__44492),
-.compact_c19a55 .contents_c19a55 .messageContent_c19a55:has(> div > .compact_b99f57.mainContainer_b99f57) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.contents_c19a55, .contents_2i8Bfm) :is(.messageContent_c19a55, .messageContent_2i8Bfm):has(> div > :is(.compact__44492, .compact_bbJCi7):is(.mainContainer__44492, .mainContainer_bbJCi7)),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.contents_c19a55, .contents_2i8Bfm) :is(.messageContent_c19a55, .messageContent_2i8Bfm):has(> div > :is(.compact_b99f57, .compact_q-l2Gj):is(.mainContainer_b99f57, .mainContainer_q-l2Gj)) {
   margin-left: 0;
 }
 /* AutoMod referenced message container */
-.compact__44492.messageContent__44492 {
+:is(.compact__44492, .compact_bbJCi7):is(.messageContent__44492, .messageContent_bbJCi7) {
   padding-left: 0;
 }
 /* AutoMod referenced message */
-.compact_c19a55 .messageContainer__44c9a {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.messageContainer__44c9a, .messageContainer_CKGXbh) {
   margin-left: 0;
 }
 /* AutoMod referenced message content */
-.compact_c19a55 .messageContainer__44c9a .messageContent_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.messageContainer__44c9a, .messageContainer_CKGXbh) :is(.messageContent_c19a55, .messageContent_2i8Bfm) {
   margin-left: calc(var(--compactpp-header-width) + var(--compactpp-header-margin-right));
 }
 /* AutoMod referenced message avatar */
-.compact__44c9a .avatar_c19a55,
-.compact__44c9a .headerText_c19a55:not(.avatar_c19a55 + *) {
+:is(.compact__44c9a, .compact_CKGXbh) :is(.avatar_c19a55, .avatar_2i8Bfm),
+:is(.compact__44c9a, .compact_CKGXbh) :is(.headerText_c19a55, .headerText_2i8Bfm):not(:is(.avatar_c19a55, .avatar_2i8Bfm) + *) {
   margin-left: auto;
 }
 /* AutoMod notice content container */
-.compact_b99f57.content_b99f57 {
+:is(.compact_b99f57, .compact_q-l2Gj):is(.content_b99f57, .content_q-l2Gj) {
   line-height: 1;
   align-items: unset;
 }
 /* AutoMod notice embed */
-.compact_b99f57.embedCard_b99f57 {
+:is(.compact_b99f57, .compact_q-l2Gj):is(.embedCard_b99f57, .embedCard_q-l2Gj) {
   margin-top: 0;
   margin-bottom: 0;
 }
 /* Message reply container */
-.compact_c19a55 .repliedMessage_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm) {
   margin-left: calc(var(--compactpp-header-margin-left) + var(--compactpp-reply-link-line-offset));
 }
 /* Vencord UserMessagesPronouns plugin: Reply pronouns */
-.compact_c19a55 .repliedMessage_c19a55 .timestamp_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm) :is(.timestamp_c19a55, .timestamp_2i8Bfm) {
   margin-left: 0;
 }
 @container style(--compactpp-minimize-replies: true) {
   /* Reply username */
-  .compact_c19a55 .repliedMessage_c19a55 .username_c19a55,
-  .compact_c19a55 .repliedTextPreview_c19a55,
-  .compact_c19a55 .repliedTextContentIcon_da8b30 {
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm) :is(.username_c19a55, .username_2i8Bfm),
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedTextPreview_c19a55, .repliedTextPreview_2i8Bfm),
+  :is(.compact_c19a55, .compact_2i8Bfm) .repliedTextContentIcon_da8b30 {
     opacity: 0;
     transition: 0.2s;
   }
   /* Reply username on message hover */
-  .compact_c19a55.message__5126c:hover .repliedTextPreview_c19a55,
-  .compact_c19a55.message__5126c:hover .repliedMessage_c19a55 .username_c19a55,
-  .compact_c19a55.message__5126c:hover .repliedTextContentIcon_da8b30 {
+  :is(.compact_c19a55, .compact_2i8Bfm):is(.message__5126c, .message_SY_P2T):hover :is(.repliedTextPreview_c19a55, .repliedTextPreview_2i8Bfm),
+  :is(.compact_c19a55, .compact_2i8Bfm):is(.message__5126c, .message_SY_P2T):hover :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm) :is(.username_c19a55, .username_2i8Bfm),
+  :is(.compact_c19a55, .compact_2i8Bfm):is(.message__5126c, .message_SY_P2T):hover .repliedTextContentIcon_da8b30 {
     opacity: 1;
   }
 }
 /* Message thread link line next to the message content */
-.compact_c19a55.hasThread_c19a55 .contents_c19a55::before {
+:is(.compact_c19a55, .compact_2i8Bfm):is(.hasThread_c19a55, .hasThread_2i8Bfm) :is(.contents_c19a55, .contents_2i8Bfm)::before {
   display: none;
 }
 /* Message thread link line next to the message embed container */
-.compact_c19a55 .spine__9271d {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.spine__9271d, .spine_g2fiji) {
   display: none;
 }
 /* Message thread embed */
-.compact_c19a55 .container__9271d {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.container__9271d, .container_g2fiji) {
   margin-top: 0;
 }
 /* Edit input */
-.compact_c19a55 .channelTextArea__5126c {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.channelTextArea__5126c, .channelTextArea_SY_P2T) {
   width: unset;
 }
 /* Vencord MessageLatency plugin: Latency indicator */
-.compact_c19a55 .headerText_c19a55 > svg {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) > svg {
   flex-shrink: 0;
   margin-right: 5px !important;
 }
 /* Vencord UserMessagesPronouns plugin: Message pronouns */
-.compact_c19a55 .headerText_c19a55 .timestamp_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :is(.timestamp_c19a55, .timestamp_2i8Bfm) {
   width: var(--compactpp-pronoundb-pronouns-width);
   max-width: fit-content;
   flex-grow: 1;
@@ -436,7 +436,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
 }
 /* DarkIRC: retain the pronoun column width in every interaction state. */
 /* Vencord PlatformIndicators plugin: Message platform indicator */
-.compact_c19a55 .vc-platform-indicator {
+:is(.compact_c19a55, .compact_2i8Bfm) .vc-platform-indicator {
   margin-left: 0 !important;
   position: static !important;
   margin-right: 5px;
@@ -731,45 +731,45 @@ body {
   color: var(--darkirc-text);
   font-family: var(--darkirc-font);
 }
-.sidebarList__5e434,
-.guilds__5e434,
-.members_c8ffbb,
-.container_c8ffbb,
-.panels__5e434 {
+:is(.sidebarList__5e434, .sidebarList_pog62O),
+:is(.guilds__5e434, .guilds_pog62O),
+:is(.members_c8ffbb, .members_86es0b),
+:is(.container_c8ffbb, .container_86es0b),
+:is(.panels__5e434, .panels_pog62O) {
   background: var(--darkirc-panel);
   border-radius: 0;
 }
-.sidebarList__5e434 { border-inline-end: 1px solid var(--darkirc-border); }
+:is(.sidebarList__5e434, .sidebarList_pog62O) { border-inline-end: 1px solid var(--darkirc-border); }
 /* Desktop Elements: the inner nav paints background-base-lowest over the
  * outer sidebar. Set the real surface rather than darkening global tokens. */
-.sidebarList__5e434 .container__2637a,
-.sidebarList__5e434 .scroller__629e4 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.container__2637a, .container_H5ozaj),
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.scroller__629e4, .scroller_ysO7Gy) {
   background: var(--darkirc-panel);
   box-shadow: none;
 }
-.sidebar__5e434::after { background: none; }
-.guilds__5e434 {
+:is(.sidebar__5e434, .sidebar_pog62O)::after { background: none; }
+:is(.guilds__5e434, .guilds_pog62O) {
   /* Keep folder backgrounds centered without changing account/RTC padding. */
   --custom-guild-list-padding: calc((var(--darkirc-server-width) - var(--guildbar-avatar-size)) / 2);
   box-sizing: border-box;
   border-inline-end: 1px solid var(--darkirc-border);
 }
-.chatContent_f75fb0 {
+:is(.chatContent_f75fb0, .chatContent_z_gUBg) {
   background: var(--darkirc-bg);
   min-width: 0;
   container: darkirc-chat / inline-size;
 }
-.membersWrap_c8ffbb {
+:is(.membersWrap_c8ffbb, .membersWrap_86es0b) {
   width: var(--darkirc-member-width);
   min-width: var(--darkirc-member-width);
   border-inline-start: 1px solid var(--darkirc-border);
 }
-.members_c8ffbb { width: var(--darkirc-member-width); }
-.member__5d473 {
+:is(.members_c8ffbb, .members_86es0b) { width: var(--darkirc-member-width); }
+:is(.member__5d473, .member_Iy0c7A) {
   margin-inline: 3px;
   max-width: calc(var(--darkirc-member-width) - 6px);
 }
-.membersGroup_c8ffbb {
+:is(.membersGroup_c8ffbb, .membersGroup_86es0b) {
   color: var(--darkirc-muted);
   font: 600 11px/16px var(--darkirc-font);
   letter-spacing: 0;
@@ -777,65 +777,65 @@ body {
 /* Use Discord's size tokens for targets, badge masks and folder geometry.
  * Image-backed guilds have no reliable short label on the clickable node;
  * retain their recognizable art. Native acronyms remain text. */
-.guilds__5e434 .listItem__650eb { margin-block: 3px; }
-.guilds__5e434 .stack_dbd263 { gap: 4px !important; }
+:is(.guilds__5e434, .guilds_pog62O) :is(.listItem__650eb, .listItem_rwEpIL) { margin-block: 3px; }
+:is(.guilds__5e434, .guilds_pog62O) :is(.stack_dbd263, .stack_TWWX0S) { gap: 4px !important; }
 /* Desktop React fixes both nested badge SVGs to a 40px coordinate space,
  * independently of the avatar token. Scale their outer layout as one unit;
  * shrinking only the image leaves a 40px target and off-center artwork.
  * Do not scale nested wrappers twice. Keep badge text at its native size. */
-.guilds__5e434 .wrapper_cc5dd2:not(.wrapper_cc5dd2 .wrapper_cc5dd2) {
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper_cc5dd2, .wrapper_hqZPsU):not(:is(.wrapper_cc5dd2, .wrapper_hqZPsU) :is(.wrapper_cc5dd2, .wrapper_hqZPsU)) {
   --guildbar-avatar-size: 40px;
   zoom: calc(var(--darkirc-server-icon-size) / 40px);
 }
-.guilds__5e434 .wrapper_cc5dd2 :is(.upperBadge_cc5dd2, .lowerBadge_cc5dd2) {
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper_cc5dd2, .wrapper_hqZPsU) :is(:is(.upperBadge_cc5dd2, .upperBadge_hqZPsU), :is(.lowerBadge_cc5dd2, .lowerBadge_hqZPsU)) {
   zoom: calc(40px / var(--darkirc-server-icon-size));
 }
-.guilds__5e434 .wrapper_cc5dd2 .childWrapper__6e9f8 {
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper_cc5dd2, .wrapper_hqZPsU) :is(.childWrapper__6e9f8, .childWrapper_JJ-hgR) {
   font-size: calc(13px * 40px / var(--darkirc-server-icon-size));
 }
-.guilds__5e434 .item__58105.selected__58105 { height: var(--darkirc-server-icon-size); }
-.guilds__5e434 .wrapper__6e9f8 {
+:is(.guilds__5e434, .guilds_pog62O) :is(.item__58105, .item__o8_Xq):is(.selected__58105, .selected__o8_Xq) { height: var(--darkirc-server-icon-size); }
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper__6e9f8, .wrapper_JJ-hgR) {
   border-radius: 2px;
   overflow: hidden;
   box-shadow: inset 0 0 0 1px var(--darkirc-border);
 }
-.guilds__5e434 .childWrapper__6e9f8 {
+:is(.guilds__5e434, .guilds_pog62O) :is(.childWrapper__6e9f8, .childWrapper_JJ-hgR) {
   border-radius: 2px;
   background: var(--darkirc-header);
   font-size: 13px;
 }
-.guilds__5e434 .wrapper__6e9f8:hover .childWrapper__6e9f8,
-.guilds__5e434 .wrapper__6e9f8:focus-visible .childWrapper__6e9f8,
-.guilds__5e434 .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper__6e9f8, .wrapper_JJ-hgR):hover :is(.childWrapper__6e9f8, .childWrapper_JJ-hgR),
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper__6e9f8, .wrapper_JJ-hgR):focus-visible :is(.childWrapper__6e9f8, .childWrapper_JJ-hgR),
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper__6e9f8, .wrapper_JJ-hgR):is(.selected__6e9f8, .selected_JJ-hgR) :is(.childWrapper__6e9f8, .childWrapper_JJ-hgR) {
   background: var(--darkirc-active);
   color: var(--darkirc-accent);
 }
-.guilds__5e434 .childWrapperHoverScale__6e9f8 { scale: 1 !important; }
-.guilds__5e434 :is(.icon__6e9f8, .folderPreviewGuildIcon__48112) {
+:is(.guilds__5e434, .guilds_pog62O) :is(.childWrapperHoverScale__6e9f8, .childWrapperHoverScale_JJ-hgR) { scale: 1 !important; }
+:is(.guilds__5e434, .guilds_pog62O) :is(:is(.icon__6e9f8, .icon_JJ-hgR), :is(.folderPreviewGuildIcon__48112, .folderPreviewGuildIcon_RTMSuZ)) {
   border-radius: 2px;
   filter: saturate(.25);
 }
-.guilds__5e434 .wrapper__6e9f8:is(:hover, :focus-visible, .selected__6e9f8, [aria-selected="true"]) .icon__6e9f8 {
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper__6e9f8, .wrapper_JJ-hgR):is(:hover, :focus-visible, :is(.selected__6e9f8, .selected_JJ-hgR), [aria-selected="true"]) :is(.icon__6e9f8, .icon_JJ-hgR) {
   filter: saturate(.65);
 }
-.guilds__5e434 .wrapper__6e9f8:is(.selected__6e9f8, [aria-selected="true"]) {
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper__6e9f8, .wrapper_JJ-hgR):is(:is(.selected__6e9f8, .selected_JJ-hgR), [aria-selected="true"]) {
   box-shadow: inset 0 0 0 1px var(--darkirc-accent);
 }
-.guilds__5e434 :is(.wrapper__6e9f8, .folderButton__48112):focus-visible {
+:is(.guilds__5e434, .guilds_pog62O) :is(:is(.wrapper__6e9f8, .wrapper_JJ-hgR), :is(.folderButton__48112, .folderButton_RTMSuZ)):focus-visible {
   outline: 2px solid var(--darkirc-accent);
   outline-offset: -2px;
 }
-.guilds__5e434 .wrapper_cc5dd2 .wrapper__6e9f8:focus-visible {
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper_cc5dd2, .wrapper_hqZPsU) :is(.wrapper__6e9f8, .wrapper_JJ-hgR):focus-visible {
   outline-width: calc(2px * 40px / var(--darkirc-server-icon-size)) !important;
   outline-offset: calc(-2px * 40px / var(--darkirc-server-icon-size));
 }
-.guilds__5e434 :is(.folderIcon__48112, .folderPreviewWrapper__48112) {
+:is(.guilds__5e434, .guilds_pog62O) :is(:is(.folderIcon__48112, .folderIcon_RTMSuZ), :is(.folderPreviewWrapper__48112, .folderPreviewWrapper_RTMSuZ)) {
   background: var(--darkirc-header);
   border-radius: 2px;
 }
-.guilds__5e434 .folderIcon__48112 { color: var(--darkirc-muted); }
+:is(.guilds__5e434, .guilds_pog62O) :is(.folderIcon__48112, .folderIcon_RTMSuZ) { color: var(--darkirc-muted); }
 
-.container__9293f {
+:is(.container__9293f, .container_ybUK7Z) {
   --__header-bar-background: var(--darkirc-header);
   background: var(--darkirc-header);
   border-bottom: 1px solid var(--darkirc-border);
@@ -843,37 +843,37 @@ body {
   padding-block: 3px;
   font: 13px/19px var(--darkirc-font);
 }
-.container__9293f :is(h1, h2, h3) { font: 600 13px/19px var(--darkirc-font); }
-.container__9293f :is([class^="topic_"], [class*=" topic_"]) {
+:is(.container__9293f, .container_ybUK7Z) :is(h1, h2, h3) { font: 600 13px/19px var(--darkirc-font); }
+:is(.container__9293f, .container_ybUK7Z) :is([class^="topic_"], [class*=" topic_"]) {
   font-size: 12px;
   color: var(--darkirc-muted);
 }
-.sidebarList__5e434 :is(header, .searchBar_e6b769) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(header, :is(.searchBar_e6b769, .searchBar_u88IQl)) {
   background: var(--darkirc-header);
   border-bottom: 1px solid var(--darkirc-border);
   box-shadow: none;
   border-radius: 0;
 }
-.sidebarList__5e434 header { min-height: 38px; height: auto; padding: 8px; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) header { min-height: 38px; height: auto; padding: 8px; }
 /* Elements-observed native flex chain. Recover nested padding and 16px
  * heading space; keep the 32px menu/invite targets and native full-name label.
  * Ellipsis is confined to the name, including when a guild badge is present. */
-.sidebarList__5e434 .header_f37cb1 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.header_f37cb1, .header_XH4OpX) {
   padding: 2px 4px;
   padding-inline-start: 4px;
 }
-.sidebarList__5e434 .headerContent_f37cb1 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.headerContent_f37cb1, .headerContent_XH4OpX) {
   min-width: 0;
   gap: 4px;
 }
-.sidebarList__5e434 .guildDropdown_f37cb1 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.guildDropdown_f37cb1, .guildDropdown_XH4OpX) {
   flex: 1 1 0;
   min-width: 0;
   padding-inline: 2px;
   border-radius: 2px;
 }
-.sidebarList__5e434 .guildBadgeAndName_f37cb1 { min-width: 0; gap: 4px; }
-.sidebarList__5e434 .name_f37cb1 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.guildBadgeAndName_f37cb1, .guildBadgeAndName_XH4OpX) { min-width: 0; gap: 4px; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.name_f37cb1, .name_XH4OpX) {
   min-width: 0;
   margin: 0 auto 0 0;
   overflow: hidden;
@@ -881,17 +881,17 @@ body {
   white-space: nowrap;
   font: 600 13px/19px var(--darkirc-font);
 }
-.sidebarList__5e434 .headerChildren_f37cb1,
-.sidebarList__5e434 .guildBadgeAndName_f37cb1 > :not(.name_f37cb1) { flex-shrink: 0; }
-.sidebarList__5e434 :is(.guildDropdown_f37cb1, .inviteButton_f37cb1, .addActionButton_f37cb1):hover {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.headerChildren_f37cb1, .headerChildren_XH4OpX),
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.guildBadgeAndName_f37cb1, .guildBadgeAndName_XH4OpX) > :not(:is(.name_f37cb1, .name_XH4OpX)) { flex-shrink: 0; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(:is(.guildDropdown_f37cb1, .guildDropdown_XH4OpX), :is(.inviteButton_f37cb1, .inviteButton_XH4OpX), :is(.addActionButton_f37cb1, .addActionButton_XH4OpX)):hover {
   background: var(--darkirc-hover);
 }
-.sidebarList__5e434 :is(.guildDropdown_f37cb1, .inviteButton_f37cb1, .addActionButton_f37cb1):focus-visible {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(:is(.guildDropdown_f37cb1, .guildDropdown_XH4OpX), :is(.inviteButton_f37cb1, .inviteButton_XH4OpX), :is(.addActionButton_f37cb1, .addActionButton_XH4OpX)):focus-visible {
   outline: 2px solid var(--darkirc-accent);
   outline-offset: -2px;
 }
-.sidebarList__5e434 [role="listitem"] { border-radius: 0; }
-.sidebarList__5e434 :is(.link__2ea32, a[href^="/channels/"]) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) [role="listitem"] { border-radius: 0; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(:is(.link__2ea32, .link_TNyK-N), a[href^="/channels/"]) {
   box-sizing: border-box;
   border-radius: 0;
   min-height: 0;
@@ -899,37 +899,37 @@ body {
   font-size: 12.5px;
   line-height: 19px;
 }
-.sidebarList__5e434 a[href^="/channels/"]:hover { background: var(--darkirc-hover); }
-.sidebarList__5e434 a[href^="/channels/"][aria-current="page"] {
+:is(.sidebarList__5e434, .sidebarList_pog62O) a[href^="/channels/"]:hover { background: var(--darkirc-hover); }
+:is(.sidebarList__5e434, .sidebarList_pog62O) a[href^="/channels/"][aria-current="page"] {
   background: var(--darkirc-active);
   color: var(--darkirc-accent);
   box-shadow: inset 2px 0 var(--darkirc-accent);
 }
 /* Only real channel rows: category, forum, voice and thread icons survive. */
-.sidebarList__5e434 :is([class^="linkTop_"], [class*=" linkTop_"]) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is([class^="linkTop_"], [class*=" linkTop_"]) {
   display: flex;
   align-items: center;
   min-height: 0;
   height: 28px;
   padding-block: 0;
 }
-.sidebarList__5e434 :is([class^="content_"], [class*=" content_"]):has(> a[href^="/channels/"]) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is([class^="content_"], [class*=" content_"]):has(> a[href^="/channels/"]) {
   border-radius: 0;
   margin-inline: 3px;
   padding-block: 0;
   padding-inline: 5px;
 }
-.sidebarList__5e434 .containerDefault_c69b6d {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.containerDefault_c69b6d, .containerDefault_Wx6SnQ) {
   /* A voice row may contain participants below its 28px clickable line. */
   min-height: 28px;
   padding-block: 0;
 }
-.sidebarList__5e434 .wrapper__2ea32 { padding-block: 0; margin-block: 0; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.wrapper__2ea32, .wrapper_TNyK-N) { padding-block: 0; margin-block: 0; }
 /* Shrink only text-bearing flex items. Native tooltips, unread badges and
  * trailing actions keep their targets; names never expand on hover. */
-.sidebarList__5e434 .link__2ea32,
-.sidebarList__5e434 .linkTop__2ea32 { min-width: 0; }
-.sidebarList__5e434 .name__2ea32 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.link__2ea32, .link_TNyK-N),
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.linkTop__2ea32, .linkTop_TNyK-N) { min-width: 0; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.name__2ea32, .name_TNyK-N) {
   font: 400 12.5px/19px var(--darkirc-font);
   min-width: 0;
   overflow: hidden;
@@ -938,50 +938,50 @@ body {
 }
 /* Current Desktop wraps the name in a separately sized text-md span.
  * Inherit the channel metrics instead of letting that span restore 16/20px. */
-.sidebarList__5e434 .name__2ea32 > [data-text-variant] { font: inherit; }
-.sidebarList__5e434 #channels [role="button"]:has(h3) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.name__2ea32, .name_TNyK-N) > [data-text-variant] { font: inherit; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) #channels [role="button"]:has(h3) {
   color: var(--darkirc-muted);
 }
-.sidebarList__5e434 #channels [role="button"] h3 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) #channels [role="button"] h3 {
   font: 500 11px/16px var(--darkirc-font);
   letter-spacing: 0;
   text-transform: uppercase;
 }
-.sidebarList__5e434 :is(.icon__2ea32, .iconContainer__2ea32) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(:is(.icon__2ea32, .icon_TNyK-N), :is(.iconContainer__2ea32, .iconContainer_TNyK-N)) {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
 }
-.sidebarList__5e434 :is([class^="modeSelected_"], [class*=" modeSelected_"]) a[href^="/channels/"] {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is([class^="modeSelected_"], [class*=" modeSelected_"]) a[href^="/channels/"] {
   color: var(--darkirc-accent);
   background: var(--darkirc-active);
   box-shadow: inset 2px 0 var(--darkirc-accent);
 }
-.sidebarList__5e434 .wrapper__2ea32:is(.modeSelected__2ea32, .modeUnreadImportant__2ea32) .name__2ea32 { font-weight: 600; }
-.sidebarList__5e434 .channel__972a0 { border-radius: 0; margin-block: 1px; }
-.sidebarList__5e434 .channel__972a0 .link__972a0 { padding-block: 0; }
-.searchBar_e6b769 .searchBarComponent_e6b769 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.wrapper__2ea32, .wrapper_TNyK-N):is(:is(.modeSelected__2ea32, .modeSelected_TNyK-N), :is(.modeUnreadImportant__2ea32, .modeUnreadImportant_TNyK-N)) :is(.name__2ea32, .name_TNyK-N) { font-weight: 600; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.channel__972a0, .channel_zln_tS) { border-radius: 0; margin-block: 1px; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.channel__972a0, .channel_zln_tS) :is(.link__972a0, .link_zln_tS) { padding-block: 0; }
+:is(.searchBar_e6b769, .searchBar_u88IQl) :is(.searchBarComponent_e6b769, .searchBarComponent_u88IQl) {
   font: 12px/18px var(--darkirc-font);
   padding: 4px 6px;
   border-radius: 0;
 }
-.searchBar_c322aa { border-radius: 0; height: 28px; }
+:is(.searchBar_c322aa, .searchBar_i16Ad0) { border-radius: 0; height: 28px; }
 
 /* Sidebar participants only. This is the native expanded list, not the
  * collapsed avatar grid or a call/video surface. Preserve the clickable row. */
-.sidebarList__5e434 .listDefault__07f91 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) {
   /* The old 4px shorthand erased list_c3cd7d's native channel indent.
    * Reserve real layout space, rather than shifting painted rows. */
   box-sizing: border-box;
   min-width: 0;
   padding-inline: 28px 4px;
 }
-.sidebarList__5e434 .listDefault__07f91 :is(.draggable__55bab, .voiceUser__07f91) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(:is(.draggable__55bab, .draggable_xIeVT2), :is(.voiceUser__07f91, .voiceUser_YUoOxm)) {
   min-width: 0;
   min-height: 22px;
   height: auto;
 }
-.sidebarList__5e434 .listDefault__07f91 .content__07f91 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(.content__07f91, .content_YUoOxm) {
   min-width: 0;
   min-height: 22px;
   height: auto;
@@ -990,8 +990,8 @@ body {
   gap: 4px;
   border-radius: 0;
 }
-.sidebarList__5e434 .listDefault__07f91 :is(.avatarContainer__07f91, .avatar__07f91) { display: none; }
-.sidebarList__5e434 .listDefault__07f91 .username__07f91 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(:is(.avatarContainer__07f91, .avatarContainer_YUoOxm), :is(.avatar__07f91, .avatar_YUoOxm)) { display: none; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(.username__07f91, .username_YUoOxm) {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -999,24 +999,24 @@ body {
   font: 12.5px/20px var(--darkirc-font);
 }
 /* Current display-name wrapper must yield space to mute/deafen icons. */
-.sidebarList__5e434 .listDefault__07f91 .content__07f91 > .container__394db {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(.content__07f91, .content_YUoOxm) > .container__394db {
   flex: 1 1 0;
   min-width: 0;
   overflow: hidden;
 }
-.sidebarList__5e434 .listDefault__07f91 .usernameContainer__394db { min-width: 0; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) .usernameContainer__394db { min-width: 0; }
 /* Server tags are optional cosmetics, never voice controls. Prefix variants
  * cover the shared tag component without targeting its profile/message uses. */
-.sidebarList__5e434 .listDefault__07f91 .voiceUser__07f91 :is(
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(.voiceUser__07f91, .voiceUser_YUoOxm) :is(
   [class^="clanTag_"], [class*=" clanTag_"],
   [class^="guildTag_"], [class*=" guildTag_"],
-  .chipletContainerInner__10651,
-  .avatarDecorationContainer__44b0c,
+  :is(.chipletContainerInner__10651, .chipletContainerInner_k8jyN7),
+  :is(.avatarDecorationContainer__44b0c, .avatarDecorationContainer_XpIUHy),
   [class^="avatarDecoration_"], [class*=" avatarDecoration_"]
 ) { display: none; }
 /* The native speaking name class remains; replace its hidden avatar ring
  * with a fixed-width dot so speaking never shifts the nick or state icons. */
-.sidebarList__5e434 .listDefault__07f91 .content__07f91::before {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(.content__07f91, .content_YUoOxm)::before {
   content: "";
   width: 4px;
   height: 4px;
@@ -1024,19 +1024,19 @@ body {
   border-radius: 50%;
   background: var(--darkirc-muted);
 }
-.sidebarList__5e434 .listDefault__07f91 .content__07f91:has(.usernameSpeaking__07f91)::before { background: var(--status-positive, #91e0b0); }
-.sidebarList__5e434 .listDefault__07f91 :is(.icons__07f91, .iconGroup__07f91) { gap: 2px; flex-shrink: 0; }
-.sidebarList__5e434 .listDefault__07f91 .icon__07f91 { width: 14px; height: 14px; }
-.sidebarList__5e434 .listDefault__07f91 .iconPriortySpeaker__07f91 { position: static; }
-.sidebarList__5e434 .listDefault__07f91 .voiceUser__07f91:focus-within .content__07f91 {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(.content__07f91, .content_YUoOxm):has(:is(.usernameSpeaking__07f91, .usernameSpeaking_YUoOxm))::before { background: var(--status-positive, #91e0b0); }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(:is(.icons__07f91, .icons_YUoOxm), :is(.iconGroup__07f91, .iconGroup_YUoOxm)) { gap: 2px; flex-shrink: 0; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(.icon__07f91, .icon_YUoOxm) { width: 14px; height: 14px; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(.iconPriortySpeaker__07f91, .iconPriortySpeaker_YUoOxm) { position: static; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.listDefault__07f91, .listDefault_YUoOxm) :is(.voiceUser__07f91, .voiceUser_YUoOxm):focus-within :is(.content__07f91, .content_YUoOxm) {
   outline: 2px solid var(--darkirc-accent);
   outline-offset: -2px;
 }
 
 /* Account and RTC panels keep their native absolute positioning and sizing.
  * No fixed panel height: connected voice controls must be able to expand. */
-.panels__5e434 { border-color: var(--darkirc-border); box-shadow: none; }
-.container__37e49 {
+:is(.panels__5e434, .panels_pog62O) { border-color: var(--darkirc-border); box-shadow: none; }
+:is(.container__37e49, .container_g6VwXp) {
   background: var(--darkirc-panel);
   box-shadow: none;
   border-radius: 0;
@@ -1047,7 +1047,7 @@ body {
   flex-direction: column;
   align-items: stretch;
 }
-.container__37e49 .accountPopoutButtonWrapper__37e49 {
+:is(.container__37e49, .container_g6VwXp) :is(.accountPopoutButtonWrapper__37e49, .accountPopoutButtonWrapper_g6VwXp) {
   flex: 0 0 auto;
   min-width: 0;
   margin: 0;
@@ -1056,16 +1056,16 @@ body {
   border-radius: 0;
 }
 /* Scale the existing SVG viewBox, including its status mask, as one unit. */
-.container__37e49 .avatar__37e49 {
+:is(.container__37e49, .container_g6VwXp) :is(.avatar__37e49, .avatar_g6VwXp) {
   width: 26px !important;
   height: 26px !important;
   flex: 0 0 26px;
 }
-.container__37e49 .avatar__37e49 > svg { width: 100%; height: 100%; }
+:is(.container__37e49, .container_g6VwXp) :is(.avatar__37e49, .avatar_g6VwXp) > svg { width: 100%; height: 100%; }
 /* Account nameplate artwork is a separate, full-panel decorative sibling. */
-.container__37e49 > .container_df39b2,
-.container__37e49 .avatarDecorationContainer__44b0c { display: none; }
-.container__37e49 .nameTag__37e49 {
+:is(.container__37e49, .container_g6VwXp) > :is(.container_df39b2, .container_AFi54G),
+:is(.container__37e49, .container_g6VwXp) :is(.avatarDecorationContainer__44b0c, .avatarDecorationContainer_XpIUHy) { display: none; }
+:is(.container__37e49, .container_g6VwXp) :is(.nameTag__37e49, .nameTag_g6VwXp) {
   /* Native account container queries can hide this in a narrow panel. With
    * controls on their own line there is now room for the name and status. */
   display: block;
@@ -1073,20 +1073,20 @@ body {
   overflow: hidden;
   font: 12px/16px var(--darkirc-font);
 }
-.container__37e49 :is(.panelTitleContainer__37e49, .panelSubtextContainer__37e49, .customStatus__37e49) {
+:is(.container__37e49, .container_g6VwXp) :is(:is(.panelTitleContainer__37e49, .panelTitleContainer_g6VwXp), :is(.panelSubtextContainer__37e49, .panelSubtextContainer_g6VwXp), :is(.customStatus__37e49, .customStatus_g6VwXp)) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0;
   font: inherit;
 }
-.container__37e49 .panelTitleContainer__37e49 .withDisplayNameStyles__37e49 { line-height: 16px; }
-.container__37e49 .panelSubtextContainer__37e49 {
+:is(.container__37e49, .container_g6VwXp) :is(.panelTitleContainer__37e49, .panelTitleContainer_g6VwXp) :is(.withDisplayNameStyles__37e49, .withDisplayNameStyles_g6VwXp) { line-height: 16px; }
+:is(.container__37e49, .container_g6VwXp) :is(.panelSubtextContainer__37e49, .panelSubtextContainer_g6VwXp) {
   color: var(--darkirc-muted);
   font-size: 10px;
   line-height: 14px;
 }
-.container__37e49 .buttons__37e49 {
+:is(.container__37e49, .container_g6VwXp) :is(.buttons__37e49, .buttons_g6VwXp) {
   flex: 0 0 auto;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1095,33 +1095,33 @@ body {
   padding-top: 4px;
   border-top: 1px solid var(--darkirc-border);
 }
-.container__37e49 .buttons__37e49 .button__67645 {
+:is(.container__37e49, .container_g6VwXp) :is(.buttons__37e49, .buttons_g6VwXp) :is(.button__67645, .button_Y-8oZW) {
   width: 100%;
   height: 30px;
   min-width: 0;
   padding: 0;
 }
-.container__37e49 .buttons__37e49 .audioButtonParent__5e764 {
+:is(.container__37e49, .container_g6VwXp) :is(.buttons__37e49, .buttons_g6VwXp) :is(.audioButtonParent__5e764, .audioButtonParent_gKpIZP) {
   display: grid;
   grid-column: span 2;
   grid-template-columns: subgrid;
   min-width: 0;
 }
 /* Five equal targets, while retaining native audio group state/hover hooks. */
-.container__37e49 .buttons__37e49 .buttonChevron__5e764 {
+:is(.container__37e49, .container_g6VwXp) :is(.buttons__37e49, .buttons_g6VwXp) :is(.buttonChevron__5e764, .buttonChevron_gKpIZP) {
   width: 100%;
   min-width: 0;
   height: 30px;
   margin-inline-start: 0;
   padding: 0;
 }
-.container__37e49 :is(.accountPopoutButtonWrapper__37e49, .button__67645):hover {
+:is(.container__37e49, .container_g6VwXp) :is(:is(.accountPopoutButtonWrapper__37e49, .accountPopoutButtonWrapper_g6VwXp), :is(.button__67645, .button_Y-8oZW)):hover {
   background-color: var(--darkirc-hover);
 }
-.container__37e49 :is(.accountPopoutButtonWrapper__37e49, .button__67645):active,
-.container__37e49 .buttons__37e49 [aria-pressed="true"] { background-color: var(--darkirc-active); }
-.container_e131a9 { border-radius: 0; padding: 6px; gap: 6px; }
-.container_e131a9 :is(button, [role="button"]) { min-width: 28px; min-height: 28px; }
+:is(.container__37e49, .container_g6VwXp) :is(:is(.accountPopoutButtonWrapper__37e49, .accountPopoutButtonWrapper_g6VwXp), :is(.button__67645, .button_Y-8oZW)):active,
+:is(.container__37e49, .container_g6VwXp) :is(.buttons__37e49, .buttons_g6VwXp) [aria-pressed="true"] { background-color: var(--darkirc-active); }
+:is(.container_e131a9, .container_9U6LUN) { border-radius: 0; padding: 6px; gap: 6px; }
+:is(.container_e131a9, .container_9U6LUN) :is(button, [role="button"]) { min-width: 28px; min-height: 28px; }
 
 /* ===== 25-nicklist.css ===== */
 /* IRC nicklist only: keep the native row, profile target and context menu.
@@ -1130,13 +1130,13 @@ body {
  * avatar's 32px vertical strut, but give it NO horizontal space or visible
  * pixels. This preserves native 42px geometry without showing an avatar.
  * CSS alone cannot safely turn Discord's virtualizer into a 20px list. */
-.members_c8ffbb .member__5d473 .childContainer__91a9d {
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A) :is(.childContainer__91a9d, .childContainer_J1Adu_) {
   padding: 0 5px;
   border-radius: 0;
   background: none !important;
   box-shadow: none;
 }
-.members_c8ffbb .member__5d473 .layout__91a9d {
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A) :is(.layout__91a9d, .layout_J1Adu_) {
   width: 100%;
   gap: 0;
   border-radius: 0;
@@ -1144,7 +1144,7 @@ body {
 /* Desktop Elements: status SVGs use dynamic masks and localized avatar labels,
  * not stable presence classes. Keep unknown presence neutral; only the native
  * offline class is reliable here. Never infer status from name/role colors. */
-.members_c8ffbb .member__5d473 .layout__91a9d::before {
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A) :is(.layout__91a9d, .layout_J1Adu_)::before {
   content: "";
   flex: 0 0 7px;
   width: 7px;
@@ -1153,55 +1153,55 @@ body {
   border-radius: 50%;
   background: var(--darkirc-muted);
 }
-.members_c8ffbb .member__5d473.offline__5d473 { opacity: .65; }
-.members_c8ffbb .member__5d473.offline__5d473:hover,
-.members_c8ffbb .member__5d473.offline__5d473:focus-within { opacity: 1; }
-.members_c8ffbb .offline__5d473 .layout__91a9d::before {
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A):is(.offline__5d473, .offline_Iy0c7A) { opacity: .65; }
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A):is(.offline__5d473, .offline_Iy0c7A):hover,
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A):is(.offline__5d473, .offline_Iy0c7A):focus-within { opacity: 1; }
+:is(.members_c8ffbb, .members_86es0b) :is(.offline__5d473, .offline_Iy0c7A) :is(.layout__91a9d, .layout_J1Adu_)::before {
   background: transparent;
   box-shadow: inset 0 0 0 1px var(--darkirc-muted);
 }
-.members_c8ffbb .member__5d473 :is(.content__91a9d, .username__5d473, .name__5d473) {
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A) :is(:is(.content__91a9d, .content_J1Adu_), :is(.username__5d473, .username_Iy0c7A), :is(.name__5d473, .name_Iy0c7A)) {
   min-width: 0;
   font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
 }
-.members_c8ffbb .member__5d473 :is(.name__5d473, .name__703b9) {
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A) :is(:is(.name__5d473, .name_Iy0c7A), :is(.name__703b9, .name_Wo4EpK)) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 /* Compact text only; retain the name-containing wrapper and native target. */
-.members_c8ffbb .member__5d473 :is(
-  .roleIcon_c8ffbb, .roleIcon_ee71ee,
-  .icon__5d473, .clanTag__5d473, .botTag__5d473,
-  .roleDotLeft__703b9, .roleDotRight__703b9, .subText__91a9d
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A) :is(
+  :is(.roleIcon_c8ffbb, .roleIcon_86es0b), :is(.roleIcon_ee71ee, .roleIcon_3jSSrV),
+  :is(.icon__5d473, .icon_Iy0c7A), :is(.clanTag__5d473, .clanTag_Iy0c7A), :is(.botTag__5d473, .botTag_Iy0c7A),
+  :is(.roleDotLeft__703b9, .roleDotLeft_Wo4EpK), :is(.roleDotRight__703b9, .roleDotRight_Wo4EpK), :is(.subText__91a9d, .subText_J1Adu_)
 ) { display: none; }
-.members_c8ffbb .member__5d473 .avatar__91a9d {
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A) :is(.avatar__91a9d, .avatar_J1Adu_) {
   visibility: hidden;
   overflow: hidden;
   width: 0;
   flex: 0 0 0;
   margin-inline: 0;
 }
-.members_c8ffbb .member__5d473 :is([class^="avatarDecoration_"], [class*=" avatarDecoration_"]) { display: none; }
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A) :is([class^="avatarDecoration_"], [class*=" avatarDecoration_"]) { display: none; }
 /* Elements verified container_df39b2 is an aria-hidden decorative sibling
  * with an inline gradient/image. Hide that layer, never its name wrapper.
  * Legacy artwork variants stay scoped to member rows, away from profiles. */
-.members_c8ffbb .member__5d473 :is(
-  .container_df39b2, .container__4bbc6, .profileEffects__0dd08,
-  .avatarDecorationContainer__44b0c,
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A) :is(
+  :is(.container_df39b2, .container_AFi54G), .container__4bbc6, :is(.profileEffects__0dd08, .profileEffects_ZjcCyW),
+  :is(.avatarDecorationContainer__44b0c, .avatarDecorationContainer_XpIUHy),
   [class^="nameplate_"], [class*=" nameplate_"]
 ) { display: none; }
 /* Native nameplates reserve 32px on the right. Reclaim it for the name. */
-.members_c8ffbb .member__5d473 .childContainer__91a9d.nameplated__91a9d { padding-inline-end: 5px; }
+:is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A) :is(.childContainer__91a9d, .childContainer_J1Adu_):is(.nameplated__91a9d, .nameplated_J1Adu_) { padding-inline-end: 5px; }
 /* Group labels stay as text, including role and online/offline grouping. */
-.members_c8ffbb .membersGroup_c8ffbb :is(.roleIcon_c8ffbb, .membersGroupNitroWheel_c8ffbb) {
+:is(.members_c8ffbb, .members_86es0b) :is(.membersGroup_c8ffbb, .membersGroup_86es0b) :is(:is(.roleIcon_c8ffbb, .roleIcon_86es0b), :is(.membersGroupNitroWheel_c8ffbb, .membersGroupNitroWheel_86es0b)) {
   display: none;
 }
 
 /* ===== 30-messages.css ===== */
 /* Compact++ supplies the core positioning; these rules refine its IRC layout.
  * Scope geometry to Compact. Cozy remains usable with the same palette. */
-.compact_c19a55.wrapper_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm):is(.wrapper_c19a55, .wrapper_2i8Bfm) {
   --chat-markup-line-height: var(--darkirc-message-line-height);
   font: 400 var(--darkirc-message-font-size)/var(--darkirc-message-line-height) var(--darkirc-font);
   min-height: var(--darkirc-message-line-height);
@@ -1212,14 +1212,14 @@ body {
   /* Keep the first column left-to-right even for Arabic/Hebrew message text. */
   direction: ltr;
 }
-.compact_c19a55.wrapper_c19a55.groupStart__5126c { margin-top: 2px; }
-.compact_c19a55 .markup__75297 {
+:is(.compact_c19a55, .compact_2i8Bfm):is(.wrapper_c19a55, .wrapper_2i8Bfm):is(.groupStart__5126c, .groupStart_SY_P2T) { margin-top: 2px; }
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.markup__75297, .markup_ku1OHH) {
   font-size: var(--darkirc-message-font-size);
   line-height: var(--darkirc-message-line-height);
   font-weight: 400;
 }
-.compact_c19a55 .contents_c19a55 { margin-inline-start: 0; padding-inline-start: 0; }
-.compact_c19a55 .header_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.contents_c19a55, .contents_2i8Bfm) { margin-inline-start: 0; padding-inline-start: 0; }
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm) {
   min-height: var(--darkirc-message-line-height);
   gap: 0;
   line-height: var(--darkirc-message-line-height);
@@ -1227,7 +1227,7 @@ body {
   font-weight: 400;
   text-indent: 0;
 }
-.compact_c19a55 .header_c19a55 > .timestamp_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm) > :is(.timestamp_c19a55, .timestamp_2i8Bfm) {
   flex: 0 0 auto;
   width: max-content;
   min-width: var(--darkirc-time-width);
@@ -1240,11 +1240,11 @@ body {
   margin-inline-end: 0;
 }
 /* Some builds already include accessible bracket separators. Avoid doubling. */
-.compact_c19a55 .header_c19a55 > .timestamp_c19a55 time:not(:has([class*="separator_"]))::before { content: "["; }
-.compact_c19a55 .header_c19a55 > .timestamp_c19a55 time:not(:has([class*="separator_"]))::after { content: "]"; }
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm) > :is(.timestamp_c19a55, .timestamp_2i8Bfm) time:not(:has([class*="separator_"]))::before { content: "["; }
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm) > :is(.timestamp_c19a55, .timestamp_2i8Bfm) time:not(:has([class*="separator_"]))::after { content: "]"; }
 /* Native Compact's bracket nodes exist for selection/copying but are normally
  * visually transparent and absolutely positioned. Make those nodes visible. */
-.compact_c19a55 .header_c19a55 > .timestamp_c19a55 .separator_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm) > :is(.timestamp_c19a55, .timestamp_2i8Bfm) :is(.separator_c19a55, .separator_2i8Bfm) {
   display: inline;
   position: static;
   opacity: 1;
@@ -1254,7 +1254,7 @@ body {
 /* The live Finnish 24-hour clock also carries latin12CompactTimeStamp.
  * Measure native clock content instead of treating that class as a 12-hour
  * signal. The 8ch minimum aligns ordinary clocks; wider locales can grow. */
-.compact_c19a55 .headerText_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) {
   flex: 1 1 0;
   justify-content: flex-start;
   min-width: 0;
@@ -1262,7 +1262,7 @@ body {
   gap: 0;
   margin-inline: 4px 0;
 }
-.compact_c19a55 .headerText_c19a55 .username_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :is(.username_c19a55, .username_2i8Bfm) {
   font: 600 var(--darkirc-message-font-size)/var(--darkirc-message-line-height) var(--darkirc-font);
   min-width: 0;
   max-width: 100%;
@@ -1270,15 +1270,15 @@ body {
 }
 /* CSS fallback is a single readable nick color. Per-user hashing belongs to
  * IrcColors: inline colors and native role colors are deliberately preserved. */
-.compact_c19a55 .headerText_c19a55 .username_c19a55:not([style*="color"]) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :is(.username_c19a55, .username_2i8Bfm):not([style*="color"]) {
   color: var(--darkirc-accent);
 }
-.compact_c19a55 .headerText_c19a55 .username_c19a55::before { content: "<"; }
-.compact_c19a55 .headerText_c19a55 .username_c19a55::after { content: ">"; }
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :is(.username_c19a55, .username_2i8Bfm)::before { content: "<"; }
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :is(.username_c19a55, .username_2i8Bfm)::after { content: ">"; }
 /* Keep modern nested names clipped too, including replies. No generated
  * tooltip: CSS has no reliable full-name attribute on every native variant.
  * The existing name node, accessible name and profile handlers are retained. */
-.compact_c19a55 :is(.headerText_c19a55, .repliedMessage_c19a55) .username_c19a55 :is(.nameContainer__703b9, .name__703b9) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.headerText_c19a55, .headerText_2i8Bfm), :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm)) :is(.username_c19a55, .username_2i8Bfm) :is(:is(.nameContainer__703b9, .nameContainer_Wo4EpK), :is(.name__703b9, .name_Wo4EpK)) {
   min-width: 0;
   max-width: 100%;
   overflow: hidden;
@@ -1287,37 +1287,37 @@ body {
   flex-shrink: 1;
 }
 /* An inset focus ring cannot cover either the next column or adjacent rows. */
-.compact_c19a55 :is(.headerText_c19a55, .repliedMessage_c19a55) .username_c19a55:focus-visible {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.headerText_c19a55, .headerText_2i8Bfm), :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm)) :is(.username_c19a55, .username_2i8Bfm):focus-visible {
   outline: 2px solid var(--darkirc-accent);
   outline-offset: -2px;
   border-radius: 0;
 }
-.compact_c19a55 .header_c19a55 > .avatar_c19a55,
-.compact_c19a55 .avatarDecoration_c19a55,
-.compact_c19a55 .headerText_c19a55 :is(.roleIcon_c19a55, .roleIcon_ee71ee, .roleDot_c19a55, .roleDotLeft__703b9, .roleDotRight__703b9, .newMemberBadge_f80704, .clanTagChiplet_c19a55, .profileEffects__0dd08) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm) > :is(.avatar_c19a55, .avatar_2i8Bfm),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.avatarDecoration_c19a55, .avatarDecoration_2i8Bfm),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :is(:is(.roleIcon_c19a55, .roleIcon_2i8Bfm), :is(.roleIcon_ee71ee, .roleIcon_3jSSrV), :is(.roleDot_c19a55, .roleDot_2i8Bfm), :is(.roleDotLeft__703b9, .roleDotLeft_Wo4EpK), :is(.roleDotRight__703b9, .roleDotRight_Wo4EpK), :is(.newMemberBadge_f80704, .newMemberBadge_P4-UkH), :is(.clanTagChiplet_c19a55, .clanTagChiplet_2i8Bfm), :is(.profileEffects__0dd08, .profileEffects_ZjcCyW)) {
   display: none;
 }
-.compact_c19a55 .headerText_c19a55 .botTag_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) :is(.botTag_c19a55, .botTag_2i8Bfm) {
   flex-shrink: 0;
   font-size: 10px;
   line-height: 14px;
   border-radius: 0;
   margin-inline-end: 3px;
 }
-.compact_c19a55 .badgesContainer_c19a55 { flex-shrink: 0; }
-.compact_c19a55 .messageContent_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.badgesContainer_c19a55, .badgesContainer_2i8Bfm) { flex-shrink: 0; }
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.messageContent_c19a55, .messageContent_2i8Bfm) {
   min-width: 0;
   overflow-wrap: anywhere;
   text-align: start;
 }
-.compact_c19a55 > .container_b7e1cb { min-width: 0; max-width: calc(100% - var(--compactpp-header-width) - 30px); }
+:is(.compact_c19a55, .compact_2i8Bfm) > :is(.container_b7e1cb, .container_YUQhib) { min-width: 0; max-width: calc(100% - var(--compactpp-header-width) - 30px); }
 /* Reactions and attachments retain the previous inherited metrics. Their
  * native emoji sizing must not follow the larger message body. */
-.compact_c19a55 > .container_b7e1cb {
+:is(.compact_c19a55, .compact_2i8Bfm) > :is(.container_b7e1cb, .container_YUQhib) {
   --chat-markup-line-height: var(--darkirc-line-height);
   font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
 }
-.compact_c19a55 .repliedMessage_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm) {
   color: var(--darkirc-muted);
   /* Resolve ch-based columns at the same font size as message text. */
   font: 400 var(--darkirc-message-font-size)/18px var(--darkirc-font);
@@ -1328,7 +1328,7 @@ body {
   padding-inline-start: 0;
   gap: 4px;
 }
-.compact_c19a55 .repliedMessage_c19a55 .username_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm) :is(.username_c19a55, .username_2i8Bfm) {
   opacity: 1;
   flex: 0 1 auto;
   min-width: 0;
@@ -1337,69 +1337,69 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.compact_c19a55 .repliedMessage_c19a55 .repliedTextPreview_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm) :is(.repliedTextPreview_c19a55, .repliedTextPreview_2i8Bfm) {
   flex: 1 1 0;
   min-width: 0;
 }
 /* Keep the native clickable spine in the gutter, clear of both columns. */
-.compact_c19a55 .repliedMessageClickableSpine_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessageClickableSpine_c19a55, .repliedMessageClickableSpine_2i8Bfm) {
   inset-inline-start: -12px;
   inset-inline-end: 100%;
 }
-.compact_c19a55 .timestamp_c19a55.timestampVisibleOnHover_c19a55 {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.timestamp_c19a55, .timestamp_2i8Bfm):is(.timestampVisibleOnHover_c19a55, .timestampVisibleOnHover_2i8Bfm) {
   opacity: 1;
   color: var(--darkirc-muted);
 }
 /* One line of room for attachment-only messages and system/event notices. */
-.compact_c19a55 .contents_c19a55 { min-height: var(--darkirc-message-line-height); }
-.compact_c19a55.isSystemMessage_c19a55 { min-height: 22px; }
-.compact_c19a55 .messageContent_c19a55 :is(pre, blockquote) { max-width: 100%; }
-.markup__75297 pre {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.contents_c19a55, .contents_2i8Bfm) { min-height: var(--darkirc-message-line-height); }
+:is(.compact_c19a55, .compact_2i8Bfm):is(.isSystemMessage_c19a55, .isSystemMessage_2i8Bfm) { min-height: 22px; }
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.messageContent_c19a55, .messageContent_2i8Bfm) :is(pre, blockquote) { max-width: 100%; }
+:is(.markup__75297, .markup_ku1OHH) pre {
   border: 1px solid var(--darkirc-border);
   border-radius: 0;
   background: var(--background-code);
   max-width: 100%;
 }
-.markup__75297 pre code {
+:is(.markup__75297, .markup_ku1OHH) pre code {
   display: block;
   white-space: pre;
   overflow-x: auto;
   font: 12px/18px var(--darkirc-font);
 }
-.markup__75297 code.inline {
+:is(.markup__75297, .markup_ku1OHH) code.inline {
   background: var(--background-code);
   border-radius: 0;
   color: inherit;
   font-family: var(--darkirc-font);
 }
-.markup__75297 a { color: var(--darkirc-accent); text-underline-offset: 2px; }
-.markup__75297 a:hover { text-decoration: underline; }
-.markup__75297 blockquote { border-radius: 0; }
+:is(.markup__75297, .markup_ku1OHH) a { color: var(--darkirc-accent); text-underline-offset: 2px; }
+:is(.markup__75297, .markup_ku1OHH) a:hover { text-decoration: underline; }
+:is(.markup__75297, .markup_ku1OHH) blockquote { border-radius: 0; }
 /* Only message text: reaction/picker/media emoji keep native geometry. */
-.compact_c19a55 .messageContent_c19a55 .emoji {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.messageContent_c19a55, .messageContent_2i8Bfm) .emoji {
   width: 17px;
   height: 17px;
   vertical-align: middle;
 }
-.compact_c19a55 .messageContent_c19a55 .emoji.jumboable {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.messageContent_c19a55, .messageContent_2i8Bfm) .emoji.jumboable {
   width: 22px;
   height: 22px;
   min-height: 22px;
 }
 /* Keep spoiler masking, embed type/color rails, image aspect ratios and player
  * controls native. Never apply a blanket height/overflow to media elements. */
-.compact_c19a55 :is([class^="embedFull_"], [class*=" embedFull_"], [class^="attachment_"], [class*=" attachment_"]) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is([class^="embedFull_"], [class*=" embedFull_"], [class^="attachment_"], [class*=" attachment_"]) {
   border-radius: 0;
   background-color: var(--darkirc-panel);
 }
 /* Desktop Elements: group > animation wrapper > reaction > focusable inner.
  * Keep native state/tooltip handlers, count min-width and wrap containers.
  * 26px border box leaves a 24px-high native click target. */
-.compact_c19a55 :is(.reaction__23977, .reaction_f8896c) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.reaction__23977, .reaction_MmKct8), :is(.reaction_f8896c, .reaction_UNkajC)) {
   border-radius: 2px;
   border-width: 1px;
 }
-.compact_c19a55 :is(.reactionInner__23977, .reactionInner_f8896c) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.reactionInner__23977, .reactionInner_MmKct8), :is(.reactionInner_f8896c, .reactionInner_UNkajC)) {
   box-sizing: border-box;
   min-width: 24px;
   min-height: 24px;
@@ -1408,11 +1408,11 @@ body {
 }
 /* The emoji sits in its own inline-formatting div. Remove its baseline
  * descender space without clipping animated/custom images or the tooltip. */
-.compact_c19a55 :is(.reactionInner__23977, .reactionInner_f8896c) > div:has(> :is(.emoji, .emoji-text)) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.reactionInner__23977, .reactionInner_MmKct8), :is(.reactionInner_f8896c, .reactionInner_UNkajC)) > div:has(> :is(.emoji, .emoji-text)) {
   display: flex;
   align-items: center;
 }
-.compact_c19a55 :is(.reaction__23977, .reaction_f8896c) .emoji {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.reaction__23977, .reaction_MmKct8), :is(.reaction_f8896c, .reaction_UNkajC)) .emoji {
   width: 18px;
   height: 18px;
   min-width: 0;
@@ -1421,16 +1421,16 @@ body {
   object-fit: contain;
   vertical-align: middle;
 }
-.compact_c19a55 :is(.reaction__23977, .reaction_f8896c) .emoji-text {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.reaction__23977, .reaction_MmKct8), :is(.reaction_f8896c, .reaction_UNkajC)) .emoji-text {
   font-size: 18px;
   line-height: 18px;
   vertical-align: middle;
 }
-.compact_c19a55 :is(.reactionCount__23977, .reactionCount_f8896c) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.reactionCount__23977, .reactionCount_MmKct8), :is(.reactionCount_f8896c, .reactionCount_UNkajC)) {
   font: 500 12px/18px var(--darkirc-font);
   margin-inline-start: 4px;
 }
-.compact_c19a55 :is(.reactionBtn__23977, .reactionBtn_f8896c) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.reactionBtn__23977, .reactionBtn_MmKct8), :is(.reactionBtn_f8896c, .reactionBtn_UNkajC)) {
   box-sizing: border-box;
   min-width: 26px;
   height: 26px;
@@ -1438,97 +1438,97 @@ body {
   border: 1px solid transparent;
   border-radius: 2px;
 }
-.compact_c19a55 :is(.reactionBtn__23977, .reactionBtn_f8896c) :is(.icon__23977, .icon_f8896c) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.reactionBtn__23977, .reactionBtn_MmKct8), :is(.reactionBtn_f8896c, .reactionBtn_UNkajC)) :is(:is(.icon__23977, .icon_MmKct8), :is(.icon_f8896c, .icon_UNkajC)) {
   width: 18px;
   height: 18px;
 }
-.compact_c19a55 :is(.reactionInner__23977, .reactionInner_f8896c, .reactionBtn__23977, .reactionBtn_f8896c):focus-visible {
+:is(.compact_c19a55, .compact_2i8Bfm) :is(:is(.reactionInner__23977, .reactionInner_MmKct8), :is(.reactionInner_f8896c, .reactionInner_UNkajC), :is(.reactionBtn__23977, .reactionBtn_MmKct8), :is(.reactionBtn_f8896c, .reactionBtn_UNkajC)):focus-visible {
   outline: 2px solid var(--darkirc-accent);
   outline-offset: -2px;
 }
-.compact_c19a55 :is([class^="buttons_"], [class*=" buttons_"]) {
+:is(.compact_c19a55, .compact_2i8Bfm) :is([class^="buttons_"], [class*=" buttons_"]) {
   border-radius: 0;
   box-shadow: none;
 }
 /* Do not change native hover/focus visibility of message action toolbars. */
-.compact_c19a55 :is([class^="button_"], [class*=" button_"]) { border-radius: 0; }
+:is(.compact_c19a55, .compact_2i8Bfm) :is([class^="button_"], [class*=" button_"]) { border-radius: 0; }
 
 /* Main composer AND inline edit composer (different native class modules). */
-.form_f75fb0,
-.compact_c19a55 .channelTextArea__5126c {
+:is(.form_f75fb0, .form_z_gUBg),
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.channelTextArea__5126c, .channelTextArea_SY_P2T) {
   /* Native Slate sizing and button alignment share these tokens. No fixed
    * editor height: Discord can still measure and grow multiline content. */
   --custom-channel-textarea-text-area-height: 38px;
   --chat-markup-line-height: var(--darkirc-line-height);
 }
-.channelTextArea__74017,
-.channelTextArea__5126c {
+:is(.channelTextArea__74017, .channelTextArea_2x8-Qn),
+:is(.channelTextArea__5126c, .channelTextArea_SY_P2T) {
   background: var(--darkirc-panel);
   border: 1px solid var(--darkirc-control-border);
   border-radius: 0;
   box-shadow: none;
   margin-bottom: 4px;
 }
-.channelTextArea__74017:focus-within,
-.channelTextArea__5126c:focus-within { border-color: var(--darkirc-accent); }
-.scrollableContainer__74017 { background: var(--darkirc-panel); border-radius: 0; }
-.form_f75fb0 .channelTextArea__74017 :is(.button__74017, .attachButtonInner__0923f) {
+:is(.channelTextArea__74017, .channelTextArea_2x8-Qn):focus-within,
+:is(.channelTextArea__5126c, .channelTextArea_SY_P2T):focus-within { border-color: var(--darkirc-accent); }
+:is(.scrollableContainer__74017, .scrollableContainer_2x8-Qn) { background: var(--darkirc-panel); border-radius: 0; }
+:is(.form_f75fb0, .form_z_gUBg) :is(.channelTextArea__74017, .channelTextArea_2x8-Qn) :is(:is(.button__74017, .button_2x8-Qn), :is(.attachButtonInner__0923f, .attachButtonInner_7TM4SO)) {
   background: transparent;
   border-radius: 0;
   box-shadow: none;
   color: var(--darkirc-muted);
 }
-.form_f75fb0 .channelTextArea__74017 :is(.button__74017, .attachButtonInner__0923f):hover {
+:is(.form_f75fb0, .form_z_gUBg) :is(.channelTextArea__74017, .channelTextArea_2x8-Qn) :is(:is(.button__74017, .button_2x8-Qn), :is(.attachButtonInner__0923f, .attachButtonInner_7TM4SO)):hover {
   background: var(--darkirc-hover);
   color: var(--darkirc-text);
 }
-.textArea__74017,
-.channelTextArea__5126c [role="textbox"] {
+:is(.textArea__74017, .textArea_2x8-Qn),
+:is(.channelTextArea__5126c, .channelTextArea_SY_P2T) [role="textbox"] {
   font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
   min-width: 0;
 }
 /* Keep the verified bottom layout: restoring native -16px requires live
  * typing/scroll anchoring evidence, not just a reconstructed spacer fixture. */
-.form_f75fb0 { margin-top: 0; padding-inline: 8px; }
-.form_f75fb0 .inner__74017 { padding-inline-start: 8px; }
-.form_f75fb0 .attachButton__74017 { margin-inline: 0 4px; }
+:is(.form_f75fb0, .form_z_gUBg) { margin-top: 0; padding-inline: 8px; }
+:is(.form_f75fb0, .form_z_gUBg) :is(.inner__74017, .inner_2x8-Qn) { padding-inline-start: 8px; }
+:is(.form_f75fb0, .form_z_gUBg) :is(.attachButton__74017, .attachButton_2x8-Qn) { margin-inline: 0 4px; }
 /* Modern + action lives outside module 74017. Its native 12px + 12px
  * padding around a 32px icon made the REAL inner container 56px tall even
  * while Slate and the old fixture measured 38px. Size this wrapper too. */
-.form_f75fb0 .attachWrapper__0923f {
+:is(.form_f75fb0, .form_z_gUBg) :is(.attachWrapper__0923f, .attachWrapper_7TM4SO) {
   align-self: flex-start;
   display: flex;
   align-items: center;
   height: var(--custom-channel-textarea-text-area-height);
   padding: 0 4px 0 0;
 }
-.form_f75fb0 { --chat-input-icon-size: 20px; }
-.form_f75fb0 .attachButtonInner__0923f {
+:is(.form_f75fb0, .form_z_gUBg) { --chat-input-icon-size: 20px; }
+:is(.form_f75fb0, .form_z_gUBg) :is(.attachButtonInner__0923f, .attachButtonInner_7TM4SO) {
   box-sizing: border-box;
   width: 30px;
   height: 30px;
   padding: 5px;
   border-radius: 0;
 }
-.form_f75fb0 .buttons__74017 { gap: 2px; }
-.form_f75fb0 .buttons__74017 .button__74017 {
+:is(.form_f75fb0, .form_z_gUBg) :is(.buttons__74017, .buttons_2x8-Qn) { gap: 2px; }
+:is(.form_f75fb0, .form_z_gUBg) :is(.buttons__74017, .buttons_2x8-Qn) :is(.button__74017, .button_2x8-Qn) {
   min-width: 28px;
   min-height: 28px;
 }
-.form_f75fb0 .placeholder__1b31f {
+:is(.form_f75fb0, .form_z_gUBg) :is(.placeholder__1b31f, .placeholder_SHcSVi) {
   color: var(--darkirc-muted);
   opacity: 1;
   font: var(--darkirc-font-size)/var(--darkirc-line-height) var(--darkirc-font);
 }
-.compact_c19a55 .operations_bab751 { font: 12px/19px var(--darkirc-font); }
+:is(.compact_c19a55, .compact_2i8Bfm) :is(.operations_bab751, .operations_h_zE4S) { font: 12px/19px var(--darkirc-font); }
 
 /* ===== 35-nick-styles.css ===== */
 /* Flatten display-name cosmetics in account, nicklist and message metadata only.
  * Inline IrcColors / role colors remain on the real name nodes. In particular,
  * do not apply these rules to messageContent, emoji, media or profile portals. */
-:is(.container__37e49, .members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) :is(
-  .username_c19a55, .name__5d473, .name__703b9, .nameContainer__703b9,
-  .usernameGradient_e5de78
+:is(:is(.container__37e49, .container_g6VwXp), :is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A), :is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm), :is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm)) :is(
+  :is(.username_c19a55, .username_2i8Bfm), :is(.name__5d473, .name_Iy0c7A), :is(.name__703b9, .name_Wo4EpK), :is(.nameContainer__703b9, .nameContainer_Wo4EpK),
+  :is(.usernameGradient_e5de78, .usernameGradient_HG2xvK)
 ) {
   font-family: var(--darkirc-font) !important;
   font-size: inherit;
@@ -1542,10 +1542,10 @@ body {
   filter: none !important;
   animation: none !important;
 }
-:is(.container__37e49, .members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) :is(.nameGlow__703b9, .usernameGlow_e5de78) {
+:is(:is(.container__37e49, .container_g6VwXp), :is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A), :is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm), :is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm)) :is(:is(.nameGlow__703b9, .nameGlow_Wo4EpK), :is(.usernameGlow_e5de78, .usernameGlow_HG2xvK)) {
   display: none;
 }
-:is(.container__37e49, .members_c8ffbb .member__5d473, .compact_c19a55 .header_c19a55, .compact_c19a55 .repliedMessage_c19a55) .convenienceGlowGradient_e5de78::after {
+:is(:is(.container__37e49, .container_g6VwXp), :is(.members_c8ffbb, .members_86es0b) :is(.member__5d473, .member_Iy0c7A), :is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm), :is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm)) :is(.convenienceGlowGradient_e5de78, .convenienceGlowGradient_HG2xvK)::after {
   content: none;
 }
 /* Hover/focus keep the same inline, role or fallback color as the resting name. */
@@ -1553,9 +1553,9 @@ body {
 /* ===== 40-surfaces.css ===== */
 /* Native roles keep dialog/menu behavior, focus management and semantics. */
 [role="menu"],
-.menu_c1e9c4,
-.root__49fc1,
-.outer_c0bea0,
+:is(.menu_c1e9c4, .menu_M3qk4j),
+:is(.root__49fc1, .root__KoJTP),
+:is(.outer_c0bea0, .outer_P1YEjQ),
 [class^="vc-notification"],
 [class*=" vc-notification"] {
   background-color: var(--darkirc-panel);
@@ -1564,7 +1564,7 @@ body {
   box-shadow: none;
   font-family: var(--darkirc-font);
 }
-.root__49fc1.root__49fc1 { border-radius: 0; }
+:is(.root__49fc1, .root__KoJTP):is(.root__49fc1, .root__KoJTP) { border-radius: 0; }
 [role="dialog"] { color: var(--darkirc-text); font-family: var(--darkirc-font); }
 [role="dialog"] :is(h1, h2, h3) { font-family: var(--darkirc-font); }
 [role="dialog"] :is(input, textarea, select),
@@ -1572,7 +1572,7 @@ body {
   font-family: var(--darkirc-font);
   border-radius: 0;
 }
-.menu_c1e9c4 {
+:is(.menu_c1e9c4, .menu_M3qk4j) {
   --custom-menu-separator-margin: 4px;
   --custom-menu-viewport-padding: 8px;
 }
@@ -1588,8 +1588,8 @@ body {
 [role="menuitem"]:hover,
 [role="menuitemcheckbox"]:hover,
 [role="menuitemradio"]:hover { background-color: var(--darkirc-active); }
-.inner_c0bea0 { border-radius: 0; }
-.outer_c0bea0 {
+:is(.inner_c0bea0, .inner_P1YEjQ) { border-radius: 0; }
+:is(.outer_c0bea0, .outer_P1YEjQ) {
   /* Nitro profile colors are inline custom properties. Scope the override to
    * profile surfaces so name/role colors and user banner images stay native. */
   --profile-gradient-primary-color: var(--darkirc-panel) !important;
@@ -1634,7 +1634,7 @@ body {
 }
 [role="alert"], [role="status"] { font-family: var(--darkirc-font); }
 /* Keep the native new-message controls, stacking and 32px hit area. */
-.newMessagesBar__0f481 {
+:is(.newMessagesBar__0f481, .newMessagesBar_j9Vvzj) {
   background-color: var(--darkirc-header);
   color: var(--darkirc-text);
   border-inline-start: 2px solid var(--darkirc-accent);
@@ -1660,16 +1660,16 @@ button, input, textarea, select { border-radius: 0; }
 
 /* Remove only decorative transitions. Voice activity, loading, typing, video
  * and accessibility feedback retain their semantic animation/state changes. */
-.guilds__5e434 .wrapper__6e9f8,
-.guilds__5e434 .childWrapper__6e9f8,
-.sidebarList__5e434 a,
-.member__5d473,
-.channelTextArea__74017,
-.channelTextArea__5126c,
-.searchBar_c322aa,
+:is(.guilds__5e434, .guilds_pog62O) :is(.wrapper__6e9f8, .wrapper_JJ-hgR),
+:is(.guilds__5e434, .guilds_pog62O) :is(.childWrapper__6e9f8, .childWrapper_JJ-hgR),
+:is(.sidebarList__5e434, .sidebarList_pog62O) a,
+:is(.member__5d473, .member_Iy0c7A),
+:is(.channelTextArea__74017, .channelTextArea_2x8-Qn),
+:is(.channelTextArea__5126c, .channelTextArea_SY_P2T),
+:is(.searchBar_c322aa, .searchBar_i16Ad0),
 [role="menuitem"] { transition: none !important; }
 @media (prefers-reduced-motion: reduce) {
-  .guilds__5e434 *,
+  :is(.guilds__5e434, .guilds_pog62O) *,
   [role="menu"],
   [role="dialog"] { scroll-behavior: auto; transition-duration: 0s !important; }
 }
@@ -1684,7 +1684,7 @@ button, input, textarea, select { border-radius: 0; }
  * panels default to the entire sidebar, including the guild rail. Use the
  * existing named grid area as their containing block; retain bottom anchoring
  * and intrinsic height for RTC/activity panels. No viewport offset is needed. */
-.sidebar__5e434 > .panels__5e434 {
+:is(.sidebar__5e434, .sidebar_pog62O) > :is(.panels__5e434, .panels_pog62O) {
   grid-column: channelsList;
   inset-inline: 0;
   width: auto;
@@ -1693,14 +1693,14 @@ button, input, textarea, select { border-radius: 0; }
 /* Keep the five controls at least 24px wide when responsive channels are
  * below 152px: four audio targets, then a full-width settings target. */
 @container darkirc-panels (max-width: 151px) {
-  .container__37e49 .buttons__37e49 { grid-template-columns: repeat(4, minmax(24px, 1fr)); }
-  .container__37e49 .buttons__37e49 > .button__67645 { grid-column: 1 / -1; }
+  :is(.container__37e49, .container_g6VwXp) :is(.buttons__37e49, .buttons_g6VwXp) { grid-template-columns: repeat(4, minmax(24px, 1fr)); }
+  :is(.container__37e49, .container_g6VwXp) :is(.buttons__37e49, .buttons_g6VwXp) > :is(.button__67645, .button_Y-8oZW) { grid-column: 1 / -1; }
 }
 
 /* Friends are ordinary flow rows, not the member-list virtualizer. PTB puts
  * an animated 61px inline height on them; allow content to grow beyond 46px.
  * The native rowButton still covers the full row and owns keyboard behavior. */
-.container__133bf .peopleListItem_cc6179 {
+:is(.container__133bf, .container_zrUwGA) :is(.peopleListItem_cc6179, .peopleListItem_y75PxA) {
   box-sizing: border-box;
   min-height: 46px;
   height: auto !important;
@@ -1708,48 +1708,48 @@ button, input, textarea, select { border-radius: 0; }
   border-radius: 2px;
   font: 13px/19px var(--darkirc-font);
 }
-.container__133bf .rowContent_cc6179 { min-height: 34px; }
-.container__133bf .peopleListItem_cc6179 .userInfo__0a06e { min-width: 0; }
-.container__133bf .peopleListItem_cc6179 .avatar__0a06e {
+:is(.container__133bf, .container_zrUwGA) :is(.rowContent_cc6179, .rowContent_y75PxA) { min-height: 34px; }
+:is(.container__133bf, .container_zrUwGA) :is(.peopleListItem_cc6179, .peopleListItem_y75PxA) :is(.userInfo__0a06e, .userInfo_jPuNMC) { min-width: 0; }
+:is(.container__133bf, .container_zrUwGA) :is(.peopleListItem_cc6179, .peopleListItem_y75PxA) :is(.avatar__0a06e, .avatar_jPuNMC) {
   width: 28px !important;
   height: 28px !important;
   flex: 0 0 28px;
   margin-inline-end: 8px;
 }
 /* Scale the complete native SVG/status mask rather than the image alone. */
-.container__133bf .peopleListItem_cc6179 .avatar__0a06e > svg { width: 100%; height: 100%; }
-.container__133bf .peopleListItem_cc6179 :is(.text__0a06e, .discordTag__0a06e) { min-width: 0; }
-.container__133bf .peopleListItem_cc6179 .username__0a06e { font: 600 13px/18px var(--darkirc-font); }
-.container__133bf .peopleListItem_cc6179 .discriminator__0a06e { font: 12px/16px var(--darkirc-font); }
-.container__133bf .peopleListItem_cc6179 :is(.subtext__0a06e, .text__19b6d) { font: 12px/16px var(--darkirc-font); }
-.container__133bf .peopleListItem_cc6179 .actions_fc004c { gap: 8px; flex-shrink: 0; }
-.container__133bf .peopleListItem_cc6179 .actionButton_f8fa06 {
+:is(.container__133bf, .container_zrUwGA) :is(.peopleListItem_cc6179, .peopleListItem_y75PxA) :is(.avatar__0a06e, .avatar_jPuNMC) > svg { width: 100%; height: 100%; }
+:is(.container__133bf, .container_zrUwGA) :is(.peopleListItem_cc6179, .peopleListItem_y75PxA) :is(:is(.text__0a06e, .text_jPuNMC), :is(.discordTag__0a06e, .discordTag_jPuNMC)) { min-width: 0; }
+:is(.container__133bf, .container_zrUwGA) :is(.peopleListItem_cc6179, .peopleListItem_y75PxA) :is(.username__0a06e, .username_jPuNMC) { font: 600 13px/18px var(--darkirc-font); }
+:is(.container__133bf, .container_zrUwGA) :is(.peopleListItem_cc6179, .peopleListItem_y75PxA) :is(.discriminator__0a06e, .discriminator_jPuNMC) { font: 12px/16px var(--darkirc-font); }
+:is(.container__133bf, .container_zrUwGA) :is(.peopleListItem_cc6179, .peopleListItem_y75PxA) :is(:is(.subtext__0a06e, .subtext_jPuNMC), :is(.text__19b6d, .text_CXmngM)) { font: 12px/16px var(--darkirc-font); }
+:is(.container__133bf, .container_zrUwGA) :is(.peopleListItem_cc6179, .peopleListItem_y75PxA) :is(.actions_fc004c, .actions_4Y31So) { gap: 8px; flex-shrink: 0; }
+:is(.container__133bf, .container_zrUwGA) :is(.peopleListItem_cc6179, .peopleListItem_y75PxA) :is(.actionButton_f8fa06, .actionButton_5GqXgh) {
   width: 32px;
   height: 32px;
   border-radius: 2px;
 }
 
 /* Activity information remains content-sized, including games and parties. */
-.nowPlayingColumn__133bf .header__7d20c { font: 600 16px/22px var(--darkirc-font); margin-block: 4px 8px; }
-.nowPlayingColumn__133bf .itemCard__7e549 { border-radius: 2px; margin-bottom: 8px; }
-.nowPlayingColumn__133bf .header__00943 { padding: 10px 12px; }
-.nowPlayingColumn__133bf .section__00943 { padding: 10px 12px; }
-.nowPlayingColumn__133bf .textContent__00943 { font-size: 12px; line-height: 18px; }
-.nowPlayingColumn__133bf .header__00943 .textContent__00943:first-child { font-size: 13px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.header__7d20c, .header_GNEh_C) { font: 600 16px/22px var(--darkirc-font); margin-block: 4px 8px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.itemCard__7e549, .itemCard_-7KzVR) { border-radius: 2px; margin-bottom: 8px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.header__00943, .header_o3hXTo) { padding: 10px 12px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.section__00943, .section_o3hXTo) { padding: 10px 12px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.textContent__00943, .textContent_o3hXTo) { font-size: 12px; line-height: 18px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.header__00943, .header_o3hXTo) :is(.textContent__00943, .textContent_o3hXTo):first-child { font-size: 13px; }
 
 /* PTB's replacement search button has nested text wrappers. Let the full
  * localized prompt wrap instead of forcing a 160px ellipsis; it still opens
  * Discord's native search dialog. Legacy search component remains supported. */
-.sidebarList__5e434 .searchBar_e6b769 { height: auto; min-height: 38px; padding: 4px; }
-.sidebarList__5e434 .searchBar_e6b769 :is(.button_a22cb0, .searchBarComponent_e6b769) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.searchBar_e6b769, .searchBar_u88IQl) { height: auto; min-height: 38px; padding: 4px; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.searchBar_e6b769, .searchBar_u88IQl) :is(:is(.button_a22cb0, .button_F7qvhY), :is(.searchBarComponent_e6b769, .searchBarComponent_u88IQl)) {
   height: auto;
   min-height: 30px;
   padding: 4px 6px;
   white-space: normal;
   text-align: start;
 }
-.sidebarList__5e434 .searchBar_e6b769 :is(.buttonChildrenWrapper_a22cb0, .buttonChildren_a22cb0) { min-width: 0; height: auto; }
-.sidebarList__5e434 .searchBar_e6b769 :is(.lineClamp1__4bd52, .overflow_b0dfc2) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.searchBar_e6b769, .searchBar_u88IQl) :is(:is(.buttonChildrenWrapper_a22cb0, .buttonChildrenWrapper_F7qvhY), :is(.buttonChildren_a22cb0, .buttonChildren_F7qvhY)) { min-width: 0; height: auto; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.searchBar_e6b769, .searchBar_u88IQl) :is(:is(.lineClamp1__4bd52, .lineClamp1_MMUIw6), :is(.overflow_b0dfc2, .overflow__WDjet)) {
   display: block;
   white-space: normal;
   overflow: visible;
@@ -1761,36 +1761,36 @@ button, input, textarea, select { border-radius: 0; }
 /* Current modal settings body, legacy settings column and Vencord's own
  * settings/modal components only. Never change global heading/input metrics.
  * Text variants carry native weights, colors and accessible labels. */
-:is(.contentBody_e9e3ed, .contentColumn__23e6b, .vc-settings-tab, .root__49fc1) {
+:is(:is(.contentBody_e9e3ed, .contentBody_3Rvb29), :is(.contentColumn__23e6b, .contentColumn_jnk11m), .vc-settings-tab, :is(.root__49fc1, .root__KoJTP)) {
   font: 13px/19px var(--darkirc-font);
 }
-:is(.contentBody_e9e3ed, .contentColumn__23e6b, .root__49fc1) :is(
+:is(:is(.contentBody_e9e3ed, .contentBody_3Rvb29), :is(.contentColumn__23e6b, .contentColumn_jnk11m), :is(.root__49fc1, .root__KoJTP)) :is(
   [data-text-variant^="text-"], [data-text-variant^="experimental/body-"],
   .vc-text-base, input, textarea, select
 ) { font-size: 13px; line-height: 19px; }
-:is(.contentBody_e9e3ed, .contentColumn__23e6b, .root__49fc1) :is(h1, h2) {
+:is(:is(.contentBody_e9e3ed, .contentBody_3Rvb29), :is(.contentColumn__23e6b, .contentColumn_jnk11m), :is(.root__49fc1, .root__KoJTP)) :is(h1, h2) {
   font-size: 20px;
   line-height: 26px;
 }
-:is(.contentBody_e9e3ed, .contentColumn__23e6b, .root__49fc1) :is(
+:is(:is(.contentBody_e9e3ed, .contentBody_3Rvb29), :is(.contentColumn__23e6b, .contentColumn_jnk11m), :is(.root__49fc1, .root__KoJTP)) :is(
   h3, [data-text-variant^="heading-md"],
   [data-text-variant^="experimental/heading-md"]
 ) { font-size: 17px; line-height: 23px; }
-:is(.contentBody_e9e3ed, .contentColumn__23e6b, .root__49fc1) :is(
+:is(:is(.contentBody_e9e3ed, .contentBody_3Rvb29), :is(.contentColumn__23e6b, .contentColumn_jnk11m), :is(.root__49fc1, .root__KoJTP)) :is(
   [data-text-variant^="heading-sm"], [data-text-variant^="heading-xs"],
   [data-text-variant^="experimental/heading-sm"], [data-text-variant^="experimental/heading-xs"]
 ) { font-size: 16px; line-height: 22px; }
 /* Limit spacing tokens to settings content; native stack/field relationships
  * keep their relative spacing. Do not impose heights on inputs or switches. */
-:is(.contentBody_e9e3ed, .contentColumn__23e6b) {
+:is(:is(.contentBody_e9e3ed, .contentBody_3Rvb29), :is(.contentColumn__23e6b, .contentColumn_jnk11m)) {
   --space-xl: 20px;
   --space-lg: 16px;
   --space-md: 12px;
 }
-.contentBody_e9e3ed .panel__6131a { margin-block: 24px; }
-.contentBody_e9e3ed .container__75920 > .stack_dbd263 { padding-bottom: 12px !important; }
+:is(.contentBody_e9e3ed, .contentBody_3Rvb29) :is(.panel__6131a, .panel_nNq2Vb) { margin-block: 24px; }
+:is(.contentBody_e9e3ed, .contentBody_3Rvb29) :is(.container__75920, .container_Gl6U0S) > :is(.stack_dbd263, .stack_TWWX0S) { padding-bottom: 12px !important; }
 .vc-settings-tab .vc-text-base { font-size: 13px; line-height: 19px; }
-:is(.vc-settings-tab, .root__49fc1) .vc-h5 {
+:is(.vc-settings-tab, :is(.root__49fc1, .root__KoJTP)) .vc-h5 {
   font: 600 16px/22px var(--darkirc-font);
   text-transform: none;
   margin-block: 12px 8px;
@@ -1814,60 +1814,60 @@ button, input, textarea, select { border-radius: 0; }
 /* PTB's floating-panel bottom inset is 8px. Its decorative sidebar ::after
  * covers the same strip. Remove only that outer inset; retain border, inner
  * padding, intrinsic height and all RTC/audio siblings above the account. */
-.sidebar__5e434 > .panels__5e434 { bottom: 0; }
-.container__37e49 .panelTitleContainer__37e49 > [data-text-variant] {
+:is(.sidebar__5e434, .sidebar_pog62O) > :is(.panels__5e434, .panels_pog62O) { bottom: 0; }
+:is(.container__37e49, .container_g6VwXp) :is(.panelTitleContainer__37e49, .panelTitleContainer_g6VwXp) > [data-text-variant] {
   font-size: var(--darkirc-ui-body);
   line-height: 18px;
 }
-.container__37e49 .panelSubtextContainer__37e49 > [data-text-variant] {
+:is(.container__37e49, .container_g6VwXp) :is(.panelSubtextContainer__37e49, .panelSubtextContainer_g6VwXp) > [data-text-variant] {
   font-size: var(--darkirc-ui-meta);
   line-height: 16px;
 }
 
 /* Private channels are flow rows. Avatars/status masks scale together;
  * multi-line status grows the row rather than clipping user information. */
-.privateChannels_e6b769 .channel__972a0 { margin-inline: 4px 0; }
-.privateChannels_e6b769 .channel__972a0 .interactive__972a0 {
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.channel__972a0, .channel_zln_tS) { margin-inline: 4px 0; }
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.channel__972a0, .channel_zln_tS) :is(.interactive__972a0, .interactive_zln_tS) {
   min-height: 28px;
   height: auto;
 }
-.privateChannels_e6b769 .channel__972a0 .link__972a0 {
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.channel__972a0, .channel_zln_tS) :is(.link__972a0, .link_zln_tS) {
   flex: 1;
   min-width: 0;
   min-height: 28px;
   padding-inline: 6px 4px;
 }
-.privateChannels_e6b769 .layout__20a53 {
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.layout__20a53, .layout_TBNqol) {
   flex: 1;
   min-width: 0;
   min-height: 24px;
   height: auto;
   padding-block: 2px;
 }
-.privateChannels_e6b769 .dm__972a0 .link__972a0 { min-height: 30px; }
-.privateChannels_e6b769 .avatar__20a53 { margin-inline-end: 6px; flex-shrink: 0; }
-.privateChannels_e6b769 .dm__972a0 .avatar__20a53,
-.privateChannels_e6b769 .dm__972a0 .avatar__20a53 > .wrapper__44b0c {
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.dm__972a0, .dm_zln_tS) :is(.link__972a0, .link_zln_tS) { min-height: 30px; }
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.avatar__20a53, .avatar_TBNqol) { margin-inline-end: 6px; flex-shrink: 0; }
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.dm__972a0, .dm_zln_tS) :is(.avatar__20a53, .avatar_TBNqol),
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.dm__972a0, .dm_zln_tS) :is(.avatar__20a53, .avatar_TBNqol) > :is(.wrapper__44b0c, .wrapper_XpIUHy) {
   width: 24px !important;
   height: 24px !important;
   flex: 0 0 24px;
 }
-.privateChannels_e6b769 .dm__972a0 .avatar__20a53 > .wrapper__44b0c > svg { width: 100%; height: 100%; }
-.privateChannels_e6b769 :is(.content__20a53, .nameAndDecorators__20a53, .name__20a53) { min-width: 0; }
-.privateChannels_e6b769 .content__20a53 { flex: 1; }
-.privateChannels_e6b769 .name__20a53 {
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.dm__972a0, .dm_zln_tS) :is(.avatar__20a53, .avatar_TBNqol) > :is(.wrapper__44b0c, .wrapper_XpIUHy) > svg { width: 100%; height: 100%; }
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(:is(.content__20a53, .content_TBNqol), :is(.nameAndDecorators__20a53, .nameAndDecorators_TBNqol), :is(.name__20a53, .name_TBNqol)) { min-width: 0; }
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.content__20a53, .content_TBNqol) { flex: 1; }
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.name__20a53, .name_TBNqol) {
   font: 500 var(--darkirc-ui-body)/18px var(--darkirc-font);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.privateChannels_e6b769 .name__20a53 .overflow_b0dfc2 { font: inherit; }
-.privateChannels_e6b769 :is(.subText__20a53, .subtext__972a0, .activityStatusText__972a0) {
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.name__20a53, .name_TBNqol) :is(.overflow_b0dfc2, .overflow__WDjet) { font: inherit; }
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(:is(.subText__20a53, .subText_TBNqol), :is(.subtext__972a0, .subtext_zln_tS), :is(.activityStatusText__972a0, .activityStatusText_zln_tS)) {
   font-size: var(--darkirc-ui-meta);
   line-height: 14px;
 }
-.privateChannels_e6b769 .iconsContainer__972a0 { height: auto; align-self: stretch; flex-shrink: 0; }
-.privateChannels_e6b769 .closeButton__972a0 { min-width: 24px; min-height: 24px; padding-inline-end: 4px; }
-.privateChannels_e6b769 .privateChannelsHeaderContainer__99e7c {
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.iconsContainer__972a0, .iconsContainer_zln_tS) { height: auto; align-self: stretch; flex-shrink: 0; }
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.closeButton__972a0, .closeButton_zln_tS) { min-width: 24px; min-height: 24px; padding-inline-end: 4px; }
+:is(.privateChannels_e6b769, .privateChannels_u88IQl) :is(.privateChannelsHeaderContainer__99e7c, .privateChannelsHeaderContainer_Bce46W) {
   font-size: var(--darkirc-ui-meta);
   line-height: 16px;
   padding-inline-start: 10px;
@@ -1875,15 +1875,15 @@ button, input, textarea, select { border-radius: 0; }
 /* The 22px nested horizontal padding caused the Finnish prompt to wrap.
  * A single line with native tooltip/accessible name fits regular widths;
  * ellipsis handles narrow panes without expanding the sidebar. */
-.sidebarList__5e434 .searchBar_e6b769 { height: 38px; padding: 4px; }
-.sidebarList__5e434 .searchBar_e6b769 :is(.button_a22cb0, .searchBarComponent_e6b769) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.searchBar_e6b769, .searchBar_u88IQl) { height: 38px; padding: 4px; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.searchBar_e6b769, .searchBar_u88IQl) :is(:is(.button_a22cb0, .button_F7qvhY), :is(.searchBarComponent_e6b769, .searchBarComponent_u88IQl)) {
   height: 30px;
   padding: 3px 2px;
   white-space: nowrap;
 }
-.sidebarList__5e434 .searchBar_e6b769 .buttonChildrenWrapper_a22cb0 { padding: 0; width: 100%; }
-.sidebarList__5e434 .searchBar_e6b769 .buttonChildren_a22cb0 { width: 100%; }
-.sidebarList__5e434 .searchBar_e6b769 :is(.lineClamp1__4bd52, .overflow_b0dfc2) {
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.searchBar_e6b769, .searchBar_u88IQl) :is(.buttonChildrenWrapper_a22cb0, .buttonChildrenWrapper_F7qvhY) { padding: 0; width: 100%; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.searchBar_e6b769, .searchBar_u88IQl) :is(.buttonChildren_a22cb0, .buttonChildren_F7qvhY) { width: 100%; }
+:is(.sidebarList__5e434, .sidebarList_pog62O) :is(.searchBar_e6b769, .searchBar_u88IQl) :is(:is(.lineClamp1__4bd52, .lineClamp1_MMUIw6), :is(.overflow_b0dfc2, .overflow__WDjet)) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1893,106 +1893,106 @@ button, input, textarea, select { border-radius: 0; }
 }
 
 /* Preserve the successful central friend rows. Only activity cards change. */
-.nowPlayingColumn__133bf .header__7d20c { font-size: var(--darkirc-ui-section); line-height: 20px; }
-.nowPlayingColumn__133bf .itemCard__7e549 { margin-block: 6px; }
-.nowPlayingColumn__133bf :is(.header__00943, .section__00943) { padding: 6px 8px; }
-.nowPlayingColumn__133bf .header__00943 .textContent__00943 { font-size: var(--darkirc-ui-meta); line-height: 16px; }
-.nowPlayingColumn__133bf .header__00943 .textContent__00943:is([data-text-variant^="text-sm/"], [data-text-variant^="text-xs/"]) { font-size: var(--darkirc-ui-meta); }
-.nowPlayingColumn__133bf .header__00943 [data-text-variant="text-md/semibold"] { font-size: var(--darkirc-ui-body); line-height: 18px; }
-.nowPlayingColumn__133bf .headerAvatar__00943 { width: 28px !important; height: 28px !important; }
-.nowPlayingColumn__133bf .headerAvatar__00943 > svg { width: 100%; height: 100%; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.header__7d20c, .header_GNEh_C) { font-size: var(--darkirc-ui-section); line-height: 20px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.itemCard__7e549, .itemCard_-7KzVR) { margin-block: 6px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(:is(.header__00943, .header_o3hXTo), :is(.section__00943, .section_o3hXTo)) { padding: 6px 8px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.header__00943, .header_o3hXTo) :is(.textContent__00943, .textContent_o3hXTo) { font-size: var(--darkirc-ui-meta); line-height: 16px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.header__00943, .header_o3hXTo) :is(.textContent__00943, .textContent_o3hXTo):is([data-text-variant^="text-sm/"], [data-text-variant^="text-xs/"]) { font-size: var(--darkirc-ui-meta); }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.header__00943, .header_o3hXTo) [data-text-variant="text-md/semibold"] { font-size: var(--darkirc-ui-body); line-height: 18px; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.headerAvatar__00943, .headerAvatar_o3hXTo) { width: 28px !important; height: 28px !important; }
+:is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) :is(.headerAvatar__00943, .headerAvatar_o3hXTo) > svg { width: 100%; height: 100%; }
 
 /* Settings: body, native nested variants, navigation and Vencord buttons.
  * No global heading/form selectors and no imposed field/switch heights. */
-:is(.contentBody_e9e3ed, .contentColumn__23e6b, .vc-settings-tab, .sidebar__409aa, .contentHeader_e9e3ed) {
+:is(:is(.contentBody_e9e3ed, .contentBody_3Rvb29), :is(.contentColumn__23e6b, .contentColumn_jnk11m), .vc-settings-tab, :is(.sidebar__409aa, .sidebar_cR4ic2), :is(.contentHeader_e9e3ed, .contentHeader_3Rvb29)) {
   font: var(--darkirc-ui-body)/19px var(--darkirc-font);
 }
-:is(.contentBody_e9e3ed, .contentColumn__23e6b, .vc-settings-tab, .sidebar__409aa, .contentHeader_e9e3ed) :is(
+:is(:is(.contentBody_e9e3ed, .contentBody_3Rvb29), :is(.contentColumn__23e6b, .contentColumn_jnk11m), .vc-settings-tab, :is(.sidebar__409aa, .sidebar_cR4ic2), :is(.contentHeader_e9e3ed, .contentHeader_3Rvb29)) :is(
   [data-text-variant^="text-"], [data-text-variant^="experimental/body-"],
   [class*="text-md/"], [class*="text-sm/"], .vc-text-base, .vc-btn-base, input, textarea, select
 ) { font-size: var(--darkirc-ui-body); line-height: 19px; }
-:is(.contentBody_e9e3ed, .contentColumn__23e6b, .vc-settings-tab, .root__49fc1) :is(
+:is(:is(.contentBody_e9e3ed, .contentBody_3Rvb29), :is(.contentColumn__23e6b, .contentColumn_jnk11m), .vc-settings-tab, :is(.root__49fc1, .root__KoJTP)) :is(
   h1, h2, .vc-special-title, [data-text-variant^="heading-lg"], [data-text-variant^="heading-xl"],
   [data-text-variant^="experimental/heading-lg"], [data-text-variant^="experimental/heading-xl"]
 ) { font-size: var(--darkirc-ui-title); line-height: 24px; }
-:is(.contentBody_e9e3ed, .contentColumn__23e6b, .vc-settings-tab, .root__49fc1) :is(
+:is(:is(.contentBody_e9e3ed, .contentBody_3Rvb29), :is(.contentColumn__23e6b, .contentColumn_jnk11m), .vc-settings-tab, :is(.root__49fc1, .root__KoJTP)) :is(
   h3, .vc-h5:not(.vc-special-title), [data-text-variant^="heading-md"],
   [data-text-variant^="heading-sm"], [data-text-variant^="heading-xs"],
   [data-text-variant^="experimental/heading-md"], [data-text-variant^="experimental/heading-sm"],
   [data-text-variant^="experimental/heading-xs"]
 ) { font-size: var(--darkirc-ui-section); line-height: 21px; }
-.sidebar__409aa :is(.label__409aa, [data-text-variant^="text-xs"], [data-text-variant^="text-xxs"]) {
+:is(.sidebar__409aa, .sidebar_cR4ic2) :is(:is(.label__409aa, .label_cR4ic2), [data-text-variant^="text-xs"], [data-text-variant^="text-xxs"]) {
   font-size: var(--darkirc-ui-meta); line-height: 16px;
 }
-.sidebar__409aa { min-width: 0; }
-.sidebar__409aa .compactInfo__081d7 { overflow-wrap: anywhere; }
-.sidebar__409aa .item_caf372 { padding-block: 6px; gap: 8px; min-height: 32px; }
-.sidebar__409aa .itemContent_caf372 { min-width: 0; }
-.sidebar__409aa .navScroller__409aa { padding-top: 8px; gap: 16px; }
-.sidebar__409aa .sublist__409aa { gap: 4px; }
-.contentBody_e9e3ed .panel__6131a { margin-block: 16px; }
+:is(.sidebar__409aa, .sidebar_cR4ic2) { min-width: 0; }
+:is(.sidebar__409aa, .sidebar_cR4ic2) :is(.compactInfo__081d7, .compactInfo_LlTAVD) { overflow-wrap: anywhere; }
+:is(.sidebar__409aa, .sidebar_cR4ic2) :is(.item_caf372, .item_xyJHva) { padding-block: 6px; gap: 8px; min-height: 32px; }
+:is(.sidebar__409aa, .sidebar_cR4ic2) :is(.itemContent_caf372, .itemContent_xyJHva) { min-width: 0; }
+:is(.sidebar__409aa, .sidebar_cR4ic2) :is(.navScroller__409aa, .navScroller_cR4ic2) { padding-top: 8px; gap: 16px; }
+:is(.sidebar__409aa, .sidebar_cR4ic2) :is(.sublist__409aa, .sublist_cR4ic2) { gap: 4px; }
+:is(.contentBody_e9e3ed, .contentBody_3Rvb29) :is(.panel__6131a, .panel_nNq2Vb) { margin-block: 16px; }
 
 /* Profile portals: keep banners, avatars, badges, roles, descriptions, media
  * and controls. Full names may wrap; never truncate profile information. */
 :is(.user-profile-popout, .user-profile-modal, .user-profile-modal-v2) { font: var(--darkirc-ui-body)/19px var(--darkirc-font); }
 :is(.user-profile-popout, .user-profile-modal, .user-profile-modal-v2) :is(
   [data-text-variant^="text-"], [data-text-variant^="experimental/body-"],
-  .userTag__26b1f, .userTagUsername__26b1f, .markup__75297, .input__983bc
+  :is(.userTag__26b1f, .userTag_C2XpHA), :is(.userTagUsername__26b1f, .userTagUsername_C2XpHA), :is(.markup__75297, .markup_ku1OHH), .input__983bc
 ) { font-size: var(--darkirc-ui-body); line-height: 19px; }
 :is(.user-profile-popout, .user-profile-modal, .user-profile-modal-v2) :is(
   [data-text-variant^="heading-"], [data-text-variant^="experimental/heading-"]
 ) { font-size: var(--darkirc-ui-section); line-height: 21px; }
 :is(.user-profile-popout, .user-profile-modal, .user-profile-modal-v2) :is(
-  .displayNameRow__26b1f [data-text-variant^="heading-"], .displayName__26b1f
+  :is(.displayNameRow__26b1f, .displayNameRow_C2XpHA) [data-text-variant^="heading-"], :is(.displayName__26b1f, .displayName_C2XpHA)
 ) { font-size: var(--darkirc-ui-title); line-height: 24px; }
-.user-profile-popout .body_ce8328 { padding: 4px 8px 12px 12px; gap: 8px; }
-.user-profile-modal-v2 .profileBody__9c3be { padding: 4px 16px 20px 20px; gap: 16px; }
+.user-profile-popout :is(.body_ce8328, .body_nitlyF) { padding: 4px 8px 12px 12px; gap: 8px; }
+.user-profile-modal-v2 :is(.profileBody__9c3be, .profileBody_s3DB6Y) { padding: 4px 16px 20px 20px; gap: 16px; }
 
 /* Pins are a separate cozy-message surface. Preserve all media and native
  * action buttons; only its own message padding and text sizes are adjusted. */
-.messagesPopoutWrap__432f4 {
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) {
   max-width: calc(100vw - 16px);
   background: var(--darkirc-panel);
   border: 1px solid var(--darkirc-border);
   border-radius: 0;
   font: var(--darkirc-ui-body)/19px var(--darkirc-font);
 }
-.messagesPopoutWrap__432f4 :is(.header__432f4, .footer__432f4) { padding: 8px 12px; }
-.messagesPopoutWrap__432f4 [data-text-variant] { font-size: var(--darkirc-ui-body); line-height: 19px; }
-.messagesPopoutWrap__432f4 .titleContainer__432f4 [data-text-variant] { font-size: 16px; line-height: 22px; }
-.messagesPopoutWrap__432f4 .footer__432f4 [data-text-variant] { font-size: var(--darkirc-ui-meta); line-height: 18px; }
-.messagesPopoutWrap__432f4 .messageGroupCozy__432f4 { padding: 8px 12px 8px 56px; }
-.messagesPopoutWrap__432f4 .messageGroupCozy__432f4 .avatar_c19a55 { left: 8px; }
-.messagesPopoutWrap__432f4 .messageGroupCozy__432f4 .messageContent_c19a55 { margin-inline-start: -56px; padding-inline-start: 56px; }
-.messagesPopoutWrap__432f4 :is(.markup__75297, .username_c19a55) { font-size: var(--darkirc-ui-body); line-height: 19px; }
-.messagesPopoutWrap__432f4 .timestamp_c19a55 { font-size: var(--darkirc-ui-meta); }
-.messagesPopoutWrap__432f4 .emptyPlaceholder__432f4 { margin-block: 8px 16px; }
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) :is(:is(.header__432f4, .header_6bgemo), :is(.footer__432f4, .footer_6bgemo)) { padding: 8px 12px; }
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) [data-text-variant] { font-size: var(--darkirc-ui-body); line-height: 19px; }
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) :is(.titleContainer__432f4, .titleContainer_6bgemo) [data-text-variant] { font-size: 16px; line-height: 22px; }
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) :is(.footer__432f4, .footer_6bgemo) [data-text-variant] { font-size: var(--darkirc-ui-meta); line-height: 18px; }
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) :is(.messageGroupCozy__432f4, .messageGroupCozy_6bgemo) { padding: 8px 12px 8px 56px; }
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) :is(.messageGroupCozy__432f4, .messageGroupCozy_6bgemo) :is(.avatar_c19a55, .avatar_2i8Bfm) { left: 8px; }
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) :is(.messageGroupCozy__432f4, .messageGroupCozy_6bgemo) :is(.messageContent_c19a55, .messageContent_2i8Bfm) { margin-inline-start: -56px; padding-inline-start: 56px; }
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) :is(:is(.markup__75297, .markup_ku1OHH), :is(.username_c19a55, .username_2i8Bfm)) { font-size: var(--darkirc-ui-body); line-height: 19px; }
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) :is(.timestamp_c19a55, .timestamp_2i8Bfm) { font-size: var(--darkirc-ui-meta); }
+:is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) :is(.emptyPlaceholder__432f4, .emptyPlaceholder_6bgemo) { margin-block: 8px 16px; }
 
 @media (max-width: 700px) {
   /* Native account rows have non-shrinking trailing stacks. At 640px these
    * put edit/reveal controls beyond the content scroller. Wrap only settings
    * control rows and retain every target and the navigation scroll area. */
-  .container_abd9a8 .sidebar__409aa:not(.mobile__409aa) { flex-basis: 180px; }
-  .contentBody_e9e3ed { min-width: 0; }
-  .sidebar__409aa .itemContent_caf372 [data-text-variant] {
+  .container_abd9a8 :is(.sidebar__409aa, .sidebar_cR4ic2):not(:is(.mobile__409aa, .mobile_cR4ic2)) { flex-basis: 180px; }
+  :is(.contentBody_e9e3ed, .contentBody_3Rvb29) { min-width: 0; }
+  :is(.sidebar__409aa, .sidebar_cR4ic2) :is(.itemContent_caf372, .itemContent_xyJHva) [data-text-variant] {
     white-space: normal;
     -webkit-line-clamp: unset;
     overflow-wrap: anywhere;
   }
-  .contentBody_e9e3ed .panel__6131a { min-width: 0; margin-inline: 8px; padding-inline: 8px; }
-  .contentBody_e9e3ed .baseControlItem_dbfbe0 { flex-wrap: wrap; }
-  .contentBody_e9e3ed .baseControlItemContent_dbfbe0 { min-width: 0; flex-basis: 160px; }
-  .contentBody_e9e3ed .baseControlItemTitle_dbfbe0 { min-width: 0; flex-wrap: wrap; }
-  .contentBody_e9e3ed .baseControlItemTrailingElement_dbfbe0,
-  .contentBody_e9e3ed .baseControlItemTrailingElement_dbfbe0 > .stack_dbd263 {
+  :is(.contentBody_e9e3ed, .contentBody_3Rvb29) :is(.panel__6131a, .panel_nNq2Vb) { min-width: 0; margin-inline: 8px; padding-inline: 8px; }
+  :is(.contentBody_e9e3ed, .contentBody_3Rvb29) :is(.baseControlItem_dbfbe0, .baseControlItem_FiiQ6I) { flex-wrap: wrap; }
+  :is(.contentBody_e9e3ed, .contentBody_3Rvb29) :is(.baseControlItemContent_dbfbe0, .baseControlItemContent_FiiQ6I) { min-width: 0; flex-basis: 160px; }
+  :is(.contentBody_e9e3ed, .contentBody_3Rvb29) :is(.baseControlItemTitle_dbfbe0, .baseControlItemTitle_FiiQ6I) { min-width: 0; flex-wrap: wrap; }
+  :is(.contentBody_e9e3ed, .contentBody_3Rvb29) :is(.baseControlItemTrailingElement_dbfbe0, .baseControlItemTrailingElement_FiiQ6I),
+  :is(.contentBody_e9e3ed, .contentBody_3Rvb29) :is(.baseControlItemTrailingElement_dbfbe0, .baseControlItemTrailingElement_FiiQ6I) > :is(.stack_dbd263, .stack_TWWX0S) {
     min-width: 0;
     max-width: 100%;
     flex-wrap: wrap;
     gap: 8px;
   }
-  .contentBody_e9e3ed .baseControlItemTrailingElement_dbfbe0 [data-text-variant] { overflow-wrap: anywhere; }
-  .user-profile-modal-v2 .profileBody__9c3be { padding-inline: 12px; }
-  .messagesPopoutWrap__432f4 .header__432f4 { padding-inline: 8px; }
+  :is(.contentBody_e9e3ed, .contentBody_3Rvb29) :is(.baseControlItemTrailingElement_dbfbe0, .baseControlItemTrailingElement_FiiQ6I) [data-text-variant] { overflow-wrap: anywhere; }
+  .user-profile-modal-v2 :is(.profileBody__9c3be, .profileBody_s3DB6Y) { padding-inline: 12px; }
+  :is(.messagesPopoutWrap__432f4, .messagesPopoutWrap_6bgemo) :is(.header__432f4, .header_6bgemo) { padding-inline: 8px; }
 }
 
 /* ===== 50-responsive.css ===== */
@@ -2007,16 +2007,16 @@ button, input, textarea, select { border-radius: 0; }
     --darkirc-channel-width: 160px;
     --darkirc-member-width: 140px;
   }
-  .container__9293f { padding-inline: 6px; }
+  :is(.container__9293f, .container_ybUK7Z) { padding-inline: 6px; }
 }
 @media (max-width: 600px) {
   :root {
     --darkirc-channel-width: clamp(120px, 27vw, 150px);
     --darkirc-member-width: clamp(100px, 23vw, 130px);
   }
-  .form_f75fb0 { padding-inline: 4px; }
+  :is(.form_f75fb0, .form_z_gUBg) { padding-inline: 4px; }
   /* Toolbar can scroll horizontally instead of removing its controls. */
-  .container__9293f :is([class^="toolbar_"], [class*=" toolbar_"]) {
+  :is(.container__9293f, .container_ybUK7Z) :is([class^="toolbar_"], [class*=" toolbar_"]) {
     overflow-x: auto;
     min-width: 0;
     flex-shrink: 1;
@@ -2026,24 +2026,24 @@ button, input, textarea, select { border-radius: 0; }
 /* Also handles narrow split/thread panes on a wide desktop. Group metadata
  * becomes its own line, leaving the complete pane width for message content. */
 @container darkirc-chat (max-width: 420px) {
-  .compact_c19a55.wrapper_c19a55 {
+  :is(.compact_c19a55, .compact_2i8Bfm):is(.wrapper_c19a55, .wrapper_2i8Bfm) {
     --compactpp-header-width: 0px;
     --compactpp-header-margin-right: 0px;
     padding-block: 2px;
   }
-  .compact_c19a55 .header_c19a55,
-  .zalgo_c19a55.gradient_c19a55.compact_c19a55 .header_c19a55,
-  .withDisplayNameStyles_c19a55.withDisplayNameStyles_c19a55.withDisplayNameStyles_c19a55 .header_c19a55 {
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm),
+  :is(.zalgo_c19a55, .zalgo_2i8Bfm):is(.gradient_c19a55, .gradient_2i8Bfm):is(.compact_c19a55, .compact_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm),
+  :is(.withDisplayNameStyles_c19a55, .withDisplayNameStyles_2i8Bfm):is(.withDisplayNameStyles_c19a55, .withDisplayNameStyles_2i8Bfm):is(.withDisplayNameStyles_c19a55, .withDisplayNameStyles_2i8Bfm) :is(.header_c19a55, .header_2i8Bfm) {
     position: relative;
     width: auto;
     margin-inline: 8px 0;
   }
-  .compact_c19a55 .headerText_c19a55 { flex: 0 1 auto; justify-content: flex-start; }
-  .compact_c19a55 > .container_b7e1cb { max-width: calc(100% - 8px); }
-  .compact_c19a55 .repliedMessage_c19a55 { margin-inline-start: 16px; }
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.headerText_c19a55, .headerText_2i8Bfm) { flex: 0 1 auto; justify-content: flex-start; }
+  :is(.compact_c19a55, .compact_2i8Bfm) > :is(.container_b7e1cb, .container_YUQhib) { max-width: calc(100% - 8px); }
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm) { margin-inline-start: 16px; }
   /* Keep every composer action reachable when a thread/pane is narrow. */
-  .form_f75fb0 .inner__74017 { flex-wrap: wrap; }
-  .form_f75fb0 .textArea__74017 { flex: 1 1 8ch; }
-  .form_f75fb0 .buttons__74017 { margin-inline-start: auto; }
-  .compact_c19a55 .repliedMessage_c19a55 .username_c19a55 { max-width: 40%; }
+  :is(.form_f75fb0, .form_z_gUBg) :is(.inner__74017, .inner_2x8-Qn) { flex-wrap: wrap; }
+  :is(.form_f75fb0, .form_z_gUBg) :is(.textArea__74017, .textArea_2x8-Qn) { flex: 1 1 8ch; }
+  :is(.form_f75fb0, .form_z_gUBg) :is(.buttons__74017, .buttons_2x8-Qn) { margin-inline-start: auto; }
+  :is(.compact_c19a55, .compact_2i8Bfm) :is(.repliedMessage_c19a55, .repliedMessage_2i8Bfm) :is(.username_c19a55, .username_2i8Bfm) { max-width: 40%; }
 }
